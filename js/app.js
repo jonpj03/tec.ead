@@ -208,14 +208,23 @@
   function handleSnapshot() {
     const snap = snapshot();
     if (!snap) return false;
+    return consumeSnapshot(snap);
+  }
 
+  /**
+   * Decide o que fazer com uma versão publicada.
+   * @returns {boolean} true se o conteúdo local foi substituído
+   */
+  function consumeSnapshot(snap) {
     const meta = Store.meta();
-    const isNew = meta.snapshotVersion !== snap.publishedAt;
-    if (!isNew) return false;
+    if (meta.snapshotVersion === snap.publishedAt) return false;
 
-    // Visitante que nunca editou nada: recebe a versão publicada direto.
-    if (!Store.isInitialized() || !meta.editedLocally) {
+    // Publicação forçada, ou visitante que nunca editou nada: aplica direto.
+    if (snap.force || !Store.isInitialized() || !meta.editedLocally) {
       applySnapshot(snap);
+      if (snap.force && meta.editedLocally) {
+        UI.toast('O painel foi atualizado com a versão publicada pela equipe.', 'info', 6000);
+      }
       return true;
     }
 
@@ -234,6 +243,41 @@
         onDismiss() { Store.setMeta({ snapshotVersion: snap.publishedAt }); }
       });
     return false;
+  }
+
+  /**
+   * Busca data/projetos.js direto da rede, sem passar pelo cache, e aplica o que
+   * houver de novo. É isso que faz uma publicação chegar a quem já tem a página
+   * aberta ou o arquivo antigo em cache.
+   */
+  let lastCheck = 0;
+  async function checkForUpdates(options) {
+    if (!/^https?:$/.test(location.protocol)) return; // file:// não permite fetch
+    const now = Date.now();
+    if (!(options && options.force) && now - lastCheck < 60000) return;
+    lastCheck = now;
+
+    try {
+      const response = await fetch(`data/projetos.js?t=${now}`, { cache: 'no-store' });
+      if (!response.ok) return;
+      const text = await response.text();
+
+      const sandbox = {};
+      new Function('window', text)(sandbox);
+      const fresh = sandbox.OPSBOARD_SNAPSHOT;
+      if (!fresh || !fresh.publishedAt || !Array.isArray(fresh.projects) || !fresh.projects.length) return;
+
+      if (consumeSnapshot(fresh)) {
+        render();
+        // Em publicação forçada o aviso já foi dado por consumeSnapshot.
+        if (!fresh.force && !(options && options.silent)) {
+          UI.toast('Painel atualizado com a versão publicada.', 'ok');
+        }
+      }
+    } catch (err) {
+      // Sem rede ou arquivo indisponível: segue com o que já está carregado.
+      console.warn('Não foi possível verificar atualizações do snapshot.', err);
+    }
   }
 
   /* ---------------------------------------------------------
@@ -256,9 +300,20 @@
     if (!Store.HAS_LS) {
       UI.toast('Este navegador está bloqueando o armazenamento local. As alterações valem só para esta aba — exporte um backup em Configurações.', 'warn', 9000);
     }
+
+    // Revalida a versão publicada logo na abertura e sempre que a aba volta ao foco.
+    checkForUpdates({ force: true, silent: true });
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) checkForUpdates();
+    });
+    global.addEventListener('focus', () => checkForUpdates());
   }
 
-  global.App = { render, rerender, refreshChrome, setTheme, setProjectFilters, get route() { return current; } };
+  global.App = {
+    render, rerender, refreshChrome, setTheme, setProjectFilters,
+    checkForUpdates,
+    get route() { return current; }
+  };
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
   else boot();

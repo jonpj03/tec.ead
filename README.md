@@ -303,10 +303,16 @@ painel**, existe o snapshot publicado:
 Como se comporta para quem visita:
 
 - Visitante novo, ou que nunca editou nada: recebe a versão publicada automaticamente.
-- Visitante que fez alterações no próprio navegador: vê um aviso de que há versão mais recente, com
-  a escolha entre atualizar (substituindo o que ele mexeu) e manter o dele. Nada é sobrescrito sem
-  consentimento.
+- Visitante que fez alterações no próprio navegador: depende da caixa **"Forçar atualização em todos
+  os navegadores"**, marcada por padrão ao gerar o snapshot. Com ela marcada, todos passam a ver a
+  sua versão e são avisados disso. Desmarcada, cada pessoa escolhe entre atualizar e manter o que
+  fez.
 - A preferência de tema de cada pessoa é sempre preservada.
+
+**Como a atualização chega:** a aplicação consulta o `data/projetos.js` direto na rede, com
+`cache: no-store`, na abertura e sempre que a aba volta ao foco (no máximo uma consulta por minuto).
+Isso contorna o cache do navegador e alcança até quem deixou a página aberta — ninguém precisa dar
+Ctrl+F5. Aberto pelo `file://`, sem servidor, a verificação é ignorada e vale o arquivo local.
 
 O snapshot é uma **foto**, não um painel colaborativo: edições feitas por quem visita ficam apenas
 no navegador dessa pessoa e desaparecem quando você publica a próxima versão. Para edição

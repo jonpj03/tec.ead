@@ -133,6 +133,12 @@
             <input class="input" id="snapshotLabel" placeholder="Identificação da versão (ex.: Status de setembro)" style="max-width:340px">
             <button class="btn btn--primary" id="makeSnapshot">${icon('upload', 'ico--sm')} Gerar snapshot para publicação</button>
           </div>
+          <label class="row gap-8 mt-16" style="cursor:pointer">
+            <span class="checkbox"><input type="checkbox" id="snapshotForce" checked>
+              <span class="checkbox__box">${icon('check')}</span></span>
+            <span class="small">Forçar atualização em todos os navegadores
+              <span class="dim">— substitui também as alterações que outras pessoas tenham feito localmente</span></span>
+          </label>
           <p class="tiny dim mt-16">O snapshot é somente leitura para quem visita: as pessoas podem
           navegar, filtrar e usar o analisador, e se editarem algo a alteração fica apenas no navegador
           delas até você publicar a próxima versão.</p>
@@ -288,6 +294,7 @@
       const payload = {
         publishedAt,
         label,
+        force: $('#snapshotForce', view).checked,
         projects: list,
         settings: Store.settings()
       };
@@ -295,6 +302,7 @@
    data/projetos.js — snapshot publicado
    Gerado pelo OpsBoard em ${U.fmtDateTime(publishedAt)}${label ? ` — ${label}` : ''}
    ${list.length} ${U.plural(list.length, 'projeto', 'projetos')}.
+   ${payload.force ? 'Publicação forçada: substitui alterações locais dos visitantes.' : 'Visitantes com alterações locais poderão escolher se atualizam.'}
 
    Substitua este arquivo no repositório e publique.
    ========================================================= */
