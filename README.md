@@ -228,6 +228,15 @@ Total de cards, concluídos, em produção, pendentes, atrasados, sem responsáv
 tempo médio de conclusão. Acompanham um resumo operacional em texto (gerado a partir dos números
 reais) e insights automáticos sobre produção, backlog, concentração e cards parados.
 
+### Filtros estratégicos
+Uma barra acima das abas recorta **toda** a análise: busca pelo nome do card, colaborador, lista,
+etiqueta, situação (concluído, em produção, pendente, atrasado, sem responsável) e uma janela de
+datas com início e fim. Os seletores de colaborador, lista e etiqueta são preenchidos com os valores
+reais do arquivo e mostram quantos cards cada um tem. Quando a janela de datas é preenchida, ela
+substitui o seletor de 7/30/90 dias e passa a definir também as séries temporais e a comparação com
+o período anterior. O rodapé da barra informa quantos cards restaram no recorte, e o relatório HTML
+e o JSON exportados registram quais filtros estavam aplicados.
+
 ### Comparação de períodos
 O período selecionado (7, 30, 90 dias ou tudo) é comparado com o período imediatamente anterior de
 mesmo tamanho, com variação percentual em cada indicador.

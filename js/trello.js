@@ -13,7 +13,9 @@
     fileSize: 0,
     parsed: null,     // { headers, rows, delimiter, warnings }
     mapping: null,
-    cards: null,
+    allCards: null,   // todos os cards interpretados do arquivo
+    cards: null,      // recorte atual (allCards após os filtros estratégicos)
+    filters: null,
     caps: null,
     result: null,
     idDerivedCreated: 0,
@@ -29,6 +31,8 @@
       agingCritical: Number(t.agingCritical) || 14,
       period: state.config ? state.config.period : (t.defaultPeriod || 30),
       granularity: state.config ? state.config.granularity : 'auto',
+      from: state.filters ? state.filters.from : '',
+      to: state.filters ? state.filters.to : '',
       doneKeywords: t.doneKeywords,
       doingKeywords: t.doingKeywords,
       treatArchivedAsDone: !!t.treatArchivedAsDone
@@ -215,28 +219,72 @@
     $('#runAnalysis', view).addEventListener('click', () => runAnalysis(view));
   }
 
+  function emptyFilters() {
+    return { members: [], labels: [], lists: [], status: '', search: '', from: '', to: '' };
+  }
+
+  /** Aplica os filtros estratégicos sobre o conjunto completo de cards. */
+  function applyFilters(cards, f) {
+    if (!f) return cards.slice();
+    const q = U.normalize(f.search || '');
+    return cards.filter(card => {
+      if (f.members.length) {
+        const hit = card.members.length
+          ? card.members.some(m => f.members.includes(m))
+          : f.members.includes('__none__');
+        if (!hit) return false;
+      }
+      if (f.labels.length) {
+        const hit = card.labels.length
+          ? card.labels.some(l => f.labels.includes(l))
+          : f.labels.includes('__none__');
+        if (!hit) return false;
+      }
+      if (f.lists.length && !f.lists.includes(card.list || '__none__')) return false;
+      if (f.status) {
+        if (f.status === 'overdue') { if (!card.isOverdue) return false; }
+        else if (f.status === 'unassigned') { if (card.members.length) return false; }
+        else if (card.status !== f.status) return false;
+      }
+      if (q && !U.normalize(card.name).includes(q)) return false;
+      return true;
+    });
+  }
+
+  /** Quantos filtros estão ativos (o período não conta, ele tem seu próprio seletor). */
+  function activeFilterCount(f) {
+    if (!f) return 0;
+    return f.members.length + f.labels.length + f.lists.length +
+      (f.status ? 1 : 0) + (f.search ? 1 : 0) + (f.from ? 1 : 0) + (f.to ? 1 : 0);
+  }
+
   function runAnalysis(view) {
     const config = currentConfig();
     const built = Analytics.buildCards(state.parsed.rows, state.mapping, config);
-    state.cards = built.cards;
+    state.allCards = built.cards;
+    state.filters = emptyFilters();
+    state.cards = built.cards.slice();
     state.idDerivedCreated = built.idDerivedCreated;
-    state.caps = Analytics.buildCapabilities(state.cards, state.mapping, built.idDerivedCreated);
+    // As capacidades descrevem o arquivo, então são medidas sobre o conjunto completo.
+    state.caps = Analytics.buildCapabilities(state.allCards, state.mapping, built.idDerivedCreated);
     state.config = { period: config.period, granularity: config.granularity };
-    state.result = Analytics.analyze(state.cards, state.mapping, config, state.caps);
+    state.result = Analytics.analyze(state.cards, state.mapping, currentConfig(), state.caps);
     renderAnalysis(view);
     UI.toast('Análise gerada a partir do arquivo.', 'ok');
   }
 
   function recompute(view) {
-    const config = currentConfig();
-    state.result = Analytics.analyze(state.cards, state.mapping, config, state.caps);
+    state.cards = applyFilters(state.allCards, state.filters);
+    state.table.page = 1;
+    state.result = Analytics.analyze(state.cards, state.mapping, currentConfig(), state.caps);
     renderAnalysis(view);
   }
 
   function resetAnalysis() {
-    state.parsed = null; state.cards = null; state.result = null;
-    state.mapping = null; state.caps = null; state.config = null;
+    state.parsed = null; state.cards = null; state.allCards = null; state.result = null;
+    state.mapping = null; state.caps = null; state.config = null; state.filters = null;
     state.fileName = ''; state.tab = 'overview';
+    state.table = { search: '', sort: null, dir: 'asc', page: 1, hidden: new Set() };
   }
 
   /* ---------------------------------------------------------
@@ -266,6 +314,7 @@
           <div class="segmented" id="periodPicker">
             ${[7, 30, 90].map(d => `<button data-period="${d}" class="${String(config.period) === String(d) ? 'is-on' : ''}">${d} dias</button>`).join('')}
             <button data-period="all" class="${config.period === 'all' ? 'is-on' : ''}">Todo período</button>
+            ${config.period === 'custom' ? `<button data-period="custom" class="is-on">Personalizado</button>` : ''}
           </div>
           <div class="dropdown">
             <button class="btn btn--sm" id="exportBtn">${icon('download', 'ico--sm')} Exportar análise ${icon('chevron-down', 'ico--sm')}</button>
@@ -281,6 +330,8 @@
         </div>
       </div>
 
+      ${filterBar()}
+
       <div class="tabs no-print" id="analysisTabs">
         ${TABS.map(t => `<button data-tab="${t.key}" class="${state.tab === t.key ? 'is-on' : ''}">${esc(t.label)}</button>`).join('')}
       </div>
@@ -288,6 +339,7 @@
       <div class="mt-16" id="tabContent"></div>`;
 
     renderTab(view);
+    bindFilterBar(view);
 
     $('#newFile', view).addEventListener('click', async () => {
       const ok = await UI.confirm({
@@ -302,6 +354,10 @@
     view.querySelectorAll('#periodPicker button').forEach(btn => {
       btn.addEventListener('click', () => {
         const value = btn.dataset.period;
+        if (value === 'custom') return;
+        // Escolher um período pronto descarta a janela de datas dos filtros.
+        state.filters.from = '';
+        state.filters.to = '';
         state.config.period = value === 'all' ? 'all' : Number(value);
         recompute(view);
       });
@@ -322,8 +378,191 @@
     });
   }
 
+  /* ---------------------------------------------------------
+     Filtros estratégicos (recortam a análise inteira)
+     --------------------------------------------------------- */
+  const STATUS_OPTIONS = [
+    ['', 'Qualquer situação'],
+    ['done', 'Concluídos'],
+    ['doing', 'Em produção'],
+    ['pending', 'Pendentes'],
+    ['overdue', 'Atrasados'],
+    ['unassigned', 'Sem responsável']
+  ];
+
+  /** Valores distintos disponíveis no arquivo, com contagem, para montar os seletores. */
+  function facet(kind) {
+    const counts = new Map();
+    let none = 0;
+    state.allCards.forEach(card => {
+      if (kind === 'lists') {
+        const key = card.list || '';
+        if (!key) none++; else counts.set(key, (counts.get(key) || 0) + 1);
+        return;
+      }
+      const values = kind === 'members' ? card.members : card.labels;
+      if (!values.length) { none++; return; }
+      values.forEach(v => counts.set(v, (counts.get(v) || 0) + 1));
+    });
+    const list = [...counts.entries()]
+      .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'pt-BR'))
+      .map(([value, count]) => ({ value, count }));
+    if (none) {
+      const label = kind === 'members' ? 'Sem responsável' : kind === 'labels' ? 'Sem etiqueta' : 'Sem lista';
+      list.push({ value: '__none__', label, count: none });
+    }
+    return list;
+  }
+
+  function facetDropdown(kind, buttonLabel, selected) {
+    const options = facet(kind);
+    if (!options.length) return '';
+    const count = selected.length;
+    return `<div class="dropdown">
+      <button class="btn btn--sm ${count ? 'btn--on' : ''}" data-facet-btn="${kind}">
+        ${esc(buttonLabel)}${count ? ` <span class="chip chip--count num">${count}</span>` : ''} ${icon('chevron-down', 'ico--sm')}
+      </button>
+      <div class="dropdown__menu dropdown__menu--scroll" data-facet-menu="${kind}">
+        ${options.map(o => `<label class="col-toggle">
+          <span class="checkbox"><input type="checkbox" data-facet="${kind}" value="${esc(o.value)}"
+            ${selected.includes(o.value) ? 'checked' : ''}>
+          <span class="checkbox__box">${icon('check')}</span></span>
+          <span class="truncate">${esc(o.label || o.value)}</span>
+          <span class="tiny dim num">${U.num(o.count)}</span>
+        </label>`).join('')}
+      </div>
+    </div>`;
+  }
+
+  function filterBar() {
+    const f = state.filters, caps = state.caps;
+    const active = activeFilterCount(f);
+    const total = state.allCards.length;
+    const shown = state.cards.length;
+
+    return `<div class="panel filter-bar no-print" id="filterBar">
+      <div class="filter-bar__row">
+        <div class="search-box">${icon('search')}
+          <input class="input input--search" id="fltSearch" placeholder="Buscar pelo nome do card"
+                 value="${esc(f.search)}"></div>
+
+        ${caps.members.ok ? facetDropdown('members', 'Colaborador', f.members) : ''}
+        ${caps.list.ok ? facetDropdown('lists', 'Lista', f.lists) : ''}
+        ${caps.labels.ok ? facetDropdown('labels', 'Etiqueta', f.labels) : ''}
+
+        <select class="select select--sm" id="fltStatus">
+          ${STATUS_OPTIONS.map(([v, label]) =>
+            `<option value="${v}" ${f.status === v ? 'selected' : ''}>${esc(label)}</option>`).join('')}
+        </select>
+
+        <div class="date-range">
+          <label class="tiny dim">De</label>
+          <input class="input input--sm" type="date" id="fltFrom" value="${esc(f.from)}">
+          <label class="tiny dim">até</label>
+          <input class="input input--sm" type="date" id="fltTo" value="${esc(f.to)}">
+        </div>
+
+        ${active ? `<button class="btn btn--sm btn--ghost" id="fltClear">${icon('x', 'ico--sm')} Limpar filtros</button>` : ''}
+      </div>
+
+      <div class="filter-bar__foot">
+        <span class="tiny ${active ? '' : 'dim'}">
+          ${active
+            ? `Analisando <b class="num">${U.num(shown)}</b> de <b class="num">${U.num(total)}</b> cards — todos os números abaixo respeitam este recorte.`
+            : `Analisando os <b class="num">${U.num(total)}</b> cards do arquivo. Use os filtros para recortar por colaborador, etapa, situação ou janela de datas.`}
+        </span>
+        ${(f.from || f.to) ? `<span class="tiny dim">A janela de datas também define o período das séries e da comparação.</span>` : ''}
+      </div>
+    </div>`;
+  }
+
+  function bindFilterBar(view) {
+    const bar = $('#filterBar', view);
+    if (!bar) return;
+    const f = state.filters;
+
+    const search = $('#fltSearch', bar);
+    search.addEventListener('input', U.debounce(e => {
+      f.search = e.target.value;
+      recompute(view);
+      const next = $('#fltSearch', view);
+      if (next) { next.focus(); next.setSelectionRange(next.value.length, next.value.length); }
+    }, 300));
+
+    bar.querySelectorAll('[data-facet-btn]').forEach(btn => {
+      const kind = btn.dataset.facetBtn;
+      const menu = bar.querySelector(`[data-facet-menu="${kind}"]`);
+      UI.attachDropdown(btn, menu);
+    });
+
+    bar.querySelectorAll('[data-facet]').forEach(cb => {
+      cb.addEventListener('change', () => {
+        const kind = cb.dataset.facet;
+        const value = cb.value;
+        const list = f[kind];
+        const at = list.indexOf(value);
+        if (cb.checked && at === -1) list.push(value);
+        else if (!cb.checked && at > -1) list.splice(at, 1);
+        recompute(view);
+      });
+    });
+
+    $('#fltStatus', bar).addEventListener('change', e => {
+      f.status = e.target.value;
+      recompute(view);
+    });
+
+    const from = $('#fltFrom', bar), to = $('#fltTo', bar);
+    const onDate = () => {
+      if (from.value && to.value && from.value > to.value) {
+        UI.toast('A data inicial é posterior à final — as duas foram invertidas.', 'warn', 4500);
+        const swap = from.value; from.value = to.value; to.value = swap;
+      }
+      f.from = from.value;
+      f.to = to.value;
+      state.config.period = (f.from || f.to) ? 'custom' : (Store.settings().trello.defaultPeriod || 30);
+      recompute(view);
+    };
+    from.addEventListener('change', onDate);
+    to.addEventListener('change', onDate);
+
+    const clear = $('#fltClear', bar);
+    if (clear) {
+      clear.addEventListener('click', () => {
+        state.filters = emptyFilters();
+        state.config.period = Store.settings().trello.defaultPeriod || 30;
+        recompute(view);
+        UI.toast('Filtros removidos.', 'ok');
+      });
+    }
+  }
+
+  /** Descrição legível do recorte, usada nos relatórios e exportações. */
+  function filterDescription() {
+    const f = state.filters;
+    if (!f || !activeFilterCount(f)) return '';
+    const parts = [];
+    const names = list => list.map(v => v === '__none__' ? 'sem valor' : v).join(', ');
+    if (f.members.length) parts.push(`colaborador: ${names(f.members)}`);
+    if (f.lists.length) parts.push(`lista: ${names(f.lists)}`);
+    if (f.labels.length) parts.push(`etiqueta: ${names(f.labels)}`);
+    if (f.status) parts.push(`situação: ${(STATUS_OPTIONS.find(o => o[0] === f.status) || [, f.status])[1].toLowerCase()}`);
+    if (f.search) parts.push(`busca: "${f.search}"`);
+    if (f.from || f.to) {
+      parts.push(`janela: ${f.from ? U.fmtDate(f.from) : 'início do arquivo'} a ${f.to ? U.fmtDate(f.to) : 'hoje'}`);
+    }
+    return parts.join(' · ');
+  }
+
   function renderTab(view) {
     const host = $('#tabContent', view);
+    if (!state.cards.length) {
+      host.innerHTML = `<div class="panel"><div class="panel__body">
+        ${UI.empty('filter', 'Nenhum card corresponde aos filtros',
+          'Nenhuma métrica é exibida porque não há dados no recorte atual. Remova algum filtro para voltar a ver a análise.')}
+      </div></div>`;
+      return;
+    }
     const renderers = {
       overview: tabOverview, team: tabTeam, timeline: tabTimeline,
       backlog: tabBacklog, efficiency: tabEfficiency, raw: tabRaw
@@ -791,6 +1030,11 @@
     const headers = state.parsed.headers;
     const q = U.normalize(state.table.search);
     let rows = state.parsed.rows;
+    // O recorte estratégico vale também para os dados brutos e para a exportação.
+    if (activeFilterCount(state.filters)) {
+      const allowed = new Set(state.cards.map(c => c.rowNumber));
+      rows = rows.filter(row => allowed.has(row.__row));
+    }
     if (q) {
       rows = rows.filter(row => headers.some(h => U.normalize(row[h]).includes(q)));
     }
@@ -892,7 +1136,7 @@
     });
     host.querySelectorAll('tbody tr').forEach(tr => {
       tr.addEventListener('click', () => {
-        const card = state.cards.find(c => c.rowNumber === +tr.dataset.row);
+        const card = state.allCards.find(c => c.rowNumber === +tr.dataset.row);
         if (card) openCard(card.index);
       });
     });
@@ -911,7 +1155,7 @@
      Detalhe do card
      --------------------------------------------------------- */
   function openCard(index) {
-    const card = state.cards[index];
+    const card = state.allCards[index];
     if (!card) return;
     const statusLabel = { done: 'Concluído', doing: 'Em produção', pending: 'Pendente' }[card.status];
     const statusColor = { done: 'var(--ok)', doing: 'var(--info)', pending: 'var(--warn)' }[card.status];
@@ -971,6 +1215,11 @@
         arquivo: state.fileName,
         geradoEm: new Date().toISOString(),
         periodo: { de: r.range.start.toISOString(), ate: r.range.end.toISOString(), selecao: config.period },
+        recorte: {
+          filtrosAplicados: filterDescription() || 'nenhum',
+          cardsNoRecorte: state.cards.length,
+          cardsNoArquivo: state.allCards.length
+        },
         mapeamentoDeColunas: state.mapping,
         totais: r.totals,
         throughput: r.throughput,
@@ -1067,6 +1316,8 @@
   <h1>Relatório de produção</h1>
   <p class="meta">Arquivo: ${esc(state.fileName)} · Gerado em ${esc(U.fmtDateTime(new Date()))} ·
     Período analisado: ${esc(U.fmtDate(r.range.start))} a ${esc(U.fmtDate(r.range.end))}</p>
+  ${filterDescription() ? `<p class="meta"><b>Recorte aplicado</b> — ${esc(filterDescription())}.
+    Os números abaixo consideram ${U.num(state.cards.length)} de ${U.num(state.allCards.length)} cards do arquivo.</p>` : ''}
 
   <div class="kpis">
     <div class="kpi"><span>Total de cards</span><b>${U.num(t.total)}</b></div>

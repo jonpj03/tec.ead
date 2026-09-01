@@ -239,9 +239,20 @@
   /* ---------------------------------------------------------
      5) Séries temporais
      --------------------------------------------------------- */
-  function buildRange(days, cards) {
-    const end = U.startOfDay(new Date());
+  function buildRange(days, cards, config) {
+    let end = U.startOfDay(new Date());
     let start;
+    // Janela informada manualmente nos filtros (data inicial e/ou final).
+    if (days === 'custom') {
+      const from = U.parseDate((config && config.from) || '');
+      const to = U.parseDate((config && config.to) || '');
+      const dates = cards.map(c => c.created || c.completed).filter(Boolean);
+      const first = dates.length ? U.startOfDay(new Date(Math.min.apply(null, dates))) : U.startOfDay(new Date());
+      start = from ? U.startOfDay(from) : first;
+      end = to ? U.startOfDay(to) : end;
+      if (start > end) { const swap = start; start = end; end = swap; }
+      return { start, end };
+    }
     if (days === 'all') {
       const dates = cards.map(c => c.created || c.completed).filter(Boolean);
       start = dates.length ? U.startOfDay(new Date(Math.min.apply(null, dates))) : new Date(end);
@@ -292,7 +303,7 @@
     const overdue = cards.filter(c => c.isOverdue);
     const unassigned = cards.filter(c => !c.members.length);
 
-    const range = buildRange(config.period, cards);
+    const range = buildRange(config.period, cards, config);
     const granularity = pickGranularity(range, config.granularity);
     const keys = periodSeries(range, granularity);
 
@@ -455,7 +466,9 @@
     const lines = [];
     const periodLabel = config.period === 'all'
       ? 'em todo o período do arquivo'
-      : `nos últimos ${config.period} dias`;
+      : config.period === 'custom'
+        ? `entre ${U.fmtDate(result.range.start)} e ${U.fmtDate(result.range.end)}`
+        : `nos últimos ${config.period} dias`;
 
     const cardsLabel = `<b>${U.num(t.total)}</b> ${U.plural(t.total, 'card', 'cards')}`;
     lines.push(t.lists > 0

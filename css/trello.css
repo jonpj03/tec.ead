@@ -134,3 +134,51 @@
   background: var(--surface-3); font-size: 12.5px;
 }
 .file-chip .ico { color: var(--accent); }
+
+/* ---------------- Filtros estratégicos ---------------- */
+.filter-bar { margin-bottom: 14px; }
+.filter-bar__row {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+  padding: 12px 14px;
+}
+.filter-bar__row .search-box { flex: 1 1 220px; min-width: 180px; }
+.filter-bar__foot {
+  display: flex; flex-wrap: wrap; gap: 4px 14px;
+  padding: 9px 14px;
+  border-top: 1px solid var(--line);
+  background: var(--surface-2);
+  border-radius: 0 0 var(--r-lg) var(--r-lg);
+}
+.filter-bar__foot b { font-weight: 600; }
+
+/* Botão de faceta com seleção ativa */
+.btn--on {
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
+  background: color-mix(in srgb, var(--accent) 10%, var(--surface));
+  color: var(--accent);
+}
+.chip--count {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 17px; height: 17px; padding: 0 5px; margin-left: 2px;
+  border-radius: 9px; font-size: 10.5px; line-height: 1;
+  background: var(--accent); color: #fff;
+}
+
+.dropdown__menu--scroll { max-height: 300px; overflow-y: auto; min-width: 236px; }
+.dropdown__menu--scroll .col-toggle { padding: 5px 6px; border-radius: var(--r-sm); }
+.dropdown__menu--scroll .col-toggle:hover { background: var(--surface-3); }
+.dropdown__menu--scroll .col-toggle .truncate { flex: 1 1 auto; }
+
+.date-range {
+  display: flex; align-items: center; gap: 6px;
+  padding: 0 4px;
+}
+.date-range .input { width: 148px; }
+.input--sm, .select--sm { height: 34px; font-size: 12.5px; padding-top: 0; padding-bottom: 0; }
+
+@media (max-width: 640px) {
+  .filter-bar__row { padding: 10px; }
+  .filter-bar__row > * { flex: 1 1 100%; }
+  .date-range { flex-wrap: wrap; }
+  .date-range .input { flex: 1 1 120px; width: auto; }
+}
