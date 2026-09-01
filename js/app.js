@@ -186,14 +186,67 @@
   global.addEventListener('hashchange', render);
 
   /* ---------------------------------------------------------
+     Snapshot publicado (data/projetos.js)
+     --------------------------------------------------------- */
+  function snapshot() {
+    const s = global.OPSBOARD_SNAPSHOT;
+    if (!s || !s.publishedAt || !Array.isArray(s.projects) || !s.projects.length) return null;
+    return s;
+  }
+
+  /** Grava o conteúdo publicado por cima do que existe no navegador. */
+  function applySnapshot(snap) {
+    if (snap.settings && typeof snap.settings === 'object') {
+      // O tema é preferência de quem visita, não de quem publicou.
+      const localTheme = Store.settings().theme;
+      Store.saveSettings(Object.assign({}, snap.settings, { theme: localTheme }));
+    }
+    Store.setProjects(snap.projects, { fromSnapshot: true });
+    Store.setMeta({ snapshotVersion: snap.publishedAt, editedLocally: false });
+  }
+
+  function handleSnapshot() {
+    const snap = snapshot();
+    if (!snap) return false;
+
+    const meta = Store.meta();
+    const isNew = meta.snapshotVersion !== snap.publishedAt;
+    if (!isNew) return false;
+
+    // Visitante que nunca editou nada: recebe a versão publicada direto.
+    if (!Store.isInitialized() || !meta.editedLocally) {
+      applySnapshot(snap);
+      return true;
+    }
+
+    // Já editou por conta própria: decide o que fazer, nada é sobrescrito sem aviso.
+    UI.toast(
+      `Há uma versão publicada mais recente${snap.label ? ` (${snap.label})` : ''}. ` +
+      'Suas alterações locais serão substituídas se você atualizar.',
+      'info', 0, {
+        actionLabel: 'Atualizar',
+        onAction() {
+          applySnapshot(snap);
+          render();
+          UI.toast('Painel atualizado com a versão publicada.', 'ok');
+        },
+        dismissLabel: 'Manter o meu',
+        onDismiss() { Store.setMeta({ snapshotVersion: snap.publishedAt }); }
+      });
+    return false;
+  }
+
+  /* ---------------------------------------------------------
      Inicialização
      --------------------------------------------------------- */
   function boot() {
     applyTheme();
 
-    // Primeira visita: carrega os projetos de demonstração.
-    if (!Store.isInitialized()) {
-      Store.setProjects(Seed.projects());
+    const fromSnapshot = handleSnapshot();
+
+    // Primeira visita sem snapshot publicado: carrega os projetos de demonstração.
+    if (!fromSnapshot && !Store.isInitialized()) {
+      Store.setProjects(Seed.projects(), { fromSnapshot: true });
       Store.setPref('demoDismissed', false);
     }
 

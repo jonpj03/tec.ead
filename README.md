@@ -17,6 +17,8 @@ Duas frentes na mesma plataforma:
 ```
 opsboard/
 ├── index.html                 Casca da SPA: sidebar, topbar, sprite de ícones SVG, contêineres
+├── data/
+│   └── projetos.js            Snapshot publicado (opcional) — gerado em Configurações
 ├── staticwebapp.config.json   Config do Azure Static Web Apps (fallback de rota)
 ├── web.config                 Config do Azure App Service / IIS (MIME types, documento padrão)
 ├── css/
@@ -286,6 +288,33 @@ Como exportar do Trello: no quadro, **Menu → Mais → Imprimir e exportar → 
 equivalentes também funciona, inclusive editado no Excel.
 
 ---
+
+## Publicando um painel para a equipe ver (snapshot)
+
+Como não há backend, os dados de cada pessoa ficam no navegador dela. Para que **todos vejam o mesmo
+painel**, existe o snapshot publicado:
+
+1. Cadastre e atualize os projetos normalmente, no seu navegador.
+2. Vá em **Configurações → Publicar o painel**, dê um nome à versão (opcional) e clique em
+   **Gerar snapshot para publicação**. Baixa um arquivo `projetos.js`.
+3. Substitua o `data/projetos.js` do repositório por esse arquivo e faça o commit.
+4. Em um ou dois minutos, quem abrir o endereço publicado verá os seus projetos.
+
+Como se comporta para quem visita:
+
+- Visitante novo, ou que nunca editou nada: recebe a versão publicada automaticamente.
+- Visitante que fez alterações no próprio navegador: vê um aviso de que há versão mais recente, com
+  a escolha entre atualizar (substituindo o que ele mexeu) e manter o dele. Nada é sobrescrito sem
+  consentimento.
+- A preferência de tema de cada pessoa é sempre preservada.
+
+O snapshot é uma **foto**, não um painel colaborativo: edições feitas por quem visita ficam apenas
+no navegador dessa pessoa e desaparecem quando você publica a próxima versão. Para edição
+compartilhada de verdade seria preciso um banco de dados (por exemplo Supabase), substituindo a
+camada `storage.js`.
+
+Enquanto o `data/projetos.js` estiver com `publishedAt: null`, a aplicação ignora o snapshot e se
+comporta de forma totalmente local, com os projetos de demonstração na primeira visita.
 
 ## Notas de privacidade
 

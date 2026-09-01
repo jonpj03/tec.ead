@@ -16,6 +16,7 @@
   function render(view) {
     const s = Store.settings();
     const projects = Store.projects();
+    const meta = Store.meta();
 
     view.innerHTML = `
       <div class="grid grid--2" style="align-items:start">
@@ -117,6 +118,27 @@
         <div class="panel__foot row row--between">
           <span class="tiny dim">As alterações valem para a próxima análise gerada.</span>
           <button class="btn btn--primary btn--sm" id="saveTrello">Salvar preferências do Trello</button>
+        </div>
+      </div>
+
+      <!-- Publicação -->
+      <div class="panel mt-16">
+        <div class="panel__head"><div><h2>Publicar o painel</h2>
+          <p class="tiny dim">Gera o arquivo <code>data/projetos.js</code> com uma foto dos seus projetos</p></div></div>
+        <div class="panel__body">
+          <p class="small muted">Envie o arquivo gerado para o repositório, substituindo
+          <code>data/projetos.js</code>. Quem abrir o site publicado passa a ver estes projetos sem
+          precisar cadastrar nada. Repita sempre que quiser atualizar o que está no ar.</p>
+          <div class="row gap-8 row--wrap mt-16">
+            <input class="input" id="snapshotLabel" placeholder="Identificação da versão (ex.: Status de setembro)" style="max-width:340px">
+            <button class="btn btn--primary" id="makeSnapshot">${icon('upload', 'ico--sm')} Gerar snapshot para publicação</button>
+          </div>
+          <p class="tiny dim mt-16">O snapshot é somente leitura para quem visita: as pessoas podem
+          navegar, filtrar e usar o analisador, e se editarem algo a alteração fica apenas no navegador
+          delas até você publicar a próxima versão.</p>
+          ${meta.snapshotVersion ? `<div class="callout mt-16">${icon('info')}
+            <div>Este navegador está com a versão publicada de <b>${esc(U.fmtDateTime(meta.snapshotVersion))}</b>.
+            ${meta.editedLocally ? 'Há alterações locais feitas depois disso.' : 'Sem alterações locais desde então.'}</div></div>` : ''}
         </div>
       </div>
 
@@ -255,6 +277,34 @@
       });
       render(view);
       UI.toast('Preferências do Trello salvas.', 'ok');
+    });
+
+    /* --- publicação --- */
+    $('#makeSnapshot', view).addEventListener('click', () => {
+      const list = Store.projects();
+      if (!list.length) return UI.toast('Não há projetos para publicar.', 'warn');
+      const label = $('#snapshotLabel', view).value.trim();
+      const publishedAt = new Date().toISOString();
+      const payload = {
+        publishedAt,
+        label,
+        projects: list,
+        settings: Store.settings()
+      };
+      const file = `/* =========================================================
+   data/projetos.js — snapshot publicado
+   Gerado pelo OpsBoard em ${U.fmtDateTime(publishedAt)}${label ? ` — ${label}` : ''}
+   ${list.length} ${U.plural(list.length, 'projeto', 'projetos')}.
+
+   Substitua este arquivo no repositório e publique.
+   ========================================================= */
+window.OPSBOARD_SNAPSHOT = ${JSON.stringify(payload, null, 2)};
+`;
+      U.downloadFile('projetos.js', file, 'application/javascript');
+      // Este navegador já está na versão que acabou de ser publicada.
+      Store.setMeta({ snapshotVersion: publishedAt, editedLocally: false });
+      render(view);
+      UI.toast('Snapshot gerado. Substitua data/projetos.js no repositório.', 'ok', 6000);
     });
 
     /* --- dados --- */

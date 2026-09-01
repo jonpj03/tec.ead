@@ -10,21 +10,43 @@
   const toastRoot = $('#toasts');
   const TOAST_ICONS = { ok: 'check', info: 'info', warn: 'alert', error: 'alert' };
 
-  function toast(message, type, duration) {
+  /**
+   * @param {string} message
+   * @param {'info'|'ok'|'warn'|'error'} [type]
+   * @param {number} [duration] 0 mantém o aviso na tela até uma ação do usuário
+   * @param {{actionLabel?:string, onAction?:Function, dismissLabel?:string, onDismiss?:Function}} [options]
+   */
+  function toast(message, type, duration, options) {
     const kind = type || 'info';
+    const opts = options || {};
     const node = html(`
       <div class="toast toast--${esc(kind)}" role="status">
         ${icon(TOAST_ICONS[kind] || 'info')}
-        <div class="grow">${esc(message)}</div>
+        <div class="grow">
+          <div>${esc(message)}</div>
+          ${opts.actionLabel ? `<div class="toast__actions">
+            <button class="btn btn--xs btn--primary" data-toast-action>${esc(opts.actionLabel)}</button>
+            ${opts.dismissLabel ? `<button class="btn btn--xs" data-toast-dismiss>${esc(opts.dismissLabel)}</button>` : ''}
+          </div>` : ''}
+        </div>
         <button class="icon-btn icon-btn--sm" aria-label="Fechar">${icon('x', 'ico--sm')}</button>
       </div>`);
     const close = () => {
       node.classList.add('is-out');
       setTimeout(() => node.remove(), 220);
     };
-    node.querySelector('button').addEventListener('click', close);
+    node.querySelector('button[aria-label="Fechar"]').addEventListener('click', () => {
+      if (opts.onDismiss) opts.onDismiss();
+      close();
+    });
+    const action = node.querySelector('[data-toast-action]');
+    if (action) action.addEventListener('click', () => { close(); opts.onAction && opts.onAction(); });
+    const dismiss = node.querySelector('[data-toast-dismiss]');
+    if (dismiss) dismiss.addEventListener('click', () => { close(); opts.onDismiss && opts.onDismiss(); });
+
     toastRoot.appendChild(node);
-    setTimeout(close, duration || 3800);
+    // duration === 0 mantém o toast até o usuário decidir
+    if (duration !== 0) setTimeout(close, duration || 3800);
     return close;
   }
 

@@ -489,3 +489,6 @@ tr:hover .row-actions, tr:focus-within .row-actions { opacity: 1; }
 .swatch::-webkit-color-swatch-wrapper { padding: 2px; }
 .swatch::-webkit-color-swatch { border: none; border-radius: 6px; }
 .swatch::-moz-color-swatch { border: none; border-radius: 6px; }
+
+/* Ações dentro de um toast persistente */
+.toast__actions { display: flex; gap: 6px; margin-top: 8px; }

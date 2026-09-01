@@ -158,6 +158,7 @@
   /* ---------- Estado em memória ---------- */
   let settings = null;
   let projects = null;
+  let meta = null;
   const listeners = new Set();
 
   function loadSettings() {
@@ -180,6 +181,7 @@
     projects = readJSON(KEYS.projects, null);
     if (!Array.isArray(projects)) projects = null; // null = nunca inicializado (seed pode entrar)
     if (projects) projects = projects.map(normalizeProject);
+    meta = readJSON(KEYS.meta, null) || { snapshotVersion: null, editedLocally: false };
   }
   init();
 
@@ -189,10 +191,25 @@
     });
   }
 
+  function markEdited() {
+    if (!meta.editedLocally) {
+      meta.editedLocally = true;
+      writeJSON(KEYS.meta, meta);
+    }
+  }
+
   /* ---------- API pública ---------- */
   const Store = {
     HAS_LS,
     SCHEMA_VERSION,
+
+    /* --- Metadados locais (controle do snapshot publicado) --- */
+    meta() { return Object.assign({}, meta); },
+    setMeta(patch) {
+      meta = Object.assign({}, meta, patch || {});
+      writeJSON(KEYS.meta, meta);
+      return meta;
+    },
 
     subscribe(fn) { listeners.add(fn); return () => listeners.delete(fn); },
 
@@ -243,6 +260,8 @@
     setProjects(list, options) {
       projects = (list || []).map(normalizeProject);
       writeJSON(KEYS.projects, projects);
+      // Alterações vindas de um snapshot publicado não contam como edição do visitante.
+      if (!(options && options.fromSnapshot)) markEdited();
       if (!(options && options.silent)) emit('projects', projects);
       return projects;
     },
@@ -272,6 +291,7 @@
       else projects.unshift(normalized);
 
       writeJSON(KEYS.projects, projects);
+      markEdited();
       emit('projects', projects);
       return normalized;
     },
@@ -280,6 +300,7 @@
       if (!projects) return;
       projects = projects.filter(p => p.id !== id);
       writeJSON(KEYS.projects, projects);
+      markEdited();
       emit('projects', projects);
     },
 
@@ -349,6 +370,7 @@
       } catch (e) { /* ignora */ }
       settings = defaultSettings();
       projects = null;
+      meta = { snapshotVersion: null, editedLocally: false };
       emit('reset');
     },
 
