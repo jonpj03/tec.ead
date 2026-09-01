@@ -1,0 +1,199 @@
+/* =========================================================
+   base.css — tokens de design, reset e tipografia
+   Paleta: base ardósia fria + acento índigo.
+   As cores semânticas (verde/âmbar/vermelho) são reservadas
+   para status e criticidade, por isso o acento é índigo.
+   ========================================================= */
+
+:root {
+  /* --- Escala de superfícies (tema claro) --- */
+  --canvas:        #f3f4f8;
+  --surface:       #ffffff;
+  --surface-2:     #f8f9fc;
+  --surface-3:     #eef0f6;
+  --line:          #e2e5ee;
+  --line-strong:   #cdd2e0;
+
+  /* --- Texto --- */
+  --text:          #131829;
+  --text-2:        #4b5468;
+  --text-3:        #79839a;
+
+  /* --- Acento --- */
+  --accent:        #4b5bd6;
+  --accent-hover:  #3d4bbd;
+  --accent-soft:   #eceefc;
+  --accent-line:   #c6ccf6;
+  --on-accent:     #ffffff;
+
+  /* --- Semântica --- */
+  --ok:            #17805a;
+  --ok-soft:       #e2f5ec;
+  --warn:          #a76a10;
+  --warn-soft:     #fdf1dc;
+  --danger:        #c03a3a;
+  --danger-soft:   #fdeaea;
+  --info:          #2a6bb0;
+  --info-soft:     #e6f0fa;
+  --neutral:       #6c7689;
+  --neutral-soft:  #eceef3;
+
+  /* --- Sombras --- */
+  --shadow-sm: 0 1px 2px rgba(16, 22, 40, .06), 0 1px 1px rgba(16, 22, 40, .04);
+  --shadow-md: 0 4px 14px rgba(16, 22, 40, .08), 0 1px 3px rgba(16, 22, 40, .05);
+  --shadow-lg: 0 18px 50px rgba(16, 22, 40, .18), 0 4px 12px rgba(16, 22, 40, .08);
+
+  /* --- Métricas --- */
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 14px;
+  --r-xl: 20px;
+  --sidebar-w: 252px;
+  --topbar-h: 68px;
+  --page-max: 1520px;
+
+  /* --- Tipografia --- */
+  --font-ui: "Inter", "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font-num: "JetBrains Mono", ui-monospace, "SF Mono", "Cascadia Mono", "Roboto Mono", Consolas, monospace;
+
+  --ease: cubic-bezier(.22, .61, .36, 1);
+}
+
+[data-theme="dark"] {
+  --canvas:        #0b0f1c;
+  --surface:       #121829;
+  --surface-2:     #171e31;
+  --surface-3:     #1e263c;
+  --line:          #242d45;
+  --line-strong:   #35405c;
+
+  --text:          #e8ecf6;
+  --text-2:        #a9b2c8;
+  --text-3:        #78829b;
+
+  --accent:        #7b88ef;
+  --accent-hover:  #909bf5;
+  --accent-soft:   #1e2444;
+  --accent-line:   #3a4478;
+  --on-accent:     #0b0f1c;
+
+  --ok:            #45c295;
+  --ok-soft:       #123328;
+  --warn:          #e0a94b;
+  --warn-soft:     #33280f;
+  --danger:        #ef7070;
+  --danger-soft:   #37191c;
+  --info:          #6aaae8;
+  --info-soft:     #14263a;
+  --neutral:       #8b95ac;
+  --neutral-soft:  #1c2438;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .4);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, .45);
+  --shadow-lg: 0 22px 60px rgba(0, 0, 0, .6);
+}
+
+/* ---------------- Reset ---------------- */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--text);
+  font-family: var(--font-ui);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+h1, h2, h3, h4, p, figure, ul, ol { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { background: none; border: 0; cursor: pointer; }
+a { color: inherit; text-decoration: none; }
+svg { display: block; }
+table { border-collapse: collapse; width: 100%; }
+img { max-width: 100%; }
+
+/* Ícones traço */
+.ico {
+  width: 18px; height: 18px;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.ico--sm { width: 15px; height: 15px; }
+.ico--lg { width: 22px; height: 22px; }
+
+/* Números sempre em mono tabular: assinatura tipográfica do produto */
+.num, .kpi__value, td.num, th.num, .metric-value {
+  font-family: var(--font-num);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+  letter-spacing: -.02em;
+}
+
+h1 { font-size: 19px; font-weight: 650; letter-spacing: -.02em; }
+h2 { font-size: 16px; font-weight: 650; letter-spacing: -.015em; }
+h3 { font-size: 14px; font-weight: 620; letter-spacing: -.01em; }
+
+.eyebrow {
+  font-size: 10.5px;
+  font-weight: 650;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+.muted { color: var(--text-2); }
+.dim { color: var(--text-3); }
+.small { font-size: 12.5px; }
+.tiny { font-size: 11.5px; }
+.strong { font-weight: 620; }
+.nowrap { white-space: nowrap; }
+.truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.center { text-align: center; }
+.right { text-align: right; }
+
+/* Foco visível e consistente */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: var(--r-sm);
+}
+
+::selection { background: var(--accent-soft); color: var(--text); }
+
+/* Scrollbars discretas */
+* { scrollbar-width: thin; scrollbar-color: var(--line-strong) transparent; }
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-thumb {
+  background: var(--line-strong);
+  border-radius: 8px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+*::-webkit-scrollbar-track { background: transparent; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    transition-duration: .001ms !important;
+  }
+}
+
+/* Utilitários de layout */
+.row { display: flex; align-items: center; gap: 8px; }
+.row--between { justify-content: space-between; }
+.row--wrap { flex-wrap: wrap; }
+.col { display: flex; flex-direction: column; }
+.grow { flex: 1 1 auto; min-width: 0; }
+.gap-4 { gap: 4px; } .gap-8 { gap: 8px; } .gap-12 { gap: 12px; } .gap-16 { gap: 16px; }
+.mt-8 { margin-top: 8px; } .mt-16 { margin-top: 16px; } .mt-24 { margin-top: 24px; }
+.hidden { display: none !important; }
+/* O atributo hidden precisa vencer os `display` declarados em componentes
+   como .modal-root (display: grid), senão a camada fica visível na carga. */
+[hidden] { display: none !important; }
+.no-scroll { overflow: hidden; }

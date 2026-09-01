@@ -1,0 +1,491 @@
+/* =========================================================
+   components.css — biblioteca de componentes da interface
+   ========================================================= */
+
+/* ---------------- Botões ---------------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+  height: 36px;
+  padding: 0 14px;
+  border-radius: 9px;
+  border: 1px solid var(--line-strong);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 570;
+  white-space: nowrap;
+  transition: background .15s var(--ease), border-color .15s var(--ease),
+              transform .12s var(--ease), box-shadow .15s var(--ease), color .15s var(--ease);
+}
+.btn:hover { background: var(--surface-3); border-color: var(--line-strong); }
+.btn:active { transform: translateY(1px); }
+.btn .ico { width: 16px; height: 16px; }
+
+.btn--primary {
+  background: var(--accent); border-color: var(--accent); color: var(--on-accent);
+  box-shadow: 0 1px 2px rgba(40, 50, 120, .2);
+}
+.btn--primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+.btn--ghost { background: transparent; border-color: transparent; color: var(--text-2); }
+.btn--ghost:hover { background: var(--surface-3); color: var(--text); }
+.btn--danger { color: var(--danger); border-color: color-mix(in srgb, var(--danger) 35%, var(--line)); }
+.btn--danger:hover { background: var(--danger-soft); }
+.btn--sm { height: 30px; padding: 0 10px; font-size: 12.5px; border-radius: 8px; }
+.btn--xs { height: 26px; padding: 0 8px; font-size: 12px; border-radius: 7px; }
+.btn--block { width: 100%; }
+.btn[disabled] { opacity: .5; pointer-events: none; }
+
+.icon-btn {
+  width: 34px; height: 34px;
+  display: grid; place-items: center;
+  border-radius: 9px;
+  color: var(--text-2);
+  transition: background .15s var(--ease), color .15s var(--ease);
+}
+.icon-btn:hover { background: var(--surface-3); color: var(--text); }
+.icon-btn--sm { width: 28px; height: 28px; border-radius: 7px; }
+.icon-btn--danger:hover { background: var(--danger-soft); color: var(--danger); }
+
+/* ---------------- Cards e painéis ---------------- */
+.card, .panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-sm);
+}
+.panel__head {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; padding: 14px 16px; border-bottom: 1px solid var(--line);
+}
+.panel__body { padding: 16px; }
+.panel__body--flush { padding: 0; }
+.panel__foot { padding: 12px 16px; border-top: 1px solid var(--line); background: var(--surface-2); border-radius: 0 0 var(--r-lg) var(--r-lg); }
+
+/* ---------------- KPI ---------------- */
+.kpi {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 15px 16px 14px;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: transform .18s var(--ease), box-shadow .18s var(--ease), border-color .18s var(--ease);
+}
+.kpi--link { cursor: pointer; }
+.kpi--link:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: var(--line-strong); }
+.kpi::after {
+  content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+  background: var(--kpi-color, var(--accent));
+  opacity: .9;
+}
+.kpi__label {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 11.5px; font-weight: 600; letter-spacing: .04em;
+  text-transform: uppercase; color: var(--text-3);
+}
+.kpi__label .ico { width: 14px; height: 14px; }
+.kpi__value { font-size: 30px; font-weight: 600; line-height: 1.15; margin-top: 8px; }
+.kpi__value small { font-size: 15px; color: var(--text-3); font-weight: 500; }
+.kpi__foot { margin-top: 6px; font-size: 12px; color: var(--text-3); display: flex; align-items: center; gap: 6px; }
+
+/* ---------------- Badges e chips ---------------- */
+.badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  height: 22px; padding: 0 9px;
+  border-radius: 20px;
+  font-size: 11.5px; font-weight: 600; letter-spacing: .01em;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  max-width: 100%;
+}
+.badge .dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; flex: none; }
+.badge span { overflow: hidden; text-overflow: ellipsis; }
+.badge--soft { background: var(--neutral-soft); color: var(--neutral); }
+.badge--outline { background: transparent; border-color: var(--line-strong); color: var(--text-2); }
+
+.chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  height: 24px; padding: 0 9px;
+  border-radius: 7px;
+  background: var(--surface-3);
+  color: var(--text-2);
+  font-size: 11.5px; font-weight: 550;
+  border: 1px solid transparent;
+}
+.chip--tag::before { content: "#"; opacity: .5; }
+.chip button { display: grid; place-items: center; color: inherit; opacity: .6; }
+.chip button:hover { opacity: 1; }
+.chip .ico { width: 12px; height: 12px; }
+
+/* Avatar de responsável */
+.avatar {
+  width: 26px; height: 26px; flex: none;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  font-size: 10.5px; font-weight: 680;
+  letter-spacing: .02em;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: 1px solid var(--accent-line);
+}
+.avatar--sm { width: 22px; height: 22px; font-size: 9.5px; }
+
+/* ---------------- Tabelas ---------------- */
+.table-wrap { overflow-x: auto; border-radius: 0 0 var(--r-lg) var(--r-lg); }
+.table { font-size: 13px; min-width: 100%; }
+.table th {
+  text-align: left;
+  font-size: 11px; font-weight: 650; letter-spacing: .07em; text-transform: uppercase;
+  color: var(--text-3);
+  padding: 10px 14px;
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+  position: sticky; top: 0; z-index: 2;
+}
+.table th.sortable { cursor: pointer; user-select: none; }
+.table th.sortable:hover { color: var(--text); }
+.table th .sort-ind { display: inline-block; width: 10px; margin-left: 4px; opacity: .8; }
+.table td { padding: 11px 14px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+.table tbody tr { transition: background .13s var(--ease); }
+.table tbody tr:hover { background: var(--surface-2); }
+.table tbody tr:last-child td { border-bottom: 0; }
+.table td.num, .table th.num { text-align: right; }
+.table .row-actions { opacity: 0; transition: opacity .15s var(--ease); display: flex; gap: 2px; justify-content: flex-end; }
+tr:hover .row-actions, tr:focus-within .row-actions { opacity: 1; }
+.table--clickable tbody tr { cursor: pointer; }
+
+/* ---------------- Campos ---------------- */
+.field { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.field > label, .label {
+  font-size: 12px; font-weight: 600; color: var(--text-2);
+}
+.field .hint { font-size: 11.5px; color: var(--text-3); }
+
+.input, .select, .textarea {
+  width: 100%;
+  height: 36px;
+  padding: 0 11px;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: 9px;
+  color: var(--text);
+  font-size: 13px;
+  transition: border-color .15s var(--ease), box-shadow .15s var(--ease), background .15s var(--ease);
+}
+.textarea { height: auto; padding: 9px 11px; resize: vertical; min-height: 76px; line-height: 1.5; }
+.input::placeholder, .textarea::placeholder { color: var(--text-3); }
+.input:focus, .select:focus, .textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+.select {
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--text-3) 50%), linear-gradient(135deg, var(--text-3) 50%, transparent 50%);
+  background-position: calc(100% - 15px) 15px, calc(100% - 10px) 15px;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+  padding-right: 30px;
+  cursor: pointer;
+}
+.input--search { padding-left: 32px; }
+.search-box { position: relative; min-width: 200px; flex: 1 1 240px; max-width: 380px; }
+.search-box .ico {
+  position: absolute; left: 10px; top: 50%; transform: translateY(-50%);
+  width: 15px; height: 15px; color: var(--text-3); pointer-events: none;
+}
+
+.switch { display: inline-flex; align-items: center; gap: 9px; cursor: pointer; font-size: 13px; }
+.switch input { position: absolute; opacity: 0; width: 0; height: 0; }
+.switch__track {
+  width: 36px; height: 20px; border-radius: 20px;
+  background: var(--line-strong); position: relative;
+  transition: background .18s var(--ease);
+  flex: none;
+}
+.switch__track::after {
+  content: ""; position: absolute; top: 2px; left: 2px;
+  width: 16px; height: 16px; border-radius: 50%;
+  background: #fff; box-shadow: var(--shadow-sm);
+  transition: transform .18s var(--ease);
+}
+.switch input:checked + .switch__track { background: var(--accent); }
+.switch input:checked + .switch__track::after { transform: translateX(16px); }
+.switch input:focus-visible + .switch__track { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.checkbox { position: relative; display: inline-grid; place-items: center; flex: none; }
+.checkbox input { position: absolute; opacity: 0; inset: 0; cursor: pointer; }
+.checkbox__box {
+  width: 17px; height: 17px; border-radius: 5px;
+  border: 1.6px solid var(--line-strong);
+  display: grid; place-items: center;
+  transition: background .15s var(--ease), border-color .15s var(--ease);
+}
+.checkbox__box .ico { width: 11px; height: 11px; stroke-width: 3; color: #fff; opacity: 0; transform: scale(.6); transition: all .15s var(--ease); }
+.checkbox input:checked + .checkbox__box { background: var(--ok); border-color: var(--ok); }
+.checkbox input:checked + .checkbox__box .ico { opacity: 1; transform: none; }
+
+/* Controle segmentado */
+.segmented {
+  display: inline-flex; gap: 2px;
+  background: var(--surface-3); padding: 3px; border-radius: 9px;
+}
+.segmented button {
+  padding: 5px 11px; border-radius: 7px;
+  font-size: 12.5px; font-weight: 560; color: var(--text-2);
+  transition: background .15s var(--ease), color .15s var(--ease);
+  white-space: nowrap;
+}
+.segmented button:hover { color: var(--text); }
+.segmented button.is-on { background: var(--surface); color: var(--text); box-shadow: var(--shadow-sm); }
+
+/* Barra de ferramentas / filtros */
+.toolbar {
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  padding: 12px 14px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 16px;
+}
+.toolbar .select, .toolbar .input { height: 34px; }
+.toolbar .select { width: auto; min-width: 132px; }
+
+/* ---------------- Modal ---------------- */
+.modal-root {
+  position: fixed; inset: 0; z-index: 60;
+  display: grid; place-items: start center;
+  padding: 5vh 16px 16px;
+  overflow-y: auto;
+  background: rgba(10, 14, 26, .55);
+  backdrop-filter: blur(3px);
+  animation: fadeIn .18s var(--ease);
+}
+.modal {
+  width: min(720px, 100%);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  box-shadow: var(--shadow-lg);
+  animation: modalIn .24s var(--ease);
+  margin-bottom: 5vh;
+}
+.modal--wide { width: min(1020px, 100%); }
+.modal--sm { width: min(460px, 100%); }
+@keyframes modalIn { from { opacity: 0; transform: translateY(14px) scale(.985); } to { opacity: 1; transform: none; } }
+.modal__head {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 18px 20px 14px; border-bottom: 1px solid var(--line);
+}
+.modal__head h2 { font-size: 17px; }
+.modal__head p { font-size: 12.5px; color: var(--text-3); margin-top: 2px; }
+.modal__body { padding: 20px; }
+.modal__foot {
+  display: flex; justify-content: flex-end; gap: 9px;
+  padding: 14px 20px; border-top: 1px solid var(--line);
+  background: var(--surface-2);
+  border-radius: 0 0 var(--r-xl) var(--r-xl);
+  position: sticky; bottom: 0;
+}
+
+/* ---------------- Toasts ---------------- */
+.toasts {
+  position: fixed; right: 18px; bottom: 18px; z-index: 90;
+  display: flex; flex-direction: column; gap: 9px;
+  max-width: min(380px, calc(100vw - 36px));
+}
+.toast {
+  display: flex; align-items: flex-start; gap: 10px;
+  padding: 12px 14px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-md);
+  font-size: 13px;
+  animation: toastIn .24s var(--ease);
+}
+.toast.is-out { animation: toastOut .2s var(--ease) forwards; }
+@keyframes toastIn { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: none; } }
+@keyframes toastOut { to { opacity: 0; transform: translateX(20px); } }
+.toast--ok { border-left-color: var(--ok); }
+.toast--warn { border-left-color: var(--warn); }
+.toast--error { border-left-color: var(--danger); }
+.toast .ico { margin-top: 1px; }
+.toast--ok .ico { color: var(--ok); }
+.toast--warn .ico { color: var(--warn); }
+.toast--error .ico { color: var(--danger); }
+
+/* ---------------- Estados vazios / carregamento ---------------- */
+.empty {
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  gap: 6px; padding: 46px 24px; color: var(--text-3);
+}
+.empty__icon {
+  width: 46px; height: 46px; border-radius: 13px;
+  display: grid; place-items: center;
+  background: var(--surface-3); color: var(--text-3);
+  margin-bottom: 6px;
+}
+.empty__icon .ico { width: 22px; height: 22px; }
+.empty h3 { color: var(--text); }
+.empty p { max-width: 400px; font-size: 13px; }
+
+.skeleton {
+  background: linear-gradient(90deg, var(--surface-3) 25%, var(--surface-2) 50%, var(--surface-3) 75%);
+  background-size: 300% 100%;
+  animation: shimmer 1.3s infinite linear;
+  border-radius: var(--r-sm);
+}
+@keyframes shimmer { from { background-position: 150% 0 } to { background-position: -150% 0 } }
+
+/* ---------------- Tooltip ---------------- */
+.tip { position: relative; display: inline-flex; }
+.tip::after {
+  content: attr(data-tip);
+  position: absolute; bottom: calc(100% + 7px); left: 50%;
+  transform: translateX(-50%) translateY(3px);
+  background: var(--text); color: var(--surface);
+  padding: 6px 9px; border-radius: 7px;
+  font-size: 11.5px; font-weight: 500; line-height: 1.4;
+  width: max-content; max-width: 260px;
+  white-space: normal; text-align: center;
+  opacity: 0; pointer-events: none;
+  transition: opacity .16s var(--ease), transform .16s var(--ease);
+  z-index: 50;
+  box-shadow: var(--shadow-md);
+}
+.tip:hover::after, .tip:focus-visible::after { opacity: 1; transform: translateX(-50%); }
+.tip--right::after { bottom: auto; top: 50%; left: calc(100% + 8px); transform: translateY(-50%) translateX(-3px); }
+.tip--right:hover::after { transform: translateY(-50%); }
+
+.info-dot {
+  width: 15px; height: 15px; border-radius: 50%;
+  display: inline-grid; place-items: center;
+  border: 1.3px solid var(--line-strong); color: var(--text-3);
+  font-size: 9.5px; font-weight: 700; cursor: help; flex: none;
+}
+.info-dot:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Tooltip dos gráficos */
+.chart-tip {
+  position: fixed; z-index: 80;
+  background: var(--text); color: var(--surface);
+  padding: 7px 10px; border-radius: 8px;
+  font-size: 11.5px; line-height: 1.45;
+  pointer-events: none; box-shadow: var(--shadow-md);
+  max-width: 240px;
+}
+.chart-tip b { font-family: var(--font-num); }
+
+/* ---------------- Abas ---------------- */
+.tabs { display: flex; gap: 2px; border-bottom: 1px solid var(--line); overflow-x: auto; }
+.tabs button {
+  padding: 9px 13px; font-size: 13px; font-weight: 560; color: var(--text-3);
+  border-bottom: 2px solid transparent; margin-bottom: -1px; white-space: nowrap;
+  transition: color .15s var(--ease), border-color .15s var(--ease);
+}
+.tabs button:hover { color: var(--text); }
+.tabs button.is-on { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* ---------------- Divisores e barras ---------------- */
+.divider { height: 1px; background: var(--line); margin: 16px 0; }
+.meter { height: 5px; border-radius: 4px; background: var(--surface-3); overflow: hidden; }
+.meter > i { display: block; height: 100%; border-radius: 4px; transition: width .4s var(--ease); }
+
+.stack-bar { display: flex; height: 6px; border-radius: 4px; overflow: hidden; background: var(--surface-3); }
+.stack-bar > i { display: block; height: 100%; }
+
+/* ---------------- Paginação ---------------- */
+.pagination {
+  display: flex; align-items: center; gap: 8px; justify-content: space-between;
+  padding: 11px 14px; border-top: 1px solid var(--line); flex-wrap: wrap;
+}
+.pagination__pages { display: flex; gap: 3px; align-items: center; }
+.page-btn {
+  min-width: 30px; height: 30px; padding: 0 8px;
+  display: grid; place-items: center; border-radius: 7px;
+  font-size: 12.5px; font-family: var(--font-num); color: var(--text-2);
+}
+.page-btn:hover { background: var(--surface-3); color: var(--text); }
+.page-btn.is-on { background: var(--accent); color: var(--on-accent); font-weight: 600; }
+
+/* ---------------- Menu suspenso ---------------- */
+.dropdown { position: relative; }
+.dropdown__menu {
+  position: absolute; right: 0; top: calc(100% + 6px);
+  min-width: 210px; z-index: 25;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-lg);
+  padding: 5px;
+  animation: modalIn .16s var(--ease);
+  max-height: 320px; overflow-y: auto;
+}
+.dropdown__menu button, .dropdown__menu label {
+  display: flex; align-items: center; gap: 9px; width: 100%;
+  padding: 7px 9px; border-radius: 7px;
+  font-size: 13px; color: var(--text-2); text-align: left;
+  cursor: pointer;
+}
+.dropdown__menu button:hover, .dropdown__menu label:hover { background: var(--surface-3); color: var(--text); }
+.dropdown__sep { height: 1px; background: var(--line); margin: 5px 0; }
+
+/* ---------------- Callouts ---------------- */
+.callout {
+  display: flex; gap: 11px;
+  padding: 12px 14px;
+  border-radius: var(--r-md);
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  font-size: 13px;
+  line-height: 1.5;
+}
+.callout .ico { margin-top: 1px; flex: none; }
+.callout--info { background: var(--info-soft); border-color: color-mix(in srgb, var(--info) 25%, transparent); color: var(--text); }
+.callout--info .ico { color: var(--info); }
+.callout--warn { background: var(--warn-soft); border-color: color-mix(in srgb, var(--warn) 25%, transparent); }
+.callout--warn .ico { color: var(--warn); }
+.callout--danger { background: var(--danger-soft); border-color: color-mix(in srgb, var(--danger) 25%, transparent); }
+.callout--danger .ico { color: var(--danger); }
+.callout--ok { background: var(--ok-soft); border-color: color-mix(in srgb, var(--ok) 25%, transparent); }
+.callout--ok .ico { color: var(--ok); }
+
+/* ---------------- Variação percentual ---------------- */
+.delta {
+  display: inline-flex; align-items: center; gap: 3px;
+  font-family: var(--font-num); font-size: 12px; font-weight: 600;
+}
+.delta .ico { width: 12px; height: 12px; stroke-width: 2.4; }
+.delta--up { color: var(--ok); }
+.delta--down { color: var(--danger); }
+.delta--flat { color: var(--text-3); }
+.delta--inverse.delta--up { color: var(--danger); }
+.delta--inverse.delta--down { color: var(--ok); }
+
+/* ---------------- Cores dinâmicas (status, criticidade, flags) ----------------
+   O elemento recebe --c (hex escolhido pelo usuário) e o CSS deriva
+   fundo/borda/texto para cada tema, garantindo contraste. */
+.badge--c {
+  --c: var(--neutral);
+  background: color-mix(in srgb, var(--c) 13%, var(--surface));
+  color: color-mix(in srgb, var(--c) 88%, var(--text));
+  border-color: color-mix(in srgb, var(--c) 30%, transparent);
+}
+.badge--c .dot { background: var(--c); }
+[data-theme="dark"] .badge--c {
+  background: color-mix(in srgb, var(--c) 20%, var(--surface));
+  color: color-mix(in srgb, var(--c) 55%, #ffffff);
+  border-color: color-mix(in srgb, var(--c) 38%, transparent);
+}
+.swatch {
+  width: 26px; height: 26px; padding: 0; border: 1px solid var(--line-strong);
+  border-radius: 8px; background: none; cursor: pointer; overflow: hidden;
+}
+.swatch::-webkit-color-swatch-wrapper { padding: 2px; }
+.swatch::-webkit-color-swatch { border: none; border-radius: 6px; }
+.swatch::-moz-color-swatch { border: none; border-radius: 6px; }
