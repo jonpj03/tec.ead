@@ -1,16 +1,161 @@
 /* =========================================================
    data/projetos.js — snapshot publicado
-   Gerado pelo OpsBoard em 02/09/2026 às 11:17
-   2 projetos.
+   Gerado pelo OpsBoard em 02/09/2026 às 17:57
+   5 projetos.
    Publicação forçada: substitui alterações locais dos visitantes.
 
    Substitua este arquivo no repositório e publique.
    ========================================================= */
 window.OPSBOARD_SNAPSHOT = {
-  "publishedAt": "2026-09-02T14:17:21.000Z",
+  "publishedAt": "2026-09-02T20:57:59.084Z",
   "label": "",
   "force": true,
   "projects": [
+    {
+      "id": "prj_mtkkrfwz_1buiry",
+      "name": "Padronização do Modelo 176",
+      "description": "Apresentação de Panorama da padronização do Modelo 176\n\nLink do controle - https://nreeducacional-my.sharepoint.com/:x:/r/personal/jonathan_souza_afya_com_br/Documents/Documentos/-%20SGP%20Prova%20F%C3%A1cil/An%C3%A1lise%20de%20Banco%20tratamento.xlsx?d=w3af8b730fb4846f8a227720007214c5a&csf=1&web=1&e=eaZ9A5",
+      "owner": "JONATHAN",
+      "area": "Soluções Educacionais",
+      "statusId": "st_active",
+      "criticalityId": "cr_attention",
+      "startDate": "2026-08-01",
+      "dueDate": "2026-09-03",
+      "tags": [],
+      "flags": [
+        "fl_prio"
+      ],
+      "items": {
+        "doing": [
+          {
+            "id": "it_mtkku9yx_33bk81",
+            "text": "Construção do controle para acompanhamento",
+            "done": false,
+            "createdAt": "2026-09-02T20:57:06.297Z"
+          }
+        ],
+        "risks": [
+          {
+            "id": "it_mtkku9yx_0kir09",
+            "text": "Questões discursivas",
+            "done": false,
+            "createdAt": "2026-09-02T20:57:06.297Z"
+          }
+        ],
+        "next": [],
+        "done": []
+      },
+      "history": [
+        {
+          "id": "hst_mtkku9yy_jzdf0b",
+          "ts": "2026-09-02T20:57:06.298Z",
+          "changes": [
+            "Projeto criado"
+          ]
+        }
+      ],
+      "createdAt": "2026-09-02T20:54:54.035Z",
+      "updatedAt": "2026-09-02T20:57:06.298Z"
+    },
+    {
+      "id": "prj_mtkkp6he_b256a2",
+      "name": "Ferramenta de para automação de Cadastro de questões",
+      "description": "Criar uma ferramenta de cadastro de questão",
+      "owner": "VINICIUS",
+      "area": "WEB",
+      "statusId": "st_active",
+      "criticalityId": "cr_attention",
+      "startDate": "2026-08-27",
+      "dueDate": "2026-09-03",
+      "tags": [],
+      "flags": [
+        "fl_prio"
+      ],
+      "items": {
+        "doing": [
+          {
+            "id": "it_mtkkr78y_6t8ucv",
+            "text": "Criação da primeira versão",
+            "done": false,
+            "createdAt": "2026-09-02T20:54:42.802Z"
+          }
+        ],
+        "risks": [
+          {
+            "id": "it_mtkkr78z_vp8lil",
+            "text": "Urgência",
+            "done": false,
+            "createdAt": "2026-09-02T20:54:42.803Z"
+          }
+        ],
+        "next": [],
+        "done": []
+      },
+      "history": [
+        {
+          "id": "hst_mtkkr78z_zq6j9k",
+          "ts": "2026-09-02T20:54:42.803Z",
+          "changes": [
+            "Projeto criado"
+          ]
+        }
+      ],
+      "createdAt": "2026-09-02T20:53:08.498Z",
+      "updatedAt": "2026-09-02T20:54:42.803Z"
+    },
+    {
+      "id": "prj_mtkkm7rd_uq1y8y",
+      "name": "Implementação do PDF",
+      "description": "Implementar PDF nos conteúdos\n\nMaterial - https://saneadadaluno.blob.core.windows.net/solucoes/imprimir-apostila/graduacao/2026.2/unidade-03/menus/conteudo.html",
+      "owner": "THIAGO",
+      "area": "WEB",
+      "statusId": "st_active",
+      "criticalityId": "cr_normal",
+      "startDate": "",
+      "dueDate": "2026-09-03",
+      "tags": [],
+      "flags": [
+        "fl_prio"
+      ],
+      "items": {
+        "doing": [
+          {
+            "id": "it_mtkko670_zzzy7g",
+            "text": "IMPLEMENTAÇÕES DE RECURSOS",
+            "done": false,
+            "createdAt": "2026-09-02T20:52:21.468Z"
+          }
+        ],
+        "risks": [],
+        "next": [],
+        "done": []
+      },
+      "history": [
+        {
+          "id": "hst_mtkkoth6_48d9c0",
+          "ts": "2026-09-02T20:52:51.642Z",
+          "changes": [
+            "Descrição atualizada"
+          ]
+        },
+        {
+          "id": "hst_mtkkojrv_mheyuy",
+          "ts": "2026-09-02T20:52:39.067Z",
+          "changes": [
+            "Descrição atualizada"
+          ]
+        },
+        {
+          "id": "hst_mtkko670_hp1nmz",
+          "ts": "2026-09-02T20:52:21.468Z",
+          "changes": [
+            "Projeto criado"
+          ]
+        }
+      ],
+      "createdAt": "2026-09-02T20:50:50.185Z",
+      "updatedAt": "2026-09-02T20:52:51.642Z"
+    },
     {
       "id": "prj_mtk1vv2p_d7pucb",
       "name": "PROPOSTA EXP - Conteudos",
