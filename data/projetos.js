@@ -1,13 +1,13 @@
 /* =========================================================
    data/projetos.js — snapshot publicado
-   Gerado pelo OpsBoard em 02/09/2026 às 09:11
+   Gerado pelo OpsBoard em 02/09/2026 às 11:17
    2 projetos.
    Publicação forçada: substitui alterações locais dos visitantes.
 
    Substitua este arquivo no repositório e publique.
    ========================================================= */
 window.OPSBOARD_SNAPSHOT = {
-  "publishedAt": "2026-09-02T12:11:03.008Z",
+  "publishedAt": "2026-09-02T14:17:21.000Z",
   "label": "",
   "force": true,
   "projects": [
@@ -15,14 +15,16 @@ window.OPSBOARD_SNAPSHOT = {
       "id": "prj_mtk1vv2p_d7pucb",
       "name": "PROPOSTA EXP - Conteudos",
       "description": "Proposta de captura de dados dos alunos nos Conteúdos",
-      "owner": "THIAGO, VINICIUS, JONATHAN, WALLACE",
+      "owner": "THIAGO, VINICIUS, JONATHAN",
       "area": "Soluções Educacionais",
       "statusId": "st_active",
-      "criticalityId": "cr_normal",
+      "criticalityId": "cr_attention",
       "startDate": "2026-09-02",
       "dueDate": "",
       "tags": [],
-      "flags": [],
+      "flags": [
+        "fl_prio"
+      ],
       "items": {
         "doing": [
           {
@@ -38,6 +40,35 @@ window.OPSBOARD_SNAPSHOT = {
       },
       "history": [
         {
+          "id": "hst_mtk5qlrc_rpopon",
+          "ts": "2026-09-02T13:54:20.712Z",
+          "changes": [
+            "Criticidade alterada para Atenção",
+            "Flags atualizadas"
+          ]
+        },
+        {
+          "id": "hst_mtk5qavr_ir5qll",
+          "ts": "2026-09-02T13:54:06.615Z",
+          "changes": [
+            "Responsável: THIAGO, VINICIUS, JONATHAN"
+          ]
+        },
+        {
+          "id": "hst_mtk5q5qn_ib0g2l",
+          "ts": "2026-09-02T13:53:59.951Z",
+          "changes": [
+            "Descrição atualizada"
+          ]
+        },
+        {
+          "id": "hst_mtk5pvgv_i1k729",
+          "ts": "2026-09-02T13:53:46.639Z",
+          "changes": [
+            "Descrição atualizada"
+          ]
+        },
+        {
           "id": "hst_mtk1zfyg_angzqu",
           "ts": "2026-09-02T12:09:14.632Z",
           "changes": [
@@ -46,7 +77,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-02T12:06:27.601Z",
-      "updatedAt": "2026-09-02T12:09:14.632Z"
+      "updatedAt": "2026-09-02T13:54:20.712Z"
     },
     {
       "id": "prj_mtj5pt9s_fqdu9q",
@@ -134,7 +165,7 @@ window.OPSBOARD_SNAPSHOT = {
   ],
   "settings": {
     "schema": 1,
-    "theme": "light",
+    "theme": "system",
     "statuses": [
       {
         "id": "st_active",
@@ -232,7 +263,7 @@ window.OPSBOARD_SNAPSHOT = {
       "defaultPeriod": 30,
       "doneKeywords": "concluido, concluído, done, finalizado, entregue, publicado, completo, aprovado, finalizada",
       "doingKeywords": "producao, produção, doing, andamento, execucao, execução, em progresso, wip, revisao, revisão, review, edicao, edição",
-      "treatArchivedAsDone": false
+      "treatArchivedAsDone": true
     }
   }
 };
