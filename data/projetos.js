@@ -1,16 +1,53 @@
 /* =========================================================
    data/projetos.js — snapshot publicado
-   Gerado pelo OpsBoard em 01/09/2026 às 18:10
-   1 projeto.
+   Gerado pelo OpsBoard em 02/09/2026 às 09:11
+   2 projetos.
    Publicação forçada: substitui alterações locais dos visitantes.
 
    Substitua este arquivo no repositório e publique.
    ========================================================= */
 window.OPSBOARD_SNAPSHOT = {
-  "publishedAt": "2026-09-01T21:10:42.878Z",
+  "publishedAt": "2026-09-02T12:11:03.008Z",
   "label": "",
   "force": true,
   "projects": [
+    {
+      "id": "prj_mtk1vv2p_d7pucb",
+      "name": "PROPOSTA EXP - Conteudos",
+      "description": "Proposta de captura de dados dos alunos nos Conteúdos",
+      "owner": "THIAGO, VINICIUS, JONATHAN, WALLACE",
+      "area": "Soluções Educacionais",
+      "statusId": "st_active",
+      "criticalityId": "cr_normal",
+      "startDate": "2026-09-02",
+      "dueDate": "",
+      "tags": [],
+      "flags": [],
+      "items": {
+        "doing": [
+          {
+            "id": "it_mtk1zfyg_mc11v0",
+            "text": "Apresentação do Projeto EXP",
+            "done": false,
+            "createdAt": "2026-09-02T12:09:14.632Z"
+          }
+        ],
+        "risks": [],
+        "next": [],
+        "done": []
+      },
+      "history": [
+        {
+          "id": "hst_mtk1zfyg_angzqu",
+          "ts": "2026-09-02T12:09:14.632Z",
+          "changes": [
+            "Projeto criado"
+          ]
+        }
+      ],
+      "createdAt": "2026-09-02T12:06:27.601Z",
+      "updatedAt": "2026-09-02T12:09:14.632Z"
+    },
     {
       "id": "prj_mtj5pt9s_fqdu9q",
       "name": "Beecrowd",
