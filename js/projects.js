@@ -160,6 +160,11 @@
             <p class="tiny dim">${U.num(filtered.length)} de ${U.num(all.length)} ${U.plural(all.length, 'projeto', 'projetos')} · clique em uma linha para abrir o detalhe</p>
           </div>
           <div class="row gap-8 no-print">
+            <div class="segmented segmented--sm" id="viewToggle">
+              <button data-view="panorama" class="${listView() === 'panorama' ? 'is-on' : ''}">${icon('table', 'ico--sm')} Panorama</button>
+              <button data-view="compact" class="${listView() === 'compact' ? 'is-on' : ''}">${icon('menu', 'ico--sm')} Compacta</button>
+            </div>
+            <button class="btn btn--sm" id="printList">${icon('print', 'ico--sm')} Imprimir</button>
             <select class="select" id="fSort" aria-label="Ordenar por">
               <option value="updatedAt:desc">Atualização recente</option>
               <option value="updatedAt:asc">Atualização antiga</option>
@@ -171,7 +176,7 @@
           </div>
         </div>
         <div class="table-wrap">
-          ${filtered.length ? renderTable(filtered) : UI.empty(
+          ${filtered.length ? (listView() === 'panorama' ? renderPanorama(filtered) : renderTable(filtered)) : UI.empty(
             all.length ? 'search' : 'projects',
             all.length ? 'Nenhum projeto encontrado' : 'Nenhum projeto cadastrado',
             all.length ? 'Ajuste os filtros ou limpe a busca para ver os demais projetos.'
@@ -182,6 +187,77 @@
       </div>`;
 
     bindListEvents(view);
+  }
+
+  /** Visão escolhida para a listagem, guardada nas preferências. */
+  function listView() {
+    return Store.settings().prefs.listView === 'compact' ? 'compact' : 'panorama';
+  }
+
+  /**
+   * Panorama: uma linha por projeto com o conteúdo das quatro listas lado a lado,
+   * no formato do quadro que a diretoria acompanha.
+   */
+  function renderPanorama(list) {
+    return `<table class="table panorama-table table--clickable">
+      <thead><tr>
+        <th class="rail-cell"></th>
+        <th class="col-project">Projeto</th>
+        <th>Entrega realizada</th>
+        <th>Em andamento</th>
+        <th>Próximos passos</th>
+        <th>Pontos de atenção</th>
+        <th class="col-narrow">Nível</th>
+        <th class="col-narrow">Última atualização</th>
+        <th class="col-status">Status</th>
+      </tr></thead>
+      <tbody>${list.map(panoramaRow).join('')}</tbody>
+    </table>`;
+  }
+
+  /** Bullets de uma das quatro listas, com corte para não esticar a linha. */
+  function cellItems(items, limit) {
+    if (!items.length) return '<span class="dim">—</span>';
+    const max = limit || 4;
+    const shown = items.slice(0, max);
+    const rest = items.length - shown.length;
+    return `<ul class="cell-list">
+      ${shown.map(it => `<li>${esc(it.text)}</li>`).join('')}
+      ${rest ? `<li class="dim">+${rest} ${U.plural(rest, 'item', 'itens')}</li>` : ''}
+    </ul>`;
+  }
+
+  function panoramaRow(p) {
+    const status = Store.status(p.statusId);
+    const crit = Store.criticality(p.criticalityId);
+    const stale = isStale(p);
+
+    return `<tr data-id="${esc(p.id)}" tabindex="0">
+      <td class="rail-cell"><i class="rail" style="--c:${esc(status.color)}"></i></td>
+      <td class="col-project" data-label="Projeto">
+        <strong>${esc(p.name)}</strong>
+        <div class="project-meta">
+          ${p.area ? `<span>${esc(p.area)}</span>` : ''}
+          ${p.owner ? `<span>${esc(p.owner)}</span>` : ''}
+          ${p.flags.length ? `<span class="tip" data-tip="${esc(p.flags.map(f => Store.flag(f).label).join(' · '))}">
+            ${icon('flag', 'ico--sm')} ${p.flags.length}</span>` : ''}
+        </div>
+      </td>
+      <td data-label="Entrega realizada">${cellItems(p.items.done)}</td>
+      <td data-label="Em andamento">${cellItems(p.items.doing)}</td>
+      <td data-label="Próximos passos">${cellItems(p.items.next)}</td>
+      <td data-label="Pontos de atenção" class="${p.items.risks.length ? 'cell-risk' : ''}">${cellItems(p.items.risks)}</td>
+      <td class="col-narrow" data-label="Nível">${UI.criticalityBadge(p.criticalityId)}</td>
+      <td class="col-narrow" data-label="Última atualização">
+        <span class="num small ${stale ? 'is-stale' : ''}">${esc(U.fmtDate(p.updatedAt))}</span>
+        <div class="tiny dim">${esc(U.relativeDays(p.updatedAt))}</div>
+      </td>
+      <td class="col-status" data-label="Status">
+        <span class="status-dot tip" style="--c:${esc(status.color)}"
+              data-tip="${esc(status.label)}${crit.weight >= 3 ? ' · ' + esc(crit.label) : ''}"></span>
+        <span class="tiny dim status-dot__label">${esc(status.label)}</span>
+      </td>
+    </tr>`;
   }
 
   function renderTable(list) {
@@ -289,6 +365,16 @@
     bindSelect('#fArea', 'area');
     bindSelect('#fTag', 'tag');
     bindSelect('#fUpdated', 'updated');
+
+    view.querySelectorAll('#viewToggle [data-view]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        Store.setPref('listView', btn.dataset.view);
+        rerender();
+      });
+    });
+
+    const printBtn = $('#printList', view);
+    if (printBtn) printBtn.addEventListener('click', () => global.print());
 
     const sortEl = $('#fSort', view);
     if (sortEl) {

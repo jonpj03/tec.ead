@@ -230,6 +230,19 @@ Total de cards, concluídos, em produção, pendentes, atrasados, sem responsáv
 tempo médio de conclusão. Acompanham um resumo operacional em texto (gerado a partir dos números
 reais) e insights automáticos sobre produção, backlog, concentração e cards parados.
 
+### Panorama do portfólio
+A tela de Projetos tem duas visões, alternáveis no canto superior direito e lembradas entre sessões:
+
+- **Panorama** (padrão) — uma linha por projeto no formato do quadro executivo: entrega realizada,
+  em andamento, próximos passos e pontos de atenção lado a lado, mais nível, data da última
+  atualização e o farol de status. Cada célula mostra até quatro itens e indica quantos ficaram de
+  fora. A coluna de pontos de atenção recebe um fundo âmbar quando tem conteúdo, e a data fica em
+  vermelho quando o projeto passou do limite de desatualização.
+- **Compacta** — a tabela anterior, com badges e a barra de composição dos itens.
+
+Ambas respeitam os filtros e a ordenação, e o botão **Imprimir** gera o quadro em papel ou PDF com
+uma linha por projeto.
+
 ### Filtros estratégicos
 Uma barra acima das abas recorta **toda** a análise: busca pelo nome do card, colaborador, lista,
 etiqueta, situação (concluído, em produção, pendente, atrasado, sem responsável) e uma janela de

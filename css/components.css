@@ -240,6 +240,7 @@ tr:hover .row-actions, tr:focus-within .row-actions { opacity: 1; }
 }
 .segmented button:hover { color: var(--text); }
 .segmented button.is-on { background: var(--surface); color: var(--text); box-shadow: var(--shadow-sm); }
+.segmented--sm button { padding: 4px 9px; font-size: 12px; display: inline-flex; align-items: center; gap: 5px; }
 
 /* Barra de ferramentas / filtros */
 .toolbar {

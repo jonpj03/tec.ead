@@ -84,7 +84,8 @@
         staleDays: 7,          // dias sem atualização = "desatualizado"
         pageSize: 25,
         confirmDelete: true,
-        demoDismissed: false
+        demoDismissed: false,
+        listView: 'panorama'   // 'panorama' (quadro completo) ou 'compact'
       },
       trello: {
         agingAttention: 7,     // dias abertos → backlog em atenção
