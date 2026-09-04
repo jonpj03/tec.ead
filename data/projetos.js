@@ -1,13 +1,13 @@
 /* =========================================================
    data/projetos.js — snapshot publicado
-   Gerado pelo OpsBoard em 04/09/2026 às 00:41
+   Gerado pelo OpsBoard em 04/09/2026 às 11:57
    18 projetos.
    Publicação forçada: substitui alterações locais dos visitantes.
 
    Substitua este arquivo no repositório e publique.
    ========================================================= */
 window.OPSBOARD_SNAPSHOT = {
-  "publishedAt": "2026-09-04T03:41:26.243Z",
+  "publishedAt": "2026-09-04T14:57:36.263Z",
   "label": "",
   "force": true,
   "projects": [
@@ -18,11 +18,13 @@ window.OPSBOARD_SNAPSHOT = {
       "owner": "JONATHAN",
       "area": "Soluções Educacionais",
       "statusId": "st_active",
-      "criticalityId": "cr_normal",
+      "criticalityId": "cr_critical",
       "startDate": "",
       "dueDate": "",
       "tags": [],
-      "flags": [],
+      "flags": [
+        "fl_ti"
+      ],
       "items": {
         "doing": [
           {
@@ -32,11 +34,34 @@ window.OPSBOARD_SNAPSHOT = {
             "createdAt": "2026-09-04T03:40:53.757Z"
           }
         ],
-        "risks": [],
+        "risks": [
+          {
+            "id": "it_mtmx9see_tuy4ey",
+            "text": "retorno da TI",
+            "done": false,
+            "createdAt": "2026-09-04T12:20:37.766Z"
+          }
+        ],
         "next": [],
         "done": []
       },
       "history": [
+        {
+          "id": "hst_mtmx9see_l7qgvi",
+          "ts": "2026-09-04T12:20:37.766Z",
+          "changes": [
+            "Pontos de atenção: adicionado — retorno da TI"
+          ]
+        },
+        {
+          "id": "hst_mtmx8yud_xultpf",
+          "ts": "2026-09-04T12:19:59.461Z",
+          "changes": [
+            "Criticidade alterada para Crítico",
+            "Flags atualizadas",
+            "Pontos de atenção: removido — Retorno TI"
+          ]
+        },
         {
           "id": "hst_mtmepenx_cnj810",
           "ts": "2026-09-04T03:40:53.757Z",
@@ -46,7 +71,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-04T03:39:58.051Z",
-      "updatedAt": "2026-09-04T03:40:53.757Z"
+      "updatedAt": "2026-09-04T12:20:37.766Z"
     },
     {
       "id": "prj_mtmejgjo_7h0z26",
@@ -91,7 +116,7 @@ window.OPSBOARD_SNAPSHOT = {
       "description": "Uso do Teams como ferramenta principal para aulas ao vivo no Canvas",
       "owner": "JONATHAN",
       "area": "Soluções Educacionais",
-      "statusId": "st_active",
+      "statusId": "st_stopped",
       "criticalityId": "cr_normal",
       "startDate": "",
       "dueDate": "",
@@ -138,6 +163,13 @@ window.OPSBOARD_SNAPSHOT = {
       },
       "history": [
         {
+          "id": "hst_mtmxm7u0_dugwbh",
+          "ts": "2026-09-04T12:30:17.640Z",
+          "changes": [
+            "Status alterado de Ativo para Parado"
+          ]
+        },
+        {
           "id": "hst_mtmd5r9u_2cy9is",
           "ts": "2026-09-04T02:57:37.362Z",
           "changes": [
@@ -146,7 +178,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-04T02:54:01.552Z",
-      "updatedAt": "2026-09-04T02:57:37.362Z"
+      "updatedAt": "2026-09-04T12:30:17.640Z"
     },
     {
       "id": "prj_mtmcxaup_b303bb",
@@ -154,7 +186,7 @@ window.OPSBOARD_SNAPSHOT = {
       "description": "Detecção de similaridade \n\nSeguirá com  COMPETÊNCIA RELACIONAL​",
       "owner": "JONATHAN",
       "area": "Soluções Educacionais",
-      "statusId": "st_active",
+      "statusId": "st_done",
       "criticalityId": "cr_normal",
       "startDate": "",
       "dueDate": "",
@@ -207,6 +239,13 @@ window.OPSBOARD_SNAPSHOT = {
       },
       "history": [
         {
+          "id": "hst_mtmxmo63_u8p5nu",
+          "ts": "2026-09-04T12:30:38.811Z",
+          "changes": [
+            "Status alterado de Ativo para Concluído"
+          ]
+        },
+        {
           "id": "hst_mtmd0i2h_bnjfia",
           "ts": "2026-09-04T02:53:32.153Z",
           "changes": [
@@ -215,7 +254,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-04T02:51:02.833Z",
-      "updatedAt": "2026-09-04T02:53:32.153Z"
+      "updatedAt": "2026-09-04T12:30:38.811Z"
     },
     {
       "id": "prj_mtm9v2ur_po5bnw",
@@ -242,32 +281,14 @@ window.OPSBOARD_SNAPSHOT = {
             "text": "Fluxo de revisão IA melhoria​",
             "done": false,
             "createdAt": "2026-09-04T01:29:19.076Z"
-          },
-          {
-            "id": "it_mtmd8s2n_m37xl5",
-            "text": "Levantamento das necessidades de integração via API",
-            "done": false,
-            "createdAt": "2026-09-04T02:59:58.367Z"
           }
         ],
         "risks": [
-          {
-            "id": "it_mtma0hpf_1kfulu",
-            "text": "Integração",
-            "done": false,
-            "createdAt": "2026-09-04T01:29:32.835Z"
-          },
           {
             "id": "it_mtma0mih_rvu4d2",
             "text": "Dados",
             "done": false,
             "createdAt": "2026-09-04T01:29:39.065Z"
-          },
-          {
-            "id": "it_mtma0qm7_5rfl5i",
-            "text": "API",
-            "done": false,
-            "createdAt": "2026-09-04T01:29:44.383Z"
           },
           {
             "id": "it_mtmd96bu_u0boc8",
@@ -279,7 +300,7 @@ window.OPSBOARD_SNAPSHOT = {
         "next": [
           {
             "id": "it_mtma0738_xd2if5",
-            "text": "Reunião marcada 03/09 às 15h",
+            "text": "Reunião marcada 04/09 às 15h",
             "done": false,
             "createdAt": "2026-09-04T01:29:19.076Z"
           },
@@ -330,6 +351,34 @@ window.OPSBOARD_SNAPSHOT = {
         ]
       },
       "history": [
+        {
+          "id": "hst_mtmxez98_jj8odm",
+          "ts": "2026-09-04T12:24:39.932Z",
+          "changes": [
+            "Em andamento: item removido — Levantamento das necessidades de integração via API"
+          ]
+        },
+        {
+          "id": "hst_mtmxerh6_4qvz8y",
+          "ts": "2026-09-04T12:24:29.850Z",
+          "changes": [
+            "Pontos de atenção: item removido — API"
+          ]
+        },
+        {
+          "id": "hst_mtmxeob9_lngxn5",
+          "ts": "2026-09-04T12:24:25.749Z",
+          "changes": [
+            "Pontos de atenção: item removido — Integração"
+          ]
+        },
+        {
+          "id": "hst_mtmxd9oo_fpkx0a",
+          "ts": "2026-09-04T12:23:20.136Z",
+          "changes": [
+            "Item editado: “Reunião marcada 03/09 às 15h” → “Reunião marcada 04/09 às 15h”"
+          ]
+        },
         {
           "id": "hst_mtmd96bu_50fxxw",
           "ts": "2026-09-04T03:00:16.842Z",
@@ -395,7 +444,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-04T01:25:20.307Z",
-      "updatedAt": "2026-09-04T03:00:16.842Z"
+      "updatedAt": "2026-09-04T12:24:39.932Z"
     },
     {
       "id": "prj_mtlk1jml_4321rh",
@@ -518,12 +567,6 @@ window.OPSBOARD_SNAPSHOT = {
         ],
         "next": [
           {
-            "id": "it_mtmdzf8b_kxpjq4",
-            "text": "Colocar a Comunidade Acadêmica em produção até dia 18.",
-            "done": false,
-            "createdAt": "2026-09-04T03:20:41.435Z"
-          },
-          {
             "id": "it_mtmdzrrl_x22is4",
             "text": "Iniciar, ainda em setembro, as frentes de Internacionalização e Esquenta",
             "done": false,
@@ -534,6 +577,12 @@ window.OPSBOARD_SNAPSHOT = {
             "text": "Apresentar cronograma detalhado no final de setembro",
             "done": false,
             "createdAt": "2026-09-04T03:21:03.549Z"
+          },
+          {
+            "id": "it_mtmxb6nm_8j9m6h",
+            "text": "Colocar a Comunidade Acadêmica em produção até dia 18/09",
+            "done": false,
+            "createdAt": "2026-09-04T12:21:42.898Z"
           }
         ],
         "done": [
@@ -570,6 +619,21 @@ window.OPSBOARD_SNAPSHOT = {
         ]
       },
       "history": [
+        {
+          "id": "hst_mtmxb6nm_jxuasl",
+          "ts": "2026-09-04T12:21:42.898Z",
+          "changes": [
+            "Próximos passos: adicionado — Colocar a Comunidade Acadêmica em produção até dia 18/…",
+            "Próximos passos: removido — Colocar a Comunidade Acadêmica em produção até dia 18."
+          ]
+        },
+        {
+          "id": "hst_mtmxaaqo_60oija",
+          "ts": "2026-09-04T12:21:01.536Z",
+          "changes": [
+            "Próximos passos: itens reordenados"
+          ]
+        },
         {
           "id": "hst_mtme09fu_gwsufl",
           "ts": "2026-09-04T03:21:20.586Z",
@@ -670,11 +734,11 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-03T13:19:48.810Z",
-      "updatedAt": "2026-09-04T03:21:20.586Z"
+      "updatedAt": "2026-09-04T12:21:42.898Z"
     },
     {
       "id": "prj_mtljdrgh_inwfcz",
-      "name": "Agendamento PROVAS [Unificado]",
+      "name": "Gestão de PROVAS [Unificado]",
       "description": "PASSO 1\n\n1. Autoagendamento em lote conforme parâmetros de decisão da gestão;\n2. Flexibilização da aplicação para um período de prova com o autoagendamento sem dia e hora específico;\n3. Correção das questões discursivas com IA\n4. Otimização da operação dos bancos de questões com anulação em lote de questões\n5. Operação dos bancos de questões a nível de conteúdo e não de turma, ou seja, as turmas são vinculadas aos bancos sem redundância. Assim os professores e coordenadores atuam diretamente no banco do conteúdo.\n6. Matriz de categorização das questões para identificação de futuros gaps de aprendizagem.\n7. Acesso com restrição por IP e não por senha que pode ser compartilhada e quebra a segurança.\n8. Anexo de Material de apoio para prova\n9. Modelo de prova personalizáveis\n10. Tempo extra para alunos em acompanhamento especial\n11. Relatórios personalizados\n\n\nPASSO 2\n\n1. Validação dos documentos enviados pelo Neymar\n\n\n\nhttps://nreeducacional-my.sharepoint.com/shared?listurl=https%3A%2F%2Fnreeducacional-my%2Esharepoint%2Ecom%2Fpersonal%2Fneymar_junior_afya_com_br%2FDocuments&id=%2Fpersonal%2Fneymar_junior_afya_com_br%2FDocuments%2FPROJETOS%20-%20TECNOLOGIAS%20EDUCACIONAIS%2FPLANEJAMEMTNO%20-%202026%20-%202027%2FProjeto%20Sistema%20de%20Agendamento%20de%20Provas%20-%20Levantamento%20de%20Melhoria%2FRequisitos%20Funcionais%20-%20Sistema%20de%20Agendamento%20de%20Provas%2Epdf&parent=%2Fpersonal%2Fneymar_junior_afya_com_br%2FDocuments%2FPROJETOS%20-%20TECNOLOGIAS%20EDUCACIONAIS%2FPLANEJAMEMTNO%20-%202026%20-%202027%2FProjeto%20Sistema%20de%20Agendamento%20de%20Provas%20-%20Levantamento%20de%20Melhoria&shareLink=1&ga=1&LOF=1\n\nhttps://nreeducacional-my.sharepoint.com/shared?listurl=https%3A%2F%2Fnreeducacional-my%2Esharepoint%2Ecom%2Fpersonal%2Fneymar_junior_afya_com_br%2FDocuments&id=%2Fpersonal%2Fneymar_junior_afya_com_br%2FDocuments%2FPROJETOS%20-%20TECNOLOGIAS%20EDUCACIONAIS%2FPLANEJAMEMTNO%20-%202026%20-%202027%2FProjeto%20Sistema%20de%20Agendamento%20de%20Provas%20-%20Levantamento%20de%20Melhoria%2FRequisitos%20Funcionais%20-%20Migração%20de%20Avaliações%20EaD%20Nacional%20-%20Canvas%2Epdf&parent=%2Fpersonal%2Fneymar_junior_afya_com_br%2FDocuments%2FPROJETOS%20-%20TECNOLOGIAS%20EDUCACIONAIS%2FPLANEJAMEMTNO%20-%202026%20-%202027%2FProjeto%20Sistema%20de%20Agendamento%20de%20Provas%20-%20Levantamento%20de%20Melhoria&shareLink=1&ga=1&LOF=1\n\n\n\t- No item I\n\t\t○ \"Um aspecto importante é que o autoagendamento não gera uma nova prova: a partir de uma prova já gerada, ajustam-se os parâmetros para que ela volte a ficar disponível ao grupo\"\nR: A funcionalidade autoagendamento cria uma avaliação nova. A diferença, é que os cenários de 2° chamada, falta de energia, etc.. As provas já estariam 'Geradas'. Desta forma, seriam apenas ajustar os parâmetros \n\n\n\n\t- No item V\n\t\t○ O sistema de agendamento atual possui apenas relatórios alguns relatórios\n\"Relatórios alguns relatórios\"",
       "owner": "JONATHAN",
       "area": "Soluções Educacionais",
@@ -712,6 +776,13 @@ window.OPSBOARD_SNAPSHOT = {
       },
       "history": [
         {
+          "id": "hst_mtmxq4km_2f4cur",
+          "ts": "2026-09-04T12:33:20.038Z",
+          "changes": [
+            "Nome alterado para “Gestão de PROVAS [Unificado]”"
+          ]
+        },
+        {
           "id": "hst_mtljx4ae_gf9nds",
           "ts": "2026-09-03T13:19:05.462Z",
           "changes": [
@@ -720,7 +791,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-03T13:04:02.369Z",
-      "updatedAt": "2026-09-03T13:19:05.462Z"
+      "updatedAt": "2026-09-04T12:33:20.038Z"
     },
     {
       "id": "prj_mtljbxeu_6befio",
@@ -1497,7 +1568,8 @@ window.OPSBOARD_SNAPSHOT = {
       "staleDays": 7,
       "pageSize": 25,
       "confirmDelete": true,
-      "demoDismissed": false
+      "demoDismissed": false,
+      "listView": "panorama"
     },
     "trello": {
       "agingAttention": 7,
