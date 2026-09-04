@@ -1,21 +1,333 @@
 /* =========================================================
    data/projetos.js — snapshot publicado
-   Gerado pelo OpsBoard em 03/09/2026 às 10:44
-   13 projetos.
+   Gerado pelo OpsBoard em 04/09/2026 às 00:06
+   16 projetos.
    Publicação forçada: substitui alterações locais dos visitantes.
 
    Substitua este arquivo no repositório e publique.
    ========================================================= */
 window.OPSBOARD_SNAPSHOT = {
-  "publishedAt": "2026-09-03T13:44:57.983Z",
+  "publishedAt": "2026-09-04T03:06:25.241Z",
   "label": "",
   "force": true,
   "projects": [
     {
+      "id": "prj_mtmd14r4_uatxwm",
+      "name": "CANVAS - Teams",
+      "description": "Uso do Teams como ferramenta principal para aulas ao vivo no Canvas",
+      "owner": "JONATHAN",
+      "area": "Soluções Educacionais",
+      "statusId": "st_active",
+      "criticalityId": "cr_normal",
+      "startDate": "",
+      "dueDate": "",
+      "tags": [],
+      "flags": [],
+      "items": {
+        "doing": [
+          {
+            "id": "it_mtmd5r9t_xfhcc6",
+            "text": "Avaliação da LTI Teams-Canvas",
+            "done": false,
+            "createdAt": "2026-09-04T02:57:37.361Z"
+          }
+        ],
+        "risks": [],
+        "next": [
+          {
+            "id": "it_mtmd5r9t_8i2kxe",
+            "text": "Evoluir o funcionamento da LTI.",
+            "done": false,
+            "createdAt": "2026-09-04T02:57:37.361Z"
+          },
+          {
+            "id": "it_mtmd5r9t_fgfvoo",
+            "text": "Obter mais informações junto à Microsoft.",
+            "done": false,
+            "createdAt": "2026-09-04T02:57:37.361Z"
+          },
+          {
+            "id": "it_mtmd5r9t_rr2g30",
+            "text": "Retomar validações antes de avançar para implantação",
+            "done": false,
+            "createdAt": "2026-09-04T02:57:37.361Z"
+          }
+        ],
+        "done": [
+          {
+            "id": "it_mtmd5r9t_wv3ugg",
+            "text": "Análises iniciais realizadas com fornecedores, Structure e infraestrutura",
+            "done": true,
+            "createdAt": "2026-09-04T02:57:37.361Z"
+          }
+        ]
+      },
+      "history": [
+        {
+          "id": "hst_mtmd5r9u_2cy9is",
+          "ts": "2026-09-04T02:57:37.362Z",
+          "changes": [
+            "Projeto criado"
+          ]
+        }
+      ],
+      "createdAt": "2026-09-04T02:54:01.552Z",
+      "updatedAt": "2026-09-04T02:57:37.362Z"
+    },
+    {
+      "id": "prj_mtmcxaup_b303bb",
+      "name": "CANVAS - Similaridades Gomining",
+      "description": "Detecção de similaridade \n\nSeguirá com  COMPETÊNCIA RELACIONAL​",
+      "owner": "JONATHAN",
+      "area": "Soluções Educacionais",
+      "statusId": "st_active",
+      "criticalityId": "cr_normal",
+      "startDate": "",
+      "dueDate": "",
+      "tags": [],
+      "flags": [],
+      "items": {
+        "doing": [
+          {
+            "id": "it_mtmd0i2h_tt504s",
+            "text": "Fase de monitoramento e acompanhamento da operação",
+            "done": false,
+            "createdAt": "2026-09-04T02:53:32.153Z"
+          }
+        ],
+        "risks": [
+          {
+            "id": "it_mtmd0i2h_t0cib8",
+            "text": "Consulta pública sobre regulamentação do uso de IA.",
+            "done": false,
+            "createdAt": "2026-09-04T02:53:32.153Z"
+          },
+          {
+            "id": "it_mtmd0i2h_e22455",
+            "text": "Necessidade de adequação do regimento interno para registrar o uso de IA como apoio às atividades avaliativas",
+            "done": false,
+            "createdAt": "2026-09-04T02:53:32.153Z"
+          }
+        ],
+        "next": [],
+        "done": [
+          {
+            "id": "it_mtmd0i2h_vp5n8i",
+            "text": "Configuração a partir das Blueprints fornecidas​",
+            "done": true,
+            "createdAt": "2026-09-04T02:53:32.153Z"
+          },
+          {
+            "id": "it_mtmd0i2h_dufg1k",
+            "text": "Preenchimento da planilha contendo os IDs das Modelos e seus itens avaliativos para a Gomining​",
+            "done": true,
+            "createdAt": "2026-09-04T02:53:32.153Z"
+          },
+          {
+            "id": "it_mtmd0i2h_dn7u72",
+            "text": "Professores capacitados.",
+            "done": true,
+            "createdAt": "2026-09-04T02:53:32.153Z"
+          }
+        ]
+      },
+      "history": [
+        {
+          "id": "hst_mtmd0i2h_bnjfia",
+          "ts": "2026-09-04T02:53:32.153Z",
+          "changes": [
+            "Projeto criado"
+          ]
+        }
+      ],
+      "createdAt": "2026-09-04T02:51:02.833Z",
+      "updatedAt": "2026-09-04T02:53:32.153Z"
+    },
+    {
+      "id": "prj_mtm9v2ur_po5bnw",
+      "name": "Prova Fácil - Melhoria + IA",
+      "description": "Acompanhamento de fluxo de revisão de IA e melhorias contínuas",
+      "owner": "JONATHAN",
+      "area": "Soluções Educacionais",
+      "statusId": "st_active",
+      "criticalityId": "cr_critical",
+      "startDate": "",
+      "dueDate": "2026-09-04",
+      "tags": [],
+      "flags": [],
+      "items": {
+        "doing": [
+          {
+            "id": "it_mtma0738_nrwnt6",
+            "text": "Documentação de autonomia dos polos​",
+            "done": false,
+            "createdAt": "2026-09-04T01:29:19.076Z"
+          },
+          {
+            "id": "it_mtma0738_v6d6q1",
+            "text": "Fluxo de revisão IA melhoria​",
+            "done": false,
+            "createdAt": "2026-09-04T01:29:19.076Z"
+          },
+          {
+            "id": "it_mtmd8s2n_m37xl5",
+            "text": "Levantamento das necessidades de integração via API",
+            "done": false,
+            "createdAt": "2026-09-04T02:59:58.367Z"
+          }
+        ],
+        "risks": [
+          {
+            "id": "it_mtma0hpf_1kfulu",
+            "text": "Integração",
+            "done": false,
+            "createdAt": "2026-09-04T01:29:32.835Z"
+          },
+          {
+            "id": "it_mtma0mih_rvu4d2",
+            "text": "Dados",
+            "done": false,
+            "createdAt": "2026-09-04T01:29:39.065Z"
+          },
+          {
+            "id": "it_mtma0qm7_5rfl5i",
+            "text": "API",
+            "done": false,
+            "createdAt": "2026-09-04T01:29:44.383Z"
+          },
+          {
+            "id": "it_mtmd96bu_u0boc8",
+            "text": "Necessidade de definição orçamentária (CAPEX)",
+            "done": false,
+            "createdAt": "2026-09-04T03:00:16.842Z"
+          }
+        ],
+        "next": [
+          {
+            "id": "it_mtma0738_xd2if5",
+            "text": "Reunião marcada 03/09 às 15h",
+            "done": false,
+            "createdAt": "2026-09-04T01:29:19.076Z"
+          },
+          {
+            "id": "it_mtmd8wg3_eqjlt6",
+            "text": "• Construção do documento de requisitos técnicos.",
+            "done": false,
+            "createdAt": "2026-09-04T03:00:04.035Z"
+          },
+          {
+            "id": "it_mtmd92d7_e60zrz",
+            "text": "Compartilhamento com o time responsável para elaboração de proposta",
+            "done": false,
+            "createdAt": "2026-09-04T03:00:11.707Z"
+          }
+        ],
+        "done": [
+          {
+            "id": "it_mtma0738_rgkmae",
+            "text": "Reunião de alinhamento quinzenal iniciada​",
+            "done": true,
+            "createdAt": "2026-09-04T01:29:19.076Z"
+          },
+          {
+            "id": "it_mtma0738_vjcx0s",
+            "text": "Cenário de autonomia dos polos detalhado​",
+            "done": true,
+            "createdAt": "2026-09-04T01:29:19.076Z"
+          },
+          {
+            "id": "it_mtma0738_1jwizt",
+            "text": "Melhorias implementadas no Relatório​",
+            "done": true,
+            "createdAt": "2026-09-04T01:29:19.076Z"
+          },
+          {
+            "id": "it_mtma0738_uaxy45",
+            "text": "Desativado a opção de IA por questão​",
+            "done": true,
+            "createdAt": "2026-09-04T01:29:19.076Z"
+          },
+          {
+            "id": "it_mtmd8lll_4xubwy",
+            "text": "Discussões iniciais sobre integração",
+            "done": true,
+            "createdAt": "2026-09-04T02:59:49.977Z"
+          }
+        ]
+      },
+      "history": [
+        {
+          "id": "hst_mtmd96bu_50fxxw",
+          "ts": "2026-09-04T03:00:16.842Z",
+          "changes": [
+            "Pontos de atenção: item adicionado — Necessidade de definição orçamentária (CAPEX)"
+          ]
+        },
+        {
+          "id": "hst_mtmd92d7_qamrsm",
+          "ts": "2026-09-04T03:00:11.707Z",
+          "changes": [
+            "Próximos passos: item adicionado — Compartilhamento com o time responsável para elaboração de …"
+          ]
+        },
+        {
+          "id": "hst_mtmd8wg3_wjy9us",
+          "ts": "2026-09-04T03:00:04.035Z",
+          "changes": [
+            "Próximos passos: item adicionado — • Construção do documento de requisitos técnicos."
+          ]
+        },
+        {
+          "id": "hst_mtmd8s2n_mv10fs",
+          "ts": "2026-09-04T02:59:58.367Z",
+          "changes": [
+            "Em andamento: item adicionado — Levantamento das necessidades de integração via API"
+          ]
+        },
+        {
+          "id": "hst_mtmd8lll_fwjnj4",
+          "ts": "2026-09-04T02:59:49.977Z",
+          "changes": [
+            "Realizado: item adicionado — Discussões iniciais sobre integração"
+          ]
+        },
+        {
+          "id": "hst_mtma0qm7_hrj2d3",
+          "ts": "2026-09-04T01:29:44.383Z",
+          "changes": [
+            "Pontos de atenção: item adicionado — API"
+          ]
+        },
+        {
+          "id": "hst_mtma0mih_rnyjig",
+          "ts": "2026-09-04T01:29:39.065Z",
+          "changes": [
+            "Pontos de atenção: item adicionado — Dados"
+          ]
+        },
+        {
+          "id": "hst_mtma0hpf_lc20j4",
+          "ts": "2026-09-04T01:29:32.835Z",
+          "changes": [
+            "Pontos de atenção: item adicionado — Integração"
+          ]
+        },
+        {
+          "id": "hst_mtma0738_x8zlc6",
+          "ts": "2026-09-04T01:29:19.076Z",
+          "changes": [
+            "Projeto criado"
+          ]
+        }
+      ],
+      "createdAt": "2026-09-04T01:25:20.307Z",
+      "updatedAt": "2026-09-04T03:00:16.842Z"
+    },
+    {
       "id": "prj_mtlk1jml_4321rh",
       "name": "CANVAS - Personalização dados",
       "description": "BI - https://app.powerbi.com/groups/f48f84eb-6cec-43e7-a35e-959e02b76c19/reports/213c5c79-6f5a-4604-ac63-d5b15b632bbf/730ca04bb77a25082e85?experience=power-bi\n\nDOC - https://nreeducacional-my.sharepoint.com/:w:/g/personal/michelle_alves_afya_com_br/IQC7uqxX34yDR4benEDeJtuiAdi0bzNqT88LJUNXDz5Q1YU?email=jonathan.souza%40afya.com.br&e=6rWrs8",
-      "owner": "",
+      "owner": "JONATHAN",
       "area": "",
       "statusId": "st_active",
       "criticalityId": "cr_normal",
@@ -71,6 +383,13 @@ window.OPSBOARD_SNAPSHOT = {
       },
       "history": [
         {
+          "id": "hst_mtm9tzbw_70jmvw",
+          "ts": "2026-09-04T01:24:29.084Z",
+          "changes": [
+            "Responsável: JONATHAN"
+          ]
+        },
+        {
           "id": "hst_mtlktacg_7a9ov9",
           "ts": "2026-09-03T13:44:06.304Z",
           "changes": [
@@ -92,7 +411,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-03T13:22:31.965Z",
-      "updatedAt": "2026-09-03T13:44:06.304Z"
+      "updatedAt": "2026-09-04T01:24:29.084Z"
     },
     {
       "id": "prj_mtljy1qi_dr2m8l",
@@ -161,10 +480,23 @@ window.OPSBOARD_SNAPSHOT = {
             "text": "Definição da estrutura, nomenclatura e critérios de participação das comunidades",
             "done": true,
             "createdAt": "2026-09-03T13:22:11.046Z"
+          },
+          {
+            "id": "it_mtmda2ux_0xt65g",
+            "text": "Apresentação das datas da iniciativa para a TE",
+            "done": true,
+            "createdAt": "2026-09-04T03:00:59.001Z"
           }
         ]
       },
       "history": [
+        {
+          "id": "hst_mtmda2ux_c2zeuy",
+          "ts": "2026-09-04T03:00:59.001Z",
+          "changes": [
+            "Realizado: item adicionado — Apresentação das datas da iniciativa para a TE"
+          ]
+        },
         {
           "id": "hst_mtlk2mce_1kyiej",
           "ts": "2026-09-03T13:23:22.142Z",
@@ -181,7 +513,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-03T13:19:48.810Z",
-      "updatedAt": "2026-09-03T13:23:22.142Z"
+      "updatedAt": "2026-09-04T03:00:59.001Z"
     },
     {
       "id": "prj_mtljdrgh_inwfcz",
@@ -679,17 +1011,112 @@ window.OPSBOARD_SNAPSHOT = {
       "items": {
         "doing": [
           {
-            "id": "it_mtk1zfyg_mc11v0",
-            "text": "Apresentação do Projeto EXP",
+            "id": "it_mtmd70bk_d4s5b1",
+            "text": "Revisão do escopo para alinhamento às necessidades regulatórias e operacionais",
             "done": false,
-            "createdAt": "2026-09-02T12:09:14.632Z"
+            "createdAt": "2026-09-04T02:58:35.744Z"
           }
         ],
-        "risks": [],
-        "next": [],
-        "done": []
+        "risks": [
+          {
+            "id": "it_mtmd7vuv_0r8dk7",
+            "text": "• Risco de contratar uma solução que não contemple todos os requisitos necessários.",
+            "done": false,
+            "createdAt": "2026-09-04T02:59:16.615Z"
+          },
+          {
+            "id": "it_mtmd80vm_wfc95o",
+            "text": "Necessidade de definição de CAPEX para planejamento orçamentário.",
+            "done": false,
+            "createdAt": "2026-09-04T02:59:23.122Z"
+          }
+        ],
+        "next": [
+          {
+            "id": "it_mtmd7eo6_6trvu4",
+            "text": "Reunião de refinamento do escopo na próxima semana",
+            "done": false,
+            "createdAt": "2026-09-04T02:58:54.342Z"
+          },
+          {
+            "id": "it_mtmd7j5m_842jax",
+            "text": "Comparação entre proposta do fornecedor e requisitos levantados",
+            "done": false,
+            "createdAt": "2026-09-04T02:59:00.154Z"
+          },
+          {
+            "id": "it_mtmd7pm1_fy02d8",
+            "text": "Solicitação de proposta ajustada à realidade da operação",
+            "done": false,
+            "createdAt": "2026-09-04T02:59:08.521Z"
+          }
+        ],
+        "done": [
+          {
+            "id": "it_mtmd6u13_cggv9w",
+            "text": "Análise preliminar da proposta recebida",
+            "done": true,
+            "createdAt": "2026-09-04T02:58:27.591Z"
+          }
+        ]
       },
       "history": [
+        {
+          "id": "hst_mtmd80vm_05uw3e",
+          "ts": "2026-09-04T02:59:23.122Z",
+          "changes": [
+            "Pontos de atenção: item adicionado — Necessidade de definição de CAPEX para planejamento orçamen…"
+          ]
+        },
+        {
+          "id": "hst_mtmd7vuv_v27e41",
+          "ts": "2026-09-04T02:59:16.615Z",
+          "changes": [
+            "Pontos de atenção: item adicionado — • Risco de contratar uma solução que não contemple todos os…"
+          ]
+        },
+        {
+          "id": "hst_mtmd7pm1_3w96ku",
+          "ts": "2026-09-04T02:59:08.521Z",
+          "changes": [
+            "Próximos passos: item adicionado — Solicitação de proposta ajustada à realidade da operação"
+          ]
+        },
+        {
+          "id": "hst_mtmd7j5n_xqi9e1",
+          "ts": "2026-09-04T02:59:00.155Z",
+          "changes": [
+            "Próximos passos: item adicionado — Comparação entre proposta do fornecedor e requisitos levant…"
+          ]
+        },
+        {
+          "id": "hst_mtmd7eo6_6b4vt2",
+          "ts": "2026-09-04T02:58:54.342Z",
+          "changes": [
+            "Próximos passos: item adicionado — Reunião de refinamento do escopo na próxima semana"
+          ]
+        },
+        {
+          "id": "hst_mtmd75t5_1f2szj",
+          "ts": "2026-09-04T02:58:42.857Z",
+          "changes": [
+            "Em andamento: item removido — Apresentação do Projeto EXP"
+          ]
+        },
+        {
+          "id": "hst_mtmd70bk_0nn8w2",
+          "ts": "2026-09-04T02:58:35.744Z",
+          "changes": [
+            "Em andamento: item adicionado — Revisão do escopo para alinhamento às necessidades regulató…"
+          ]
+        },
+        {
+          "id": "hst_mtmd6u13_gzl9ht",
+          "ts": "2026-09-04T02:58:27.591Z",
+          "changes": [
+            "Realizado: item adicionado — Análise preliminar da proposta recebida"
+          ]
+        },
         {
           "id": "hst_mtk5qlrc_rpopon",
           "ts": "2026-09-02T13:54:20.712Z",
@@ -728,7 +1155,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-02T12:06:27.601Z",
-      "updatedAt": "2026-09-02T13:54:20.712Z"
+      "updatedAt": "2026-09-04T02:59:23.122Z"
     },
     {
       "id": "prj_mtj5pt9s_fqdu9q",
