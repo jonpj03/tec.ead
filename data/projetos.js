@@ -1,16 +1,90 @@
 /* =========================================================
    data/projetos.js — snapshot publicado
-   Gerado pelo OpsBoard em 04/09/2026 às 00:21
-   16 projetos.
+   Gerado pelo OpsBoard em 04/09/2026 às 00:41
+   18 projetos.
    Publicação forçada: substitui alterações locais dos visitantes.
 
    Substitua este arquivo no repositório e publique.
    ========================================================= */
 window.OPSBOARD_SNAPSHOT = {
-  "publishedAt": "2026-09-04T03:21:29.738Z",
+  "publishedAt": "2026-09-04T03:41:26.243Z",
   "label": "",
   "force": true,
   "projects": [
+    {
+      "id": "prj_mtmeo7oj_p6cuer",
+      "name": "Automação de notas [Integração]",
+      "description": "",
+      "owner": "JONATHAN",
+      "area": "Soluções Educacionais",
+      "statusId": "st_active",
+      "criticalityId": "cr_normal",
+      "startDate": "",
+      "dueDate": "",
+      "tags": [],
+      "flags": [],
+      "items": {
+        "doing": [
+          {
+            "id": "it_mtmepenx_ghe4ox",
+            "text": "Alinhamento Angélica",
+            "done": false,
+            "createdAt": "2026-09-04T03:40:53.757Z"
+          }
+        ],
+        "risks": [],
+        "next": [],
+        "done": []
+      },
+      "history": [
+        {
+          "id": "hst_mtmepenx_cnj810",
+          "ts": "2026-09-04T03:40:53.757Z",
+          "changes": [
+            "Projeto criado"
+          ]
+        }
+      ],
+      "createdAt": "2026-09-04T03:39:58.051Z",
+      "updatedAt": "2026-09-04T03:40:53.757Z"
+    },
+    {
+      "id": "prj_mtmejgjo_7h0z26",
+      "name": "CANVAS - SSBI [LAKE]",
+      "description": "Dados do lake pelo SSBI",
+      "owner": "JONATHAN",
+      "area": "Soluções Educacionais",
+      "statusId": "st_active",
+      "criticalityId": "cr_attention",
+      "startDate": "",
+      "dueDate": "",
+      "tags": [],
+      "flags": [],
+      "items": {
+        "doing": [
+          {
+            "id": "it_mtmenuxw_izmivu",
+            "text": "Avaliação da liberação de tabelas do Canvas para o SSBI da EAD",
+            "done": false,
+            "createdAt": "2026-09-04T03:39:41.540Z"
+          }
+        ],
+        "risks": [],
+        "next": [],
+        "done": []
+      },
+      "history": [
+        {
+          "id": "hst_mtmenuxw_scl91f",
+          "ts": "2026-09-04T03:39:41.540Z",
+          "changes": [
+            "Projeto criado"
+          ]
+        }
+      ],
+      "createdAt": "2026-09-04T03:36:16.259Z",
+      "updatedAt": "2026-09-04T03:39:41.540Z"
+    },
     {
       "id": "prj_mtmd14r4_uatxwm",
       "name": "CANVAS - Teams",
