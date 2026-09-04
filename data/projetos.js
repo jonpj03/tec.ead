@@ -1,13 +1,13 @@
 /* =========================================================
    data/projetos.js — snapshot publicado
-   Gerado pelo OpsBoard em 04/09/2026 às 00:06
+   Gerado pelo OpsBoard em 04/09/2026 às 00:21
    16 projetos.
    Publicação forçada: substitui alterações locais dos visitantes.
 
    Substitua este arquivo no repositório e publique.
    ========================================================= */
 window.OPSBOARD_SNAPSHOT = {
-  "publishedAt": "2026-09-04T03:06:25.241Z",
+  "publishedAt": "2026-09-04T03:21:29.738Z",
   "label": "",
   "force": true,
   "projects": [
@@ -428,41 +428,47 @@ window.OPSBOARD_SNAPSHOT = {
       "items": {
         "doing": [
           {
-            "id": "it_mtlk13hi_ls3pbs",
-            "text": "Refinamento da integração automatizada entre RM e Canvas",
+            "id": "it_mtmdyo8a_156z6i",
+            "text": "Preparação da primeira entrega (Comunidade Acadêmica).",
             "done": false,
-            "createdAt": "2026-09-03T13:22:11.046Z"
-          },
-          {
-            "id": "it_mtlk13hi_tk1vwz",
-            "text": "Consolidação das regras para criação, manutenção e atualização das comunidades",
-            "done": false,
-            "createdAt": "2026-09-03T13:22:11.046Z"
+            "createdAt": "2026-09-04T03:20:06.442Z"
           }
         ],
         "risks": [
           {
             "id": "it_mtlk13hi_9kxd75",
-            "text": "Garantir atualização automática em casos de mudança de matrícula, modalidade ou filial.",
+            "text": "Dependência da conclusão da primeira fase para evolução das demais entregas",
             "done": false,
             "createdAt": "2026-09-03T13:22:11.046Z"
           }
         ],
         "next": [
           {
-            "id": "it_mtlk13hi_hw1thg",
-            "text": "Implementar regras de inclusão, remoção e movimentação automática de usuários.",
+            "id": "it_mtmdzf8b_kxpjq4",
+            "text": "Colocar a Comunidade Acadêmica em produção até dia 18.",
             "done": false,
-            "createdAt": "2026-09-03T13:22:11.046Z"
+            "createdAt": "2026-09-04T03:20:41.435Z"
           },
           {
-            "id": "it_mtlk13hi_6jvgnm",
-            "text": "Desenvolver a automação de criação e matrícula das comunidades",
+            "id": "it_mtmdzrrl_x22is4",
+            "text": "Iniciar, ainda em setembro, as frentes de Internacionalização e Esquenta",
             "done": false,
-            "createdAt": "2026-09-03T13:22:11.046Z"
+            "createdAt": "2026-09-04T03:20:57.681Z"
+          },
+          {
+            "id": "it_mtmdzwal_87qr5s",
+            "text": "Apresentar cronograma detalhado no final de setembro",
+            "done": false,
+            "createdAt": "2026-09-04T03:21:03.549Z"
           }
         ],
         "done": [
+          {
+            "id": "it_mtlk13hi_tk1vwz",
+            "text": "Consolidação das regras para criação, manutenção e atualização das comunidades",
+            "done": true,
+            "createdAt": "2026-09-03T13:22:11.046Z"
+          },
           {
             "id": "it_mtlk13hi_wroluo",
             "text": "Levantamento e documentação do escopo da solução.",
@@ -491,6 +497,83 @@ window.OPSBOARD_SNAPSHOT = {
       },
       "history": [
         {
+          "id": "hst_mtme09fu_gwsufl",
+          "ts": "2026-09-04T03:21:20.586Z",
+          "changes": [
+            "Item editado: “Garantir atualização automática em caso…” → “Dependência da conclusão da primeira fa…”"
+          ]
+        },
+        {
+          "id": "hst_mtmdzwam_70l6eh",
+          "ts": "2026-09-04T03:21:03.550Z",
+          "changes": [
+            "Próximos passos: item adicionado — Apresentar cronograma detalhado no final de setembro"
+          ]
+        },
+        {
+          "id": "hst_mtmdzrrl_2re7ri",
+          "ts": "2026-09-04T03:20:57.681Z",
+          "changes": [
+            "Próximos passos: item adicionado — Iniciar, ainda em setembro, as frentes de Internacionalizaç…"
+          ]
+        },
+        {
+          "id": "hst_mtmdzknw_4xwfyp",
+          "ts": "2026-09-04T03:20:48.476Z",
+          "changes": [
+            "Item editado: “• Colocar a Comunidade Acadêmica em pro…” → “Colocar a Comunidade Acadêmica em produ…”"
+          ]
+        },
+        {
+          "id": "hst_mtmdzf8b_7v7znh",
+          "ts": "2026-09-04T03:20:41.435Z",
+          "changes": [
+            "Próximos passos: item adicionado — • Colocar a Comunidade Acadêmica em produção até dia 18."
+          ]
+        },
+        {
+          "id": "hst_mtmdza0k_00254h",
+          "ts": "2026-09-04T03:20:34.676Z",
+          "changes": [
+            "Realizado: item removido — Implementar regras de inclusão, remoção e movimentação auto…"
+          ]
+        },
+        {
+          "id": "hst_mtmdz6g2_dipmr5",
+          "ts": "2026-09-04T03:20:30.050Z",
+          "changes": [
+            "Item concluído: Implementar regras de inclusão, remoção e movimentação auto…"
+          ]
+        },
+        {
+          "id": "hst_mtmdz5ij_ftonhs",
+          "ts": "2026-09-04T03:20:28.843Z",
+          "changes": [
+            "Próximos passos: item removido — Desenvolver a automação de criação e matrícula das comunida…"
+          ]
+        },
+        {
+          "id": "hst_mtmdyv1f_i9r0ao",
+          "ts": "2026-09-04T03:20:15.267Z",
+          "changes": [
+            "Item concluído: Consolidação das regras para criação, manutenção e atualiza…"
+          ]
+        },
+        {
+          "id": "hst_mtmdyrg4_1fwyje",
+          "ts": "2026-09-04T03:20:10.612Z",
+          "changes": [
+            "Em andamento: item removido — Refinamento da integração automatizada entre RM e Canvas"
+          ]
+        },
+        {
+          "id": "hst_mtmdyo8b_ux3dkw",
+          "ts": "2026-09-04T03:20:06.443Z",
+          "changes": [
+            "Em andamento: item adicionado — Preparação da primeira entrega (Comunidade Acadêmica)."
+          ]
+        },
+        {
           "id": "hst_mtmda2ux_c2zeuy",
           "ts": "2026-09-04T03:00:59.001Z",
           "changes": [
@@ -513,7 +596,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-03T13:19:48.810Z",
-      "updatedAt": "2026-09-04T03:00:59.001Z"
+      "updatedAt": "2026-09-04T03:21:20.586Z"
     },
     {
       "id": "prj_mtljdrgh_inwfcz",
