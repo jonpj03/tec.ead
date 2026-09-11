@@ -1,13 +1,13 @@
 /* =========================================================
    data/projetos.js — snapshot publicado
-   Gerado pelo OpsBoard em 10/09/2026 às 23:36
+   Gerado pelo OpsBoard em 11/09/2026 às 02:16
    18 projetos.
    Publicação forçada: substitui alterações locais dos visitantes.
 
    Substitua este arquivo no repositório e publique.
    ========================================================= */
 window.OPSBOARD_SNAPSHOT = {
-  "publishedAt": "2026-09-11T02:36:16.162Z",
+  "publishedAt": "2026-09-11T05:16:31.863Z",
   "label": "",
   "force": true,
   "projects": [
@@ -625,10 +625,23 @@ window.OPSBOARD_SNAPSHOT = {
             "text": "Apresentação das datas da iniciativa para a TE",
             "done": true,
             "createdAt": "2026-09-04T03:00:59.001Z"
+          },
+          {
+            "id": "it_mtwi32ii_yn28st",
+            "text": "Reunião de alinhamento com George",
+            "done": true,
+            "createdAt": "2026-09-11T05:13:11.802Z"
           }
         ]
       },
       "history": [
+        {
+          "id": "hst_mtwi32ii_gg9gie",
+          "ts": "2026-09-11T05:13:11.802Z",
+          "changes": [
+            "Realizado: item adicionado — Reunião de alinhamento com George"
+          ]
+        },
         {
           "id": "hst_mtmxb6nm_jxuasl",
           "ts": "2026-09-04T12:21:42.898Z",
@@ -744,12 +757,12 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-03T13:19:48.810Z",
-      "updatedAt": "2026-09-04T12:21:42.898Z"
+      "updatedAt": "2026-09-11T05:13:11.802Z"
     },
     {
       "id": "prj_mtljdrgh_inwfcz",
       "name": "Gestão de PROVAS [Unificado]",
-      "description": "PASSO 1\n\n1. Autoagendamento em lote conforme parâmetros de decisão da gestão;\n2. Flexibilização da aplicação para um período de prova com o autoagendamento sem dia e hora específico;\n3. Correção das questões discursivas com IA\n4. Otimização da operação dos bancos de questões com anulação em lote de questões\n5. Operação dos bancos de questões a nível de conteúdo e não de turma, ou seja, as turmas são vinculadas aos bancos sem redundância. Assim os professores e coordenadores atuam diretamente no banco do conteúdo.\n6. Matriz de categorização das questões para identificação de futuros gaps de aprendizagem.\n7. Acesso com restrição por IP e não por senha que pode ser compartilhada e quebra a segurança.\n8. Anexo de Material de apoio para prova\n9. Modelo de prova personalizáveis\n10. Tempo extra para alunos em acompanhamento especial\n11. Relatórios personalizados\n\n\nPASSO 2\n\n1. Validação dos documentos enviados pelo Neymar\n\n\n\nhttps://nreeducacional-my.sharepoint.com/shared?listurl=https%3A%2F%2Fnreeducacional-my%2Esharepoint%2Ecom%2Fpersonal%2Fneymar_junior_afya_com_br%2FDocuments&id=%2Fpersonal%2Fneymar_junior_afya_com_br%2FDocuments%2FPROJETOS%20-%20TECNOLOGIAS%20EDUCACIONAIS%2FPLANEJAMEMTNO%20-%202026%20-%202027%2FProjeto%20Sistema%20de%20Agendamento%20de%20Provas%20-%20Levantamento%20de%20Melhoria%2FRequisitos%20Funcionais%20-%20Sistema%20de%20Agendamento%20de%20Provas%2Epdf&parent=%2Fpersonal%2Fneymar_junior_afya_com_br%2FDocuments%2FPROJETOS%20-%20TECNOLOGIAS%20EDUCACIONAIS%2FPLANEJAMEMTNO%20-%202026%20-%202027%2FProjeto%20Sistema%20de%20Agendamento%20de%20Provas%20-%20Levantamento%20de%20Melhoria&shareLink=1&ga=1&LOF=1\n\nhttps://nreeducacional-my.sharepoint.com/shared?listurl=https%3A%2F%2Fnreeducacional-my%2Esharepoint%2Ecom%2Fpersonal%2Fneymar_junior_afya_com_br%2FDocuments&id=%2Fpersonal%2Fneymar_junior_afya_com_br%2FDocuments%2FPROJETOS%20-%20TECNOLOGIAS%20EDUCACIONAIS%2FPLANEJAMEMTNO%20-%202026%20-%202027%2FProjeto%20Sistema%20de%20Agendamento%20de%20Provas%20-%20Levantamento%20de%20Melhoria%2FRequisitos%20Funcionais%20-%20Migração%20de%20Avaliações%20EaD%20Nacional%20-%20Canvas%2Epdf&parent=%2Fpersonal%2Fneymar_junior_afya_com_br%2FDocuments%2FPROJETOS%20-%20TECNOLOGIAS%20EDUCACIONAIS%2FPLANEJAMEMTNO%20-%202026%20-%202027%2FProjeto%20Sistema%20de%20Agendamento%20de%20Provas%20-%20Levantamento%20de%20Melhoria&shareLink=1&ga=1&LOF=1\n\n\n\t- No item I\n\t\t○ \"Um aspecto importante é que o autoagendamento não gera uma nova prova: a partir de uma prova já gerada, ajustam-se os parâmetros para que ela volte a ficar disponível ao grupo\"\nR: A funcionalidade autoagendamento cria uma avaliação nova. A diferença, é que os cenários de 2° chamada, falta de energia, etc.. As provas já estariam 'Geradas'. Desta forma, seriam apenas ajustar os parâmetros \n\n\n\n\t- No item V\n\t\t○ O sistema de agendamento atual possui apenas relatórios alguns relatórios\n\"Relatórios alguns relatórios\"",
+      "description": "PASSO 1\n\n1. Autoagendamento em lote conforme parâmetros de decisão da gestão;\n2. Flexibilização da aplicação para um período de prova com o autoagendamento sem dia e hora específico;\n3. Correção das questões discursivas com IA\n4. Otimização da operação dos bancos de questões com anulação em lote de questões\n5. Operação dos bancos de questões a nível de conteúdo e não de turma, ou seja, as turmas são vinculadas aos bancos sem redundância. Assim os professores e coordenadores atuam diretamente no banco do conteúdo.\n6. Matriz de categorização das questões para identificação de futuros gaps de aprendizagem.\n7. Acesso com restrição por IP e não por senha que pode ser compartilhada e quebra a segurança.\n8. Anexo de Material de apoio para prova\n9. Modelo de prova personalizáveis\n10. Tempo extra para alunos em acompanhamento especial\n11. Relatórios personalizados",
       "owner": "JONATHAN",
       "area": "Soluções Educacionais",
       "statusId": "st_active",
@@ -771,6 +784,12 @@ window.OPSBOARD_SNAPSHOT = {
         ],
         "done": [
           {
+            "id": "it_mtwi6s42_egvy7g",
+            "text": "Alinhamento de Campus/Polo RM - Prova Fácil",
+            "done": true,
+            "createdAt": "2026-09-11T05:16:04.946Z"
+          },
+          {
             "id": "it_mtljx4ae_81qrdm",
             "text": "Levantamento de escopo EAD",
             "done": true,
@@ -785,6 +804,27 @@ window.OPSBOARD_SNAPSHOT = {
         ]
       },
       "history": [
+        {
+          "id": "hst_mtwi6vip_rlrcv1",
+          "ts": "2026-09-11T05:16:09.361Z",
+          "changes": [
+            "Item concluído: Alinhamento de Campus/Polo RM - Prova Fácil"
+          ]
+        },
+        {
+          "id": "hst_mtwi6s42_vjntsi",
+          "ts": "2026-09-11T05:16:04.946Z",
+          "changes": [
+            "Em andamento: item adicionado — Alinhamento de Campus/Polo RM - Prova Fácil"
+          ]
+        },
+        {
+          "id": "hst_mtwi6168_w928kn",
+          "ts": "2026-09-11T05:15:30.032Z",
+          "changes": [
+            "Descrição atualizada"
+          ]
+        },
         {
           "id": "hst_mtmxq4km_2f4cur",
           "ts": "2026-09-04T12:33:20.038Z",
@@ -801,7 +841,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-03T13:04:02.369Z",
-      "updatedAt": "2026-09-04T12:33:20.038Z"
+      "updatedAt": "2026-09-11T05:16:09.361Z"
     },
     {
       "id": "prj_mtljbxeu_6befio",
@@ -1136,7 +1176,7 @@ window.OPSBOARD_SNAPSHOT = {
     {
       "id": "prj_mtkkp6he_b256a2",
       "name": "Ferramenta de para automação de Cadastro de questões",
-      "description": "Criar uma ferramenta de cadastro de questão",
+      "description": "Criar uma ferramenta de cadastro de questão\n\nferramenta - https://saneadadaluno.blob.core.windows.net/solucoes/exportar-questoes-qti/index.html",
       "owner": "VINICIUS",
       "area": "WEB",
       "statusId": "st_active",
@@ -1150,10 +1190,16 @@ window.OPSBOARD_SNAPSHOT = {
       "items": {
         "doing": [
           {
-            "id": "it_mtkkr78y_6t8ucv",
-            "text": "Criação da primeira versão",
+            "id": "it_mtwi0e80_q1uk5a",
+            "text": "Tela de cadastro direto",
             "done": false,
-            "createdAt": "2026-09-02T20:54:42.802Z"
+            "createdAt": "2026-09-11T05:11:07.008Z"
+          },
+          {
+            "id": "it_mtwi0w28_rez90k",
+            "text": "Exportação QTI CANVAS e SGP",
+            "done": false,
+            "createdAt": "2026-09-11T05:11:30.128Z"
           }
         ],
         "risks": [
@@ -1165,9 +1211,44 @@ window.OPSBOARD_SNAPSHOT = {
           }
         ],
         "next": [],
-        "done": []
+        "done": [
+          {
+            "id": "it_mtkkr78y_6t8ucv",
+            "text": "Criação da primeira versão",
+            "done": true,
+            "createdAt": "2026-09-02T20:54:42.802Z"
+          }
+        ]
       },
       "history": [
+        {
+          "id": "hst_mtwi0w28_ag8u67",
+          "ts": "2026-09-11T05:11:30.128Z",
+          "changes": [
+            "Em andamento: item adicionado — Exportação QTI CANVAS e SGP"
+          ]
+        },
+        {
+          "id": "hst_mtwi0e80_d153yb",
+          "ts": "2026-09-11T05:11:07.008Z",
+          "changes": [
+            "Em andamento: item adicionado — Tela de cadastro direto"
+          ]
+        },
+        {
+          "id": "hst_mtwi00f3_vngwv6",
+          "ts": "2026-09-11T05:10:49.119Z",
+          "changes": [
+            "Item concluído: Criação da primeira versão"
+          ]
+        },
+        {
+          "id": "hst_mtwhzxkx_ujxri0",
+          "ts": "2026-09-11T05:10:45.441Z",
+          "changes": [
+            "Descrição atualizada"
+          ]
+        },
         {
           "id": "hst_mtkkr78z_zq6j9k",
           "ts": "2026-09-02T20:54:42.803Z",
@@ -1177,7 +1258,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-02T20:53:08.498Z",
-      "updatedAt": "2026-09-02T20:54:42.803Z"
+      "updatedAt": "2026-09-11T05:11:30.128Z"
     },
     {
       "id": "prj_mtkkm7rd_uq1y8y",
