@@ -1,13 +1,13 @@
 /* =========================================================
    data/projetos.js — snapshot publicado
-   Gerado pelo OpsBoard em 04/09/2026 às 11:57
+   Gerado pelo OpsBoard em 10/09/2026 às 23:36
    18 projetos.
    Publicação forçada: substitui alterações locais dos visitantes.
 
    Substitua este arquivo no repositório e publique.
    ========================================================= */
 window.OPSBOARD_SNAPSHOT = {
-  "publishedAt": "2026-09-04T14:57:36.263Z",
+  "publishedAt": "2026-09-11T02:36:16.162Z",
   "label": "",
   "force": true,
   "projects": [
@@ -267,7 +267,9 @@ window.OPSBOARD_SNAPSHOT = {
       "startDate": "",
       "dueDate": "2026-09-04",
       "tags": [],
-      "flags": [],
+      "flags": [
+        "fl_mtwag35e_wvflic"
+      ],
       "items": {
         "doing": [
           {
@@ -283,20 +285,7 @@ window.OPSBOARD_SNAPSHOT = {
             "createdAt": "2026-09-04T01:29:19.076Z"
           }
         ],
-        "risks": [
-          {
-            "id": "it_mtma0mih_rvu4d2",
-            "text": "Dados",
-            "done": false,
-            "createdAt": "2026-09-04T01:29:39.065Z"
-          },
-          {
-            "id": "it_mtmd96bu_u0boc8",
-            "text": "Necessidade de definição orçamentária (CAPEX)",
-            "done": false,
-            "createdAt": "2026-09-04T03:00:16.842Z"
-          }
-        ],
+        "risks": [],
         "next": [
           {
             "id": "it_mtma0738_xd2if5",
@@ -351,6 +340,27 @@ window.OPSBOARD_SNAPSHOT = {
         ]
       },
       "history": [
+        {
+          "id": "hst_mtwaj3j7_2usk17",
+          "ts": "2026-09-11T01:41:42.691Z",
+          "changes": [
+            "Flags atualizadas"
+          ]
+        },
+        {
+          "id": "hst_mtn7nx5h_kscw9l",
+          "ts": "2026-09-04T17:11:33.269Z",
+          "changes": [
+            "Pontos de atenção: item removido — Necessidade de definição orçamentária (CAPEX)"
+          ]
+        },
+        {
+          "id": "hst_mtn7nw38_fw5ya0",
+          "ts": "2026-09-04T17:11:31.892Z",
+          "changes": [
+            "Pontos de atenção: item removido — Dados"
+          ]
+        },
         {
           "id": "hst_mtmxez98_jj8odm",
           "ts": "2026-09-04T12:24:39.932Z",
@@ -444,7 +454,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-04T01:25:20.307Z",
-      "updatedAt": "2026-09-04T12:24:39.932Z"
+      "updatedAt": "2026-09-11T01:41:42.691Z"
     },
     {
       "id": "prj_mtlk1jml_4321rh",
@@ -1226,7 +1236,7 @@ window.OPSBOARD_SNAPSHOT = {
       "id": "prj_mtk1vv2p_d7pucb",
       "name": "PROPOSTA EXP - Conteudos",
       "description": "Proposta de captura de dados dos alunos nos Conteúdos",
-      "owner": "THIAGO, VINICIUS, JONATHAN",
+      "owner": "THIAGO, VINICIUS, JONATHAN, WALLACE",
       "area": "Soluções Educacionais",
       "statusId": "st_active",
       "criticalityId": "cr_attention",
@@ -1239,56 +1249,259 @@ window.OPSBOARD_SNAPSHOT = {
       "items": {
         "doing": [
           {
-            "id": "it_mtmd70bk_d4s5b1",
-            "text": "Revisão do escopo para alinhamento às necessidades regulatórias e operacionais",
+            "id": "it_mtwb2tw8_57u5nw",
+            "text": "Análise da arquitetura atual do servidor Azure/Storage.",
             "done": false,
-            "createdAt": "2026-09-04T02:58:35.744Z"
+            "createdAt": "2026-09-11T01:57:03.320Z"
+          },
+          {
+            "id": "it_mtwb36s2_x94gbu",
+            "text": "Avaliação da necessidade de uma nova solução de gestão de conteúdos.",
+            "done": false,
+            "createdAt": "2026-09-11T01:57:20.018Z"
+          },
+          {
+            "id": "it_mtwb3sm6_gsd0qp",
+            "text": "Discussão sobre inclusão de uma IA de apoio ao aprendizado baseada no conteúdo já na primeira fase",
+            "done": false,
+            "createdAt": "2026-09-11T01:57:48.318Z"
           }
         ],
         "risks": [
           {
             "id": "it_mtmd7vuv_0r8dk7",
-            "text": "• Risco de contratar uma solução que não contemple todos os requisitos necessários.",
+            "text": "Risco de contratar uma solução que não contemple todos os requisitos necessários.",
             "done": false,
             "createdAt": "2026-09-04T02:59:16.615Z"
           },
           {
-            "id": "it_mtmd80vm_wfc95o",
-            "text": "Necessidade de definição de CAPEX para planejamento orçamentário.",
+            "id": "it_mtwbema3_idgbn4",
+            "text": "Atualmente os conteúdos podem ser acessados externamente por meio do compartilhamento direto dos links.",
             "done": false,
-            "createdAt": "2026-09-04T02:59:23.122Z"
+            "createdAt": "2026-09-11T02:06:13.323Z"
+          },
+          {
+            "id": "it_mtwbf0xx_47qpml",
+            "text": "O ambiente atual funciona basicamente como storage e pode não suportar todas as necessidades futuras.",
+            "done": false,
+            "createdAt": "2026-09-11T02:06:32.325Z"
+          },
+          {
+            "id": "it_mtwbfpxs_kslpcr",
+            "text": "Apresentar o projeto como iniciativa institucional para graduação presencial e EAD",
+            "done": false,
+            "createdAt": "2026-09-11T02:07:04.720Z"
           }
         ],
         "next": [
           {
-            "id": "it_mtmd7eo6_6trvu4",
-            "text": "Reunião de refinamento do escopo na próxima semana",
+            "id": "it_mtwbdsyk_xtmx9e",
+            "text": "Detalhar a arquitetura da API de autenticação entre Canvas e servidor",
             "done": false,
-            "createdAt": "2026-09-04T02:58:54.342Z"
+            "createdAt": "2026-09-11T02:05:35.324Z"
           },
           {
-            "id": "it_mtmd7j5m_842jax",
-            "text": "Comparação entre proposta do fornecedor e requisitos levantados",
+            "id": "it_mtwbea7f_4g4pdr",
+            "text": "Em uma etapa posterior, avaliar integração com CRM para ações de retenção e sucesso do aluno.",
             "done": false,
-            "createdAt": "2026-09-04T02:59:00.154Z"
-          },
-          {
-            "id": "it_mtmd7pm1_fy02d8",
-            "text": "Solicitação de proposta ajustada à realidade da operação",
-            "done": false,
-            "createdAt": "2026-09-04T02:59:08.521Z"
+            "createdAt": "2026-09-11T02:05:57.675Z"
           }
         ],
         "done": [
+          {
+            "id": "it_mtmd7eo6_6trvu4",
+            "text": "Reunião de refinamento do escopo na próxima semana",
+            "done": true,
+            "createdAt": "2026-09-04T02:58:54.342Z"
+          },
+          {
+            "id": "it_mtmd70bk_d4s5b1",
+            "text": "Revisão do escopo para alinhamento às necessidades regulatórias e operacionais",
+            "done": true,
+            "createdAt": "2026-09-04T02:58:35.744Z"
+          },
           {
             "id": "it_mtmd6u13_cggv9w",
             "text": "Análise preliminar da proposta recebida",
             "done": true,
             "createdAt": "2026-09-04T02:58:27.591Z"
+          },
+          {
+            "id": "it_mtwazr4c_z71dkk",
+            "text": "Identificadas as principais necessidades de segurança, integração, rastreamento e dados.",
+            "done": true,
+            "createdAt": "2026-09-11T01:54:39.756Z"
+          },
+          {
+            "id": "it_mtwb01hm_ffycap",
+            "text": "Definida a necessidade de integração entre Canvas e servidor de conteúdo",
+            "done": true,
+            "createdAt": "2026-09-11T01:54:53.194Z"
           }
         ]
       },
       "history": [
+        {
+          "id": "hst_mtwcewr6_xgzogi",
+          "ts": "2026-09-11T02:34:26.514Z",
+          "changes": [
+            "Item editado: “• Risco de contratar uma solução que nã…” → “Risco de contratar uma solução que não …”"
+          ]
+        },
+        {
+          "id": "hst_mtwceqdk_uhtvlc",
+          "ts": "2026-09-11T02:34:18.248Z",
+          "changes": [
+            "Item editado: “Segurança: atualmente os conteúdos pode…” → “Atualmente os conteúdos podem ser acess…”"
+          ]
+        },
+        {
+          "id": "hst_mtwceied_mqdtuy",
+          "ts": "2026-09-11T02:34:07.909Z",
+          "changes": [
+            "Item editado: “Infraestrutura: o ambiente atual funcio…” → “O ambiente atual funciona basicamente c…”"
+          ]
+        },
+        {
+          "id": "hst_mtwcecp4_kmhw31",
+          "ts": "2026-09-11T02:34:00.520Z",
+          "changes": [
+            "Pontos de atenção: itens reordenados"
+          ]
+        },
+        {
+          "id": "hst_mtwcechc_6kwj5a",
+          "ts": "2026-09-11T02:34:00.240Z",
+          "changes": [
+            "Pontos de atenção: itens reordenados"
+          ]
+        },
+        {
+          "id": "hst_mtwce5lv_6q65rg",
+          "ts": "2026-09-11T02:33:51.331Z",
+          "changes": [
+            "Item editado: “Posicionamento: apresentar o projeto co…” → “Apresentar o projeto como iniciativa in…”"
+          ]
+        },
+        {
+          "id": "hst_mtwcdm9c_4gb5sh",
+          "ts": "2026-09-11T02:33:26.256Z",
+          "changes": [
+            "Pontos de atenção: itens reordenados"
+          ]
+        },
+        {
+          "id": "hst_mtwccnec_jg7w8x",
+          "ts": "2026-09-11T02:32:41.076Z",
+          "changes": [
+            "Responsável: THIAGO, VINICIUS, JONATHAN, WALLACE"
+          ]
+        },
+        {
+          "id": "hst_mtwbfpxs_5tafur",
+          "ts": "2026-09-11T02:07:04.720Z",
+          "changes": [
+            "Pontos de atenção: item adicionado — Posicionamento: apresentar o projeto como iniciativa instit…"
+          ]
+        },
+        {
+          "id": "hst_mtwbf0xx_p4wqlr",
+          "ts": "2026-09-11T02:06:32.325Z",
+          "changes": [
+            "Pontos de atenção: item adicionado — Infraestrutura: o ambiente atual funciona basicamente como …"
+          ]
+        },
+        {
+          "id": "hst_mtwbema3_b0vz5r",
+          "ts": "2026-09-11T02:06:13.323Z",
+          "changes": [
+            "Pontos de atenção: item adicionado — Segurança: atualmente os conteúdos podem ser acessados exte…"
+          ]
+        },
+        {
+          "id": "hst_mtwbea7f_aczxaz",
+          "ts": "2026-09-11T02:05:57.675Z",
+          "changes": [
+            "Próximos passos: item adicionado — Em uma etapa posterior, avaliar integração com CRM para açõ…"
+          ]
+        },
+        {
+          "id": "hst_mtwbdsyl_gdwfr5",
+          "ts": "2026-09-11T02:05:35.325Z",
+          "changes": [
+            "Próximos passos: item adicionado — Detalhar a arquitetura da API de autenticação entre Canvas …"
+          ]
+        },
+        {
+          "id": "hst_mtwb3sm6_eiemet",
+          "ts": "2026-09-11T01:57:48.318Z",
+          "changes": [
+            "Em andamento: item adicionado — Discussão sobre inclusão de uma IA de apoio ao aprendizado …"
+          ]
+        },
+        {
+          "id": "hst_mtwb36s3_06lygz",
+          "ts": "2026-09-11T01:57:20.019Z",
+          "changes": [
+            "Em andamento: item adicionado — Avaliação da necessidade de uma nova solução de gestão de c…"
+          ]
+        },
+        {
+          "id": "hst_mtwb2tw9_zjlpah",
+          "ts": "2026-09-11T01:57:03.321Z",
+          "changes": [
+            "Em andamento: item adicionado — Análise da arquitetura atual do servidor Azure/Storage."
+          ]
+        },
+        {
+          "id": "hst_mtwb01hm_xbjylu",
+          "ts": "2026-09-11T01:54:53.194Z",
+          "changes": [
+            "Realizado: item adicionado — Definida a necessidade de integração entre Canvas e servido…"
+          ]
+        },
+        {
+          "id": "hst_mtwazr4d_xh77ta",
+          "ts": "2026-09-11T01:54:39.757Z",
+          "changes": [
+            "Realizado: item adicionado — Identificadas as principais necessidades de segurança, inte…"
+          ]
+        },
+        {
+          "id": "hst_mtwavs3e_qbsckj",
+          "ts": "2026-09-11T01:51:34.394Z",
+          "changes": [
+            "Pontos de atenção: item removido — Necessidade de definição de CAPEX para planejamento orçamen…"
+          ]
+        },
+        {
+          "id": "hst_mtwavlte_us1kj6",
+          "ts": "2026-09-11T01:51:26.258Z",
+          "changes": [
+            "Próximos passos: item removido — Solicitação de proposta ajustada à realidade da operação"
+          ]
+        },
+        {
+          "id": "hst_mtwavi1f_ez0mo2",
+          "ts": "2026-09-11T01:51:21.363Z",
+          "changes": [
+            "Próximos passos: item removido — Comparação entre proposta do fornecedor e requisitos levant…"
+          ]
+        },
+        {
+          "id": "hst_mtwatjs1_zj27mk",
+          "ts": "2026-09-11T01:49:50.305Z",
+          "changes": [
+            "Item concluído: Reunião de refinamento do escopo na próxima semana"
+          ]
+        },
+        {
+          "id": "hst_mtwathgj_b3fp3c",
+          "ts": "2026-09-11T01:49:47.299Z",
+          "changes": [
+            "Item concluído: Revisão do escopo para alinhamento às necessidades regulató…"
+          ]
+        },
         {
           "id": "hst_mtmd80vm_05uw3e",
           "ts": "2026-09-04T02:59:23.122Z",
@@ -1383,7 +1596,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-02T12:06:27.601Z",
-      "updatedAt": "2026-09-04T02:59:23.122Z"
+      "updatedAt": "2026-09-11T02:34:26.514Z"
     },
     {
       "id": "prj_mtj5pt9s_fqdu9q",
@@ -1395,13 +1608,7 @@ window.OPSBOARD_SNAPSHOT = {
       "criticalityId": "cr_attention",
       "startDate": "",
       "dueDate": "",
-      "tags": [
-        "495014",
-        "494250",
-        "500340",
-        "495232",
-        "494259"
-      ],
+      "tags": [],
       "flags": [
         "fl_dep"
       ],
@@ -1458,6 +1665,20 @@ window.OPSBOARD_SNAPSHOT = {
       },
       "history": [
         {
+          "id": "hst_mtwalaih_2ud8b3",
+          "ts": "2026-09-11T01:43:25.049Z",
+          "changes": [
+            "Projeto revisado sem alterações de conteúdo"
+          ]
+        },
+        {
+          "id": "hst_mtwakqci_ihrls2",
+          "ts": "2026-09-11T01:42:58.914Z",
+          "changes": [
+            "Tags atualizadas"
+          ]
+        },
+        {
           "id": "hst_mtlk2ayu_0at06w",
           "ts": "2026-09-03T13:23:07.398Z",
           "changes": [
@@ -1473,7 +1694,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-01T21:05:57.616Z",
-      "updatedAt": "2026-09-03T13:23:07.398Z"
+      "updatedAt": "2026-09-11T01:43:25.049Z"
     }
   ],
   "settings": {
@@ -1543,7 +1764,7 @@ window.OPSBOARD_SNAPSHOT = {
       },
       {
         "id": "fl_prazo",
-        "label": "Risco de prazo",
+        "label": "CANVAS",
         "color": "#c03a3a"
       },
       {
@@ -1555,6 +1776,16 @@ window.OPSBOARD_SNAPSHOT = {
         "id": "fl_block",
         "label": "Bloqueado",
         "color": "#4b5468"
+      },
+      {
+        "id": "fl_mtwag35e_wvflic",
+        "label": "Prova Fácil",
+        "color": "#272262"
+      },
+      {
+        "id": "fl_mtwai76j_p238ro",
+        "label": "RM",
+        "color": "#b0b0b0"
       }
     ],
     "areas": [
