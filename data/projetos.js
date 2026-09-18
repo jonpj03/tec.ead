@@ -1,13 +1,13 @@
 /* =========================================================
    data/projetos.js — snapshot publicado
-   Gerado pelo OpsBoard em 17/09/2026 às 22:08
+   Gerado pelo OpsBoard em 18/09/2026 às 01:50
    18 projetos.
    Publicação forçada: substitui alterações locais dos visitantes.
 
    Substitua este arquivo no repositório e publique.
    ========================================================= */
 window.OPSBOARD_SNAPSHOT = {
-  "publishedAt": "2026-09-18T01:08:52.018Z",
+  "publishedAt": "2026-09-18T04:50:31.742Z",
   "label": "",
   "force": true,
   "projects": [
@@ -283,16 +283,28 @@ window.OPSBOARD_SNAPSHOT = {
             "text": "Fluxo de revisão IA melhoria​",
             "done": false,
             "createdAt": "2026-09-04T01:29:19.076Z"
+          },
+          {
+            "id": "it_mu6h3znd_t0iu45",
+            "text": "Implementação de Melhoria IP",
+            "done": false,
+            "createdAt": "2026-09-18T04:43:36.889Z"
+          },
+          {
+            "id": "it_mu6h4xcv_g32cbp",
+            "text": "Anexo de arquivo como material de correção da IA",
+            "done": false,
+            "createdAt": "2026-09-18T04:44:20.575Z"
+          },
+          {
+            "id": "it_mu6h98np_ygo24y",
+            "text": "Fluxo De Revisão Por Nota",
+            "done": false,
+            "createdAt": "2026-09-18T04:47:41.845Z"
           }
         ],
         "risks": [],
         "next": [
-          {
-            "id": "it_mtma0738_xd2if5",
-            "text": "Reunião marcada 04/09 às 15h",
-            "done": false,
-            "createdAt": "2026-09-04T01:29:19.076Z"
-          },
           {
             "id": "it_mtmd8wg3_eqjlt6",
             "text": "• Construção do documento de requisitos técnicos.",
@@ -300,18 +312,18 @@ window.OPSBOARD_SNAPSHOT = {
             "createdAt": "2026-09-04T03:00:04.035Z"
           },
           {
-            "id": "it_mtmd92d7_e60zrz",
-            "text": "Compartilhamento com o time responsável para elaboração de proposta",
+            "id": "it_mu6h3fh1_e2d3dd",
+            "text": "Documento API",
             "done": false,
-            "createdAt": "2026-09-04T03:00:11.707Z"
+            "createdAt": "2026-09-18T04:43:10.741Z"
           }
         ],
         "done": [
           {
-            "id": "it_mtma0738_rgkmae",
-            "text": "Reunião de alinhamento quinzenal iniciada​",
+            "id": "it_mtmd92d7_e60zrz",
+            "text": "Compartilhamento com o time responsável para elaboração de proposta",
             "done": true,
-            "createdAt": "2026-09-04T01:29:19.076Z"
+            "createdAt": "2026-09-04T03:00:11.707Z"
           },
           {
             "id": "it_mtma0738_vjcx0s",
@@ -324,22 +336,59 @@ window.OPSBOARD_SNAPSHOT = {
             "text": "Melhorias implementadas no Relatório​",
             "done": true,
             "createdAt": "2026-09-04T01:29:19.076Z"
-          },
-          {
-            "id": "it_mtma0738_uaxy45",
-            "text": "Desativado a opção de IA por questão​",
-            "done": true,
-            "createdAt": "2026-09-04T01:29:19.076Z"
-          },
-          {
-            "id": "it_mtmd8lll_4xubwy",
-            "text": "Discussões iniciais sobre integração",
-            "done": true,
-            "createdAt": "2026-09-04T02:59:49.977Z"
           }
         ]
       },
       "history": [
+        {
+          "id": "hst_mu6h9jw5_iz5ksj",
+          "ts": "2026-09-18T04:47:56.405Z",
+          "changes": [
+            "Realizado atualizado pelo Panorama"
+          ]
+        },
+        {
+          "id": "hst_mu6h98np_32ahle",
+          "ts": "2026-09-18T04:47:41.845Z",
+          "changes": [
+            "Em andamento atualizado pelo Panorama"
+          ]
+        },
+        {
+          "id": "hst_mu6h4xcv_wgt15m",
+          "ts": "2026-09-18T04:44:20.575Z",
+          "changes": [
+            "Em andamento: item adicionado — Anexo de arquivo como material de correção da IA"
+          ]
+        },
+        {
+          "id": "hst_mu6h3znd_u1uh1i",
+          "ts": "2026-09-18T04:43:36.889Z",
+          "changes": [
+            "Em andamento: item adicionado — Implementação de Melhoria IP"
+          ]
+        },
+        {
+          "id": "hst_mu6h3fh1_z8lwfj",
+          "ts": "2026-09-18T04:43:10.741Z",
+          "changes": [
+            "Próximos passos: item adicionado — Documento API"
+          ]
+        },
+        {
+          "id": "hst_mu6h2yol_zy3j88",
+          "ts": "2026-09-18T04:42:48.981Z",
+          "changes": [
+            "Item concluído: Compartilhamento com o time responsável para elaboração de …"
+          ]
+        },
+        {
+          "id": "hst_mu6h2rbq_20eybr",
+          "ts": "2026-09-18T04:42:39.446Z",
+          "changes": [
+            "Item concluído: Reunião marcada 04/09 às 15h"
+          ]
+        },
         {
           "id": "hst_mtwaj3j7_2usk17",
           "ts": "2026-09-11T01:41:42.691Z",
@@ -454,7 +503,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-04T01:25:20.307Z",
-      "updatedAt": "2026-09-11T01:41:42.691Z"
+      "updatedAt": "2026-09-18T04:47:56.405Z"
     },
     {
       "id": "prj_mtlk1jml_4321rh",
