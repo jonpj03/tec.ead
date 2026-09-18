@@ -1,13 +1,13 @@
 /* =========================================================
    data/projetos.js — snapshot publicado
-   Gerado pelo OpsBoard em 11/09/2026 às 02:16
+   Gerado pelo OpsBoard em 17/09/2026 às 22:08
    18 projetos.
    Publicação forçada: substitui alterações locais dos visitantes.
 
    Substitua este arquivo no repositório e publique.
    ========================================================= */
 window.OPSBOARD_SNAPSHOT = {
-  "publishedAt": "2026-09-11T05:16:31.863Z",
+  "publishedAt": "2026-09-18T01:08:52.018Z",
   "label": "",
   "force": true,
   "projects": [
@@ -555,7 +555,7 @@ window.OPSBOARD_SNAPSHOT = {
       "statusId": "st_active",
       "criticalityId": "cr_attention",
       "startDate": "2026-07-21",
-      "dueDate": "",
+      "dueDate": "2026-09-18",
       "tags": [],
       "flags": [],
       "items": {
@@ -635,6 +635,13 @@ window.OPSBOARD_SNAPSHOT = {
         ]
       },
       "history": [
+        {
+          "id": "hst_mu69eas3_5vvbkh",
+          "ts": "2026-09-18T01:07:40.947Z",
+          "changes": [
+            "Prazo previsto: 18/09/2026"
+          ]
+        },
         {
           "id": "hst_mtwi32ii_gg9gie",
           "ts": "2026-09-11T05:13:11.802Z",
@@ -757,7 +764,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-03T13:19:48.810Z",
-      "updatedAt": "2026-09-11T05:13:11.802Z"
+      "updatedAt": "2026-09-18T01:07:40.947Z"
     },
     {
       "id": "prj_mtljdrgh_inwfcz",
@@ -1870,18 +1877,16 @@ window.OPSBOARD_SNAPSHOT = {
       }
     ],
     "areas": [
-      "Operações",
-      "Tecnologia",
-      "Financeiro",
-      "Comercial",
-      "Qualidade"
+      "Soluções Educacionais",
+      "WED"
     ],
     "prefs": {
       "staleDays": 7,
       "pageSize": 25,
       "confirmDelete": true,
       "demoDismissed": false,
-      "listView": "panorama"
+      "listView": "panorama",
+      "sidebarCollapsed": true
     },
     "trello": {
       "agingAttention": 7,
