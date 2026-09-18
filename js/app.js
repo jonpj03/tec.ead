@@ -6,6 +6,7 @@
   'use strict';
   const { $, $$, icon } = U;
 
+  const appShell = $('#app');
   const view = $('#view');
   const sidebar = $('#sidebar');
   const scrim = $('#scrim');
@@ -15,6 +16,7 @@
 
   let current = { route: 'dashboard', param: null };
   const mediaDark = global.matchMedia ? global.matchMedia('(prefers-color-scheme: dark)') : null;
+  const desktopSidebar = global.matchMedia ? global.matchMedia('(min-width: 961px)') : null;
 
   /* ---------------------------------------------------------
      Tema
@@ -43,25 +45,55 @@
   /* ---------------------------------------------------------
      Navegação lateral (off-canvas no celular)
      --------------------------------------------------------- */
+  function isDesktopSidebar() {
+    return !desktopSidebar || desktopSidebar.matches;
+  }
+  function applySidebarState() {
+    const collapsed = !!Store.settings().prefs.sidebarCollapsed;
+    appShell.classList.toggle('sidebar-collapsed', isDesktopSidebar() && collapsed);
+    const burger = $('#burger');
+    if (burger) {
+      burger.setAttribute('aria-expanded', String(isDesktopSidebar() ? !collapsed : sidebar.classList.contains('is-open')));
+      burger.setAttribute('aria-label', isDesktopSidebar()
+        ? (collapsed ? 'Expandir menu lateral' : 'Recolher menu lateral')
+        : 'Abrir menu lateral');
+    }
+  }
   function openSidebar() {
     sidebar.classList.add('is-open');
     scrim.hidden = false;
     document.body.classList.add('no-scroll');
+    applySidebarState();
   }
   function closeSidebar() {
     sidebar.classList.remove('is-open');
     scrim.hidden = true;
     document.body.classList.remove('no-scroll');
+    applySidebarState();
+  }
+  function toggleSidebar() {
+    if (isDesktopSidebar()) {
+      Store.setPref('sidebarCollapsed', !Store.settings().prefs.sidebarCollapsed);
+      applySidebarState();
+      return;
+    }
+    if (sidebar.classList.contains('is-open')) closeSidebar();
+    else openSidebar();
   }
 
-  $('#burger').addEventListener('click', openSidebar);
+  $('#burger').addEventListener('click', toggleSidebar);
   $('#sidebarClose').addEventListener('click', closeSidebar);
   scrim.addEventListener('click', closeSidebar);
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && sidebar.classList.contains('is-open')) closeSidebar();
   });
-  $$('.nav__item').forEach(link => link.addEventListener('click', closeSidebar));
+  $$('.nav__item').forEach(link => link.addEventListener('click', () => { if (!isDesktopSidebar()) closeSidebar(); }));
   $$('[data-theme-set]').forEach(btn => btn.addEventListener('click', () => setTheme(btn.dataset.themeSet)));
+  if (desktopSidebar) {
+    const onSidebarBreakpoint = () => { closeSidebar(); applySidebarState(); };
+    if (desktopSidebar.addEventListener) desktopSidebar.addEventListener('change', onSidebarBreakpoint);
+    else if (desktopSidebar.addListener) desktopSidebar.addListener(onSidebarBreakpoint);
+  }
 
   /* ---------------------------------------------------------
      Roteamento
@@ -175,6 +207,7 @@
   function refreshChrome() {
     $('#navProjectCount').textContent = U.num(Store.projects().length);
     applyTheme();
+    applySidebarState();
   }
 
   /** Redesenha a tela atual (após salvar, importar, etc.). */
@@ -285,6 +318,7 @@
      --------------------------------------------------------- */
   function boot() {
     applyTheme();
+    applySidebarState();
 
     const fromSnapshot = handleSnapshot();
 

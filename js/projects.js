@@ -20,6 +20,10 @@
     sort: 'updatedAt', dir: 'desc'
   };
 
+  /* Mantém a ordem do Panorama estável enquanto o usuário faz anotações. */
+  let panoramaOrder = [];
+  let panoramaOrderSignature = '';
+
   /* ---------------- Helpers de domínio ---------------- */
   function isStale(project) {
     const limit = Store.settings().prefs.staleDays || 7;
@@ -103,6 +107,34 @@
     return U.sortBy(list, getters[key] || getters.updatedAt, filters.dir);
   }
 
+
+  function currentPanoramaSignature() {
+    return JSON.stringify([
+      filters.search, filters.status, filters.criticality, filters.owner,
+      filters.area, filters.tag, filters.updated, filters.sort, filters.dir
+    ]);
+  }
+
+  /**
+   * Evita que um projeto pule para o topo imediatamente depois de ser atualizado.
+   * A ordem é recalculada quando filtros ou ordenação são alterados pelo usuário.
+   */
+  function stabilizePanoramaOrder(sorted) {
+    const signature = currentPanoramaSignature();
+    if (signature !== panoramaOrderSignature || !panoramaOrder.length) {
+      panoramaOrderSignature = signature;
+      panoramaOrder = sorted.map(p => p.id);
+      return sorted;
+    }
+
+    const byId = new Map(sorted.map(p => [p.id, p]));
+    const known = panoramaOrder.filter(id => byId.has(id)).map(id => byId.get(id));
+    const knownIds = new Set(known.map(p => p.id));
+    const newcomers = sorted.filter(p => !knownIds.has(p.id));
+    panoramaOrder = newcomers.concat(known).map(p => p.id);
+    return newcomers.concat(known);
+  }
+
   function activeFilterCount() {
     return ['status', 'criticality', 'owner', 'area', 'tag', 'updated']
       .filter(k => filters[k]).length + (filters.search ? 1 : 0);
@@ -112,7 +144,13 @@
   function renderList(view) {
     const settings = Store.settings();
     const all = Store.projects();
-    const filtered = sortList(applyFilters(all));
+    let filtered = sortList(applyFilters(all));
+    if (listView() === 'panorama' && filters.sort === 'updatedAt') {
+      filtered = stabilizePanoramaOrder(filtered);
+    } else {
+      panoramaOrder = [];
+      panoramaOrderSignature = '';
+    }
 
     view.innerHTML = `
       <div class="toolbar no-print">
@@ -157,7 +195,7 @@
         <div class="panel__head">
           <div>
             <h2>Portfólio</h2>
-            <p class="tiny dim">${U.num(filtered.length)} de ${U.num(all.length)} ${U.plural(all.length, 'projeto', 'projetos')} · clique em uma linha para abrir o detalhe</p>
+            <p class="tiny dim">${U.num(filtered.length)} de ${U.num(all.length)} ${U.plural(all.length, 'projeto', 'projetos')} · ${listView() === 'panorama' ? 'edite as anotações diretamente nas colunas' : 'clique em uma linha para abrir o detalhe'}</p>
           </div>
           <div class="row gap-8 no-print">
             <div class="segmented segmented--sm" id="viewToggle">
@@ -215,16 +253,101 @@
     </table>`;
   }
 
-  /** Bullets de uma das quatro listas, com corte para não esticar a linha. */
-  function cellItems(items, limit) {
-    if (!items.length) return '<span class="dim">—</span>';
+  /** Conteúdo de uma coluna do Panorama, com acesso à edição rápida. */
+  function panoramaCell(project, key, limit) {
+    const items = project.items[key] || [];
     const max = limit || 4;
     const shown = items.slice(0, max);
     const rest = items.length - shown.length;
-    return `<ul class="cell-list">
-      ${shown.map(it => `<li>${esc(it.text)}</li>`).join('')}
-      ${rest ? `<li class="dim">+${rest} ${U.plural(rest, 'item', 'itens')}</li>` : ''}
-    </ul>`;
+    return `<div class="panorama-cell" data-project="${esc(project.id)}" data-key="${esc(key)}">
+      ${items.length ? `<ul class="cell-list">
+        ${shown.map(it => `<li>${esc(it.text)}</li>`).join('')}
+        ${rest ? `<li class="dim">+${rest} ${U.plural(rest, 'item', 'itens')}</li>` : ''}
+      </ul>` : '<span class="dim panorama-cell__empty">—</span>'}
+      <button type="button" class="panorama-cell__action no-print" data-act="quick-notes"
+              title="Editar anotações desta coluna">
+        ${icon(items.length ? 'edit' : 'plus', 'ico--sm')} ${items.length ? 'Editar' : 'Anotar'}
+      </button>
+    </div>`;
+  }
+
+  function quickEditorRow(item) {
+    const data = item || { id: '', text: '' };
+    return `<div class="panorama-editor__row" data-item-id="${esc(data.id || '')}">
+      <textarea class="textarea panorama-editor__input" rows="2" placeholder="Digite a anotação">${esc(data.text || '')}</textarea>
+      <button type="button" class="icon-btn icon-btn--sm icon-btn--danger" data-act="quick-delete-note" title="Remover anotação">${icon('x', 'ico--sm')}</button>
+    </div>`;
+  }
+
+  function openPanoramaEditor(cell) {
+    if (!cell) return;
+    const project = Store.project(cell.dataset.project);
+    const key = cell.dataset.key;
+    if (!project || !COLUMN_BY_KEY[key]) return;
+    const items = project.items[key] || [];
+    cell.innerHTML = `<div class="panorama-editor" data-panorama-editor>
+      <div class="panorama-editor__list">
+        ${(items.length ? items : [{ id: '', text: '' }]).map(quickEditorRow).join('')}
+      </div>
+      <div class="panorama-editor__actions">
+        <button type="button" class="btn btn--ghost btn--sm" data-act="quick-add-note">${icon('plus', 'ico--sm')} Item</button>
+        <span class="grow"></span>
+        <button type="button" class="btn btn--ghost btn--sm" data-act="quick-cancel-notes">Cancelar</button>
+        <button type="button" class="btn btn--primary btn--sm" data-act="quick-save-notes">Salvar</button>
+      </div>
+    </div>`;
+    const first = cell.querySelector('.panorama-editor__input');
+    if (first) { first.focus(); first.setSelectionRange(first.value.length, first.value.length); }
+  }
+
+  function closePanoramaEditor(cell) {
+    if (!cell) return;
+    const project = Store.project(cell.dataset.project);
+    const key = cell.dataset.key;
+    const td = cell.closest('td');
+    if (project && td) td.innerHTML = panoramaCell(project, key);
+  }
+
+  function refreshPanoramaUpdatedAt(row, project) {
+    const target = row && row.querySelector('[data-updated-cell]');
+    if (!target) return;
+    const stale = isStale(project);
+    target.innerHTML = `
+      <span class="num small ${stale ? 'is-stale' : ''}">${esc(U.fmtDate(project.updatedAt))}</span>
+      <div class="tiny dim">${esc(U.relativeDays(project.updatedAt))}</div>`;
+  }
+
+  function savePanoramaEditor(cell) {
+    if (!cell) return;
+    const project = Store.project(cell.dataset.project);
+    const key = cell.dataset.key;
+    if (!project || !COLUMN_BY_KEY[key]) return;
+
+    const previous = project.items[key] || [];
+    const rows = Array.from(cell.querySelectorAll('.panorama-editor__row'));
+    const nextItems = rows.map(row => {
+      const text = (row.querySelector('.panorama-editor__input').value || '').trim();
+      if (!text) return null;
+      const id = row.dataset.itemId;
+      const match = id && previous.find(item => item.id === id);
+      return match
+        ? Object.assign({}, match, { text })
+        : { id: U.uid('it'), text, done: key === 'done', createdAt: new Date().toISOString() };
+    }).filter(Boolean);
+
+    const updated = Object.assign({}, project, {
+      items: Object.assign({}, project.items, { [key]: nextItems })
+    });
+    const label = COLUMN_BY_KEY[key].label;
+    const saved = Store.save(updated, { changes: [`${label} atualizado pelo Panorama`] });
+    const td = cell.closest('td');
+    const row = cell.closest('tr');
+    if (td) {
+      td.innerHTML = panoramaCell(saved, key);
+      if (key === 'risks') td.classList.toggle('cell-risk', saved.items.risks.length > 0);
+    }
+    refreshPanoramaUpdatedAt(row, saved);
+    UI.toast('Anotações salvas sem alterar sua posição no Panorama.', 'ok');
   }
 
   function panoramaRow(p) {
@@ -242,13 +365,16 @@
           ${p.flags.length ? `<span class="tip" data-tip="${esc(p.flags.map(f => Store.flag(f).label).join(' · '))}">
             ${icon('flag', 'ico--sm')} ${p.flags.length}</span>` : ''}
         </div>
+        <button type="button" class="panorama-project-edit no-print" data-act="edit" data-id="${esc(p.id)}">
+          ${icon('edit', 'ico--sm')} Editar projeto
+        </button>
       </td>
-      <td data-label="Entrega realizada">${cellItems(p.items.done)}</td>
-      <td data-label="Em andamento">${cellItems(p.items.doing)}</td>
-      <td data-label="Próximos passos">${cellItems(p.items.next)}</td>
-      <td data-label="Pontos de atenção" class="${p.items.risks.length ? 'cell-risk' : ''}">${cellItems(p.items.risks)}</td>
+      <td data-label="Entrega realizada">${panoramaCell(p, 'done')}</td>
+      <td data-label="Em andamento">${panoramaCell(p, 'doing')}</td>
+      <td data-label="Próximos passos">${panoramaCell(p, 'next')}</td>
+      <td data-label="Pontos de atenção" class="${p.items.risks.length ? 'cell-risk' : ''}">${panoramaCell(p, 'risks')}</td>
       <td class="col-narrow" data-label="Nível">${UI.criticalityBadge(p.criticalityId)}</td>
-      <td class="col-narrow" data-label="Última atualização">
+      <td class="col-narrow" data-label="Última atualização" data-updated-cell>
         <span class="num small ${stale ? 'is-stale' : ''}">${esc(U.fmtDate(p.updatedAt))}</span>
         <div class="tiny dim">${esc(U.relativeDays(p.updatedAt))}</div>
       </td>
@@ -399,13 +525,41 @@
 
     view.querySelectorAll('tbody tr').forEach(tr => {
       tr.addEventListener('click', e => {
-        if (e.target.closest('[data-act]')) return;
+        if (e.target.closest('[data-act], button, input, textarea, select, a, [data-panorama-editor]')) return;
         location.hash = '#/projects/' + tr.dataset.id;
       });
       tr.addEventListener('keydown', e => {
-        if (e.key === 'Enter') location.hash = '#/projects/' + tr.dataset.id;
+        if (e.key === 'Enter' && e.target === tr) location.hash = '#/projects/' + tr.dataset.id;
       });
     });
+    const quickRoot = view.querySelector('.table-wrap');
+    if (quickRoot) quickRoot.addEventListener('click', e => {
+      const action = e.target.closest('[data-act]');
+      if (!action) return;
+      const cell = action.closest('.panorama-cell');
+      if (action.dataset.act === 'quick-notes') {
+        e.stopPropagation();
+        openPanoramaEditor(cell);
+      } else if (action.dataset.act === 'quick-add-note') {
+        e.stopPropagation();
+        const list = cell && cell.querySelector('.panorama-editor__list');
+        if (!list) return;
+        list.insertAdjacentHTML('beforeend', quickEditorRow(null));
+        const inputs = list.querySelectorAll('.panorama-editor__input');
+        if (inputs.length) inputs[inputs.length - 1].focus();
+      } else if (action.dataset.act === 'quick-delete-note') {
+        e.stopPropagation();
+        const row = action.closest('.panorama-editor__row');
+        if (row) row.remove();
+      } else if (action.dataset.act === 'quick-cancel-notes') {
+        e.stopPropagation();
+        closePanoramaEditor(cell);
+      } else if (action.dataset.act === 'quick-save-notes') {
+        e.stopPropagation();
+        savePanoramaEditor(cell);
+      }
+    });
+
     view.querySelectorAll('[data-act="edit"]').forEach(btn => {
       btn.addEventListener('click', e => {
         e.stopPropagation();
@@ -928,7 +1082,13 @@
       modal.close();
       UI.toast(isNew ? 'Projeto criado.' : 'Alterações salvas.', 'ok');
       if (isNew) location.hash = '#/projects/' + saved.id;
-      else global.App.rerender();
+      else if (global.App.route.route === 'projects') {
+        const scrollY = global.scrollY;
+        const listViewEl = $('#view');
+        if (listViewEl) renderList(listViewEl);
+        global.App.refreshChrome();
+        global.requestAnimationFrame(() => global.scrollTo({ top: scrollY, behavior: 'auto' }));
+      } else global.App.rerender();
     });
   }
 

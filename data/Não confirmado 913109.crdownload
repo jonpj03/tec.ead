@@ -1,0 +1,1900 @@
+/* =========================================================
+   data/projetos.js — snapshot publicado
+   Gerado pelo OpsBoard em 17/09/2026 às 22:08
+   18 projetos.
+   Publicação forçada: substitui alterações locais dos visitantes.
+
+   Substitua este arquivo no repositório e publique.
+   ========================================================= */
+window.OPSBOARD_SNAPSHOT = {
+  "publishedAt": "2026-09-18T01:08:52.018Z",
+  "label": "",
+  "force": true,
+  "projects": [
+    {
+      "id": "prj_mtmeo7oj_p6cuer",
+      "name": "Automação de notas [Integração]",
+      "description": "",
+      "owner": "JONATHAN",
+      "area": "Soluções Educacionais",
+      "statusId": "st_active",
+      "criticalityId": "cr_critical",
+      "startDate": "",
+      "dueDate": "",
+      "tags": [],
+      "flags": [
+        "fl_ti"
+      ],
+      "items": {
+        "doing": [
+          {
+            "id": "it_mtmepenx_ghe4ox",
+            "text": "Alinhamento Angélica",
+            "done": false,
+            "createdAt": "2026-09-04T03:40:53.757Z"
+          }
+        ],
+        "risks": [
+          {
+            "id": "it_mtmx9see_tuy4ey",
+            "text": "retorno da TI",
+            "done": false,
+            "createdAt": "2026-09-04T12:20:37.766Z"
+          }
+        ],
+        "next": [],
+        "done": []
+      },
+      "history": [
+        {
+          "id": "hst_mtmx9see_l7qgvi",
+          "ts": "2026-09-04T12:20:37.766Z",
+          "changes": [
+            "Pontos de atenção: adicionado — retorno da TI"
+          ]
+        },
+        {
+          "id": "hst_mtmx8yud_xultpf",
+          "ts": "2026-09-04T12:19:59.461Z",
+          "changes": [
+            "Criticidade alterada para Crítico",
+            "Flags atualizadas",
+            "Pontos de atenção: removido — Retorno TI"
+          ]
+        },
+        {
+          "id": "hst_mtmepenx_cnj810",
+          "ts": "2026-09-04T03:40:53.757Z",
+          "changes": [
+            "Projeto criado"
+          ]
+        }
+      ],
+      "createdAt": "2026-09-04T03:39:58.051Z",
+      "updatedAt": "2026-09-04T12:20:37.766Z"
+    },
+    {
+      "id": "prj_mtmejgjo_7h0z26",
+      "name": "CANVAS - SSBI [LAKE]",
+      "description": "Dados do lake pelo SSBI",
+      "owner": "JONATHAN",
+      "area": "Soluções Educacionais",
+      "statusId": "st_active",
+      "criticalityId": "cr_attention",
+      "startDate": "",
+      "dueDate": "",
+      "tags": [],
+      "flags": [],
+      "items": {
+        "doing": [
+          {
+            "id": "it_mtmenuxw_izmivu",
+            "text": "Avaliação da liberação de tabelas do Canvas para o SSBI da EAD",
+            "done": false,
+            "createdAt": "2026-09-04T03:39:41.540Z"
+          }
+        ],
+        "risks": [],
+        "next": [],
+        "done": []
+      },
+      "history": [
+        {
+          "id": "hst_mtmenuxw_scl91f",
+          "ts": "2026-09-04T03:39:41.540Z",
+          "changes": [
+            "Projeto criado"
+          ]
+        }
+      ],
+      "createdAt": "2026-09-04T03:36:16.259Z",
+      "updatedAt": "2026-09-04T03:39:41.540Z"
+    },
+    {
+      "id": "prj_mtmd14r4_uatxwm",
+      "name": "CANVAS - Teams",
+      "description": "Uso do Teams como ferramenta principal para aulas ao vivo no Canvas",
+      "owner": "JONATHAN",
+      "area": "Soluções Educacionais",
+      "statusId": "st_stopped",
+      "criticalityId": "cr_normal",
+      "startDate": "",
+      "dueDate": "",
+      "tags": [],
+      "flags": [],
+      "items": {
+        "doing": [
+          {
+            "id": "it_mtmd5r9t_xfhcc6",
+            "text": "Avaliação da LTI Teams-Canvas",
+            "done": false,
+            "createdAt": "2026-09-04T02:57:37.361Z"
+          }
+        ],
+        "risks": [],
+        "next": [
+          {
+            "id": "it_mtmd5r9t_8i2kxe",
+            "text": "Evoluir o funcionamento da LTI.",
+            "done": false,
+            "createdAt": "2026-09-04T02:57:37.361Z"
+          },
+          {
+            "id": "it_mtmd5r9t_fgfvoo",
+            "text": "Obter mais informações junto à Microsoft.",
+            "done": false,
+            "createdAt": "2026-09-04T02:57:37.361Z"
+          },
+          {
+            "id": "it_mtmd5r9t_rr2g30",
+            "text": "Retomar validações antes de avançar para implantação",
+            "done": false,
+            "createdAt": "2026-09-04T02:57:37.361Z"
+          }
+        ],
+        "done": [
+          {
+            "id": "it_mtmd5r9t_wv3ugg",
+            "text": "Análises iniciais realizadas com fornecedores, Structure e infraestrutura",
+            "done": true,
+            "createdAt": "2026-09-04T02:57:37.361Z"
+          }
+        ]
+      },
+      "history": [
+        {
+          "id": "hst_mtmxm7u0_dugwbh",
+          "ts": "2026-09-04T12:30:17.640Z",
+          "changes": [
+            "Status alterado de Ativo para Parado"
+          ]
+        },
+        {
+          "id": "hst_mtmd5r9u_2cy9is",
+          "ts": "2026-09-04T02:57:37.362Z",
+          "changes": [
+            "Projeto criado"
+          ]
+        }
+      ],
+      "createdAt": "2026-09-04T02:54:01.552Z",
+      "updatedAt": "2026-09-04T12:30:17.640Z"
+    },
+    {
+      "id": "prj_mtmcxaup_b303bb",
+      "name": "CANVAS - Similaridades Gomining",
+      "description": "Detecção de similaridade \n\nSeguirá com  COMPETÊNCIA RELACIONAL​",
+      "owner": "JONATHAN",
+      "area": "Soluções Educacionais",
+      "statusId": "st_done",
+      "criticalityId": "cr_normal",
+      "startDate": "",
+      "dueDate": "",
+      "tags": [],
+      "flags": [],
+      "items": {
+        "doing": [
+          {
+            "id": "it_mtmd0i2h_tt504s",
+            "text": "Fase de monitoramento e acompanhamento da operação",
+            "done": false,
+            "createdAt": "2026-09-04T02:53:32.153Z"
+          }
+        ],
+        "risks": [
+          {
+            "id": "it_mtmd0i2h_t0cib8",
+            "text": "Consulta pública sobre regulamentação do uso de IA.",
+            "done": false,
+            "createdAt": "2026-09-04T02:53:32.153Z"
+          },
+          {
+            "id": "it_mtmd0i2h_e22455",
+            "text": "Necessidade de adequação do regimento interno para registrar o uso de IA como apoio às atividades avaliativas",
+            "done": false,
+            "createdAt": "2026-09-04T02:53:32.153Z"
+          }
+        ],
+        "next": [],
+        "done": [
+          {
+            "id": "it_mtmd0i2h_vp5n8i",
+            "text": "Configuração a partir das Blueprints fornecidas​",
+            "done": true,
+            "createdAt": "2026-09-04T02:53:32.153Z"
+          },
+          {
+            "id": "it_mtmd0i2h_dufg1k",
+            "text": "Preenchimento da planilha contendo os IDs das Modelos e seus itens avaliativos para a Gomining​",
+            "done": true,
+            "createdAt": "2026-09-04T02:53:32.153Z"
+          },
+          {
+            "id": "it_mtmd0i2h_dn7u72",
+            "text": "Professores capacitados.",
+            "done": true,
+            "createdAt": "2026-09-04T02:53:32.153Z"
+          }
+        ]
+      },
+      "history": [
+        {
+          "id": "hst_mtmxmo63_u8p5nu",
+          "ts": "2026-09-04T12:30:38.811Z",
+          "changes": [
+            "Status alterado de Ativo para Concluído"
+          ]
+        },
+        {
+          "id": "hst_mtmd0i2h_bnjfia",
+          "ts": "2026-09-04T02:53:32.153Z",
+          "changes": [
+            "Projeto criado"
+          ]
+        }
+      ],
+      "createdAt": "2026-09-04T02:51:02.833Z",
+      "updatedAt": "2026-09-04T12:30:38.811Z"
+    },
+    {
+      "id": "prj_mtm9v2ur_po5bnw",
+      "name": "Prova Fácil - Melhoria + IA",
+      "description": "Acompanhamento de fluxo de revisão de IA e melhorias contínuas",
+      "owner": "JONATHAN",
+      "area": "Soluções Educacionais",
+      "statusId": "st_active",
+      "criticalityId": "cr_critical",
+      "startDate": "",
+      "dueDate": "2026-09-04",
+      "tags": [],
+      "flags": [
+        "fl_mtwag35e_wvflic"
+      ],
+      "items": {
+        "doing": [
+          {
+            "id": "it_mtma0738_nrwnt6",
+            "text": "Documentação de autonomia dos polos​",
+            "done": false,
+            "createdAt": "2026-09-04T01:29:19.076Z"
+          },
+          {
+            "id": "it_mtma0738_v6d6q1",
+            "text": "Fluxo de revisão IA melhoria​",
+            "done": false,
+            "createdAt": "2026-09-04T01:29:19.076Z"
+          }
+        ],
+        "risks": [],
+        "next": [
+          {
+            "id": "it_mtma0738_xd2if5",
+            "text": "Reunião marcada 04/09 às 15h",
+            "done": false,
+            "createdAt": "2026-09-04T01:29:19.076Z"
+          },
+          {
+            "id": "it_mtmd8wg3_eqjlt6",
+            "text": "• Construção do documento de requisitos técnicos.",
+            "done": false,
+            "createdAt": "2026-09-04T03:00:04.035Z"
+          },
+          {
+            "id": "it_mtmd92d7_e60zrz",
+            "text": "Compartilhamento com o time responsável para elaboração de proposta",
+            "done": false,
+            "createdAt": "2026-09-04T03:00:11.707Z"
+          }
+        ],
+        "done": [
+          {
+            "id": "it_mtma0738_rgkmae",
+            "text": "Reunião de alinhamento quinzenal iniciada​",
+            "done": true,
+            "createdAt": "2026-09-04T01:29:19.076Z"
+          },
+          {
+            "id": "it_mtma0738_vjcx0s",
+            "text": "Cenário de autonomia dos polos detalhado​",
+            "done": true,
+            "createdAt": "2026-09-04T01:29:19.076Z"
+          },
+          {
+            "id": "it_mtma0738_1jwizt",
+            "text": "Melhorias implementadas no Relatório​",
+            "done": true,
+            "createdAt": "2026-09-04T01:29:19.076Z"
+          },
+          {
+            "id": "it_mtma0738_uaxy45",
+            "text": "Desativado a opção de IA por questão​",
+            "done": true,
+            "createdAt": "2026-09-04T01:29:19.076Z"
+          },
+          {
+            "id": "it_mtmd8lll_4xubwy",
+            "text": "Discussões iniciais sobre integração",
+            "done": true,
+            "createdAt": "2026-09-04T02:59:49.977Z"
+          }
+        ]
+      },
+      "history": [
+        {
+          "id": "hst_mtwaj3j7_2usk17",
+          "ts": "2026-09-11T01:41:42.691Z",
+          "changes": [
+            "Flags atualizadas"
+          ]
+        },
+        {
+          "id": "hst_mtn7nx5h_kscw9l",
+          "ts": "2026-09-04T17:11:33.269Z",
+          "changes": [
+            "Pontos de atenção: item removido — Necessidade de definição orçamentária (CAPEX)"
+          ]
+        },
+        {
+          "id": "hst_mtn7nw38_fw5ya0",
+          "ts": "2026-09-04T17:11:31.892Z",
+          "changes": [
+            "Pontos de atenção: item removido — Dados"
+          ]
+        },
+        {
+          "id": "hst_mtmxez98_jj8odm",
+          "ts": "2026-09-04T12:24:39.932Z",
+          "changes": [
+            "Em andamento: item removido — Levantamento das necessidades de integração via API"
+          ]
+        },
+        {
+          "id": "hst_mtmxerh6_4qvz8y",
+          "ts": "2026-09-04T12:24:29.850Z",
+          "changes": [
+            "Pontos de atenção: item removido — API"
+          ]
+        },
+        {
+          "id": "hst_mtmxeob9_lngxn5",
+          "ts": "2026-09-04T12:24:25.749Z",
+          "changes": [
+            "Pontos de atenção: item removido — Integração"
+          ]
+        },
+        {
+          "id": "hst_mtmxd9oo_fpkx0a",
+          "ts": "2026-09-04T12:23:20.136Z",
+          "changes": [
+            "Item editado: “Reunião marcada 03/09 às 15h” → “Reunião marcada 04/09 às 15h”"
+          ]
+        },
+        {
+          "id": "hst_mtmd96bu_50fxxw",
+          "ts": "2026-09-04T03:00:16.842Z",
+          "changes": [
+            "Pontos de atenção: item adicionado — Necessidade de definição orçamentária (CAPEX)"
+          ]
+        },
+        {
+          "id": "hst_mtmd92d7_qamrsm",
+          "ts": "2026-09-04T03:00:11.707Z",
+          "changes": [
+            "Próximos passos: item adicionado — Compartilhamento com o time responsável para elaboração de …"
+          ]
+        },
+        {
+          "id": "hst_mtmd8wg3_wjy9us",
+          "ts": "2026-09-04T03:00:04.035Z",
+          "changes": [
+            "Próximos passos: item adicionado — • Construção do documento de requisitos técnicos."
+          ]
+        },
+        {
+          "id": "hst_mtmd8s2n_mv10fs",
+          "ts": "2026-09-04T02:59:58.367Z",
+          "changes": [
+            "Em andamento: item adicionado — Levantamento das necessidades de integração via API"
+          ]
+        },
+        {
+          "id": "hst_mtmd8lll_fwjnj4",
+          "ts": "2026-09-04T02:59:49.977Z",
+          "changes": [
+            "Realizado: item adicionado — Discussões iniciais sobre integração"
+          ]
+        },
+        {
+          "id": "hst_mtma0qm7_hrj2d3",
+          "ts": "2026-09-04T01:29:44.383Z",
+          "changes": [
+            "Pontos de atenção: item adicionado — API"
+          ]
+        },
+        {
+          "id": "hst_mtma0mih_rnyjig",
+          "ts": "2026-09-04T01:29:39.065Z",
+          "changes": [
+            "Pontos de atenção: item adicionado — Dados"
+          ]
+        },
+        {
+          "id": "hst_mtma0hpf_lc20j4",
+          "ts": "2026-09-04T01:29:32.835Z",
+          "changes": [
+            "Pontos de atenção: item adicionado — Integração"
+          ]
+        },
+        {
+          "id": "hst_mtma0738_x8zlc6",
+          "ts": "2026-09-04T01:29:19.076Z",
+          "changes": [
+            "Projeto criado"
+          ]
+        }
+      ],
+      "createdAt": "2026-09-04T01:25:20.307Z",
+      "updatedAt": "2026-09-11T01:41:42.691Z"
+    },
+    {
+      "id": "prj_mtlk1jml_4321rh",
+      "name": "CANVAS - Personalização dados",
+      "description": "BI - https://app.powerbi.com/groups/f48f84eb-6cec-43e7-a35e-959e02b76c19/reports/213c5c79-6f5a-4604-ac63-d5b15b632bbf/730ca04bb77a25082e85?experience=power-bi\n\nDOC - https://nreeducacional-my.sharepoint.com/:w:/g/personal/michelle_alves_afya_com_br/IQC7uqxX34yDR4benEDeJtuiAdi0bzNqT88LJUNXDz5Q1YU?email=jonathan.souza%40afya.com.br&e=6rWrs8",
+      "owner": "JONATHAN",
+      "area": "",
+      "statusId": "st_active",
+      "criticalityId": "cr_normal",
+      "startDate": "",
+      "dueDate": "",
+      "tags": [],
+      "flags": [],
+      "items": {
+        "doing": [
+          {
+            "id": "it_mtlktacf_fk6du7",
+            "text": "Melhoria no BI",
+            "done": false,
+            "createdAt": "2026-09-03T13:44:06.303Z"
+          }
+        ],
+        "risks": [
+          {
+            "id": "it_mtlktacf_wfa6r0",
+            "text": "Semestre 26.2",
+            "done": false,
+            "createdAt": "2026-09-03T13:44:06.303Z"
+          }
+        ],
+        "next": [
+          {
+            "id": "it_mtlktacf_eouiwj",
+            "text": "Validação do BI",
+            "done": false,
+            "createdAt": "2026-09-03T13:44:06.303Z"
+          }
+        ],
+        "done": [
+          {
+            "id": "it_mtlktacf_0hk4zp",
+            "text": "○ Matrículas \t\t\t§ Filtro \t\t\t§ CPF \t\t\t§ IES \t\t\t§ NÍVEL DE ENSINO \t\t\t§ IDTURMADISC \t\t\t§ IDCANVAS \t\t\t§ Turno do aluno \t\t\t§ Modelo de etapa",
+            "done": true,
+            "createdAt": "2026-09-03T13:44:06.303Z"
+          },
+          {
+            "id": "it_mtlktacf_7tx133",
+            "text": "Inerir ID Canvas como filtro em todas",
+            "done": true,
+            "createdAt": "2026-09-03T13:44:06.303Z"
+          },
+          {
+            "id": "it_mtlktacf_2tukl0",
+            "text": "○ Botão  - Limpar todos os filtros",
+            "done": true,
+            "createdAt": "2026-09-03T13:44:06.303Z"
+          }
+        ]
+      },
+      "history": [
+        {
+          "id": "hst_mtm9tzbw_70jmvw",
+          "ts": "2026-09-04T01:24:29.084Z",
+          "changes": [
+            "Responsável: JONATHAN"
+          ]
+        },
+        {
+          "id": "hst_mtlktacg_7a9ov9",
+          "ts": "2026-09-03T13:44:06.304Z",
+          "changes": [
+            "Descrição atualizada",
+            "Em andamento: adicionado — Melhoria no BI",
+            "Pontos de atenção: adicionado — Semestre 26.2",
+            "Próximos passos: adicionado — Validação do BI",
+            "Realizado: adicionado — ○ Matrículas \t\t\t§ Filtro \t\t\t§ CPF \t\t\t§ IES \t\t\t§ NÍVEL …",
+            "Realizado: adicionado — Inerir ID Canvas como filtro em todas",
+            "Realizado: adicionado — ○ Botão  - Limpar todos os filtros"
+          ]
+        },
+        {
+          "id": "hst_mtlk1y5h_rfnk4d",
+          "ts": "2026-09-03T13:22:50.789Z",
+          "changes": [
+            "Projeto criado"
+          ]
+        }
+      ],
+      "createdAt": "2026-09-03T13:22:31.965Z",
+      "updatedAt": "2026-09-04T01:24:29.084Z"
+    },
+    {
+      "id": "prj_mtljy1qi_dr2m8l",
+      "name": "CANVAS - Comunidade",
+      "description": "Automatização de comunidade dos alunos",
+      "owner": "JONATHAN",
+      "area": "Soluções Educacionais",
+      "statusId": "st_active",
+      "criticalityId": "cr_attention",
+      "startDate": "2026-07-21",
+      "dueDate": "2026-09-18",
+      "tags": [],
+      "flags": [],
+      "items": {
+        "doing": [
+          {
+            "id": "it_mtmdyo8a_156z6i",
+            "text": "Preparação da primeira entrega (Comunidade Acadêmica).",
+            "done": false,
+            "createdAt": "2026-09-04T03:20:06.442Z"
+          }
+        ],
+        "risks": [
+          {
+            "id": "it_mtlk13hi_9kxd75",
+            "text": "Dependência da conclusão da primeira fase para evolução das demais entregas",
+            "done": false,
+            "createdAt": "2026-09-03T13:22:11.046Z"
+          }
+        ],
+        "next": [
+          {
+            "id": "it_mtmdzrrl_x22is4",
+            "text": "Iniciar, ainda em setembro, as frentes de Internacionalização e Esquenta",
+            "done": false,
+            "createdAt": "2026-09-04T03:20:57.681Z"
+          },
+          {
+            "id": "it_mtmdzwal_87qr5s",
+            "text": "Apresentar cronograma detalhado no final de setembro",
+            "done": false,
+            "createdAt": "2026-09-04T03:21:03.549Z"
+          },
+          {
+            "id": "it_mtmxb6nm_8j9m6h",
+            "text": "Colocar a Comunidade Acadêmica em produção até dia 18/09",
+            "done": false,
+            "createdAt": "2026-09-04T12:21:42.898Z"
+          }
+        ],
+        "done": [
+          {
+            "id": "it_mtlk13hi_tk1vwz",
+            "text": "Consolidação das regras para criação, manutenção e atualização das comunidades",
+            "done": true,
+            "createdAt": "2026-09-03T13:22:11.046Z"
+          },
+          {
+            "id": "it_mtlk13hi_wroluo",
+            "text": "Levantamento e documentação do escopo da solução.",
+            "done": true,
+            "createdAt": "2026-09-03T13:22:11.046Z"
+          },
+          {
+            "id": "it_mtlk13hi_d74l24",
+            "text": "Definição das regras de negócio para Comunidades Discentes e Internacionalização",
+            "done": true,
+            "createdAt": "2026-09-03T13:22:11.046Z"
+          },
+          {
+            "id": "it_mtlk13hi_tx0gpf",
+            "text": "Definição da estrutura, nomenclatura e critérios de participação das comunidades",
+            "done": true,
+            "createdAt": "2026-09-03T13:22:11.046Z"
+          },
+          {
+            "id": "it_mtmda2ux_0xt65g",
+            "text": "Apresentação das datas da iniciativa para a TE",
+            "done": true,
+            "createdAt": "2026-09-04T03:00:59.001Z"
+          },
+          {
+            "id": "it_mtwi32ii_yn28st",
+            "text": "Reunião de alinhamento com George",
+            "done": true,
+            "createdAt": "2026-09-11T05:13:11.802Z"
+          }
+        ]
+      },
+      "history": [
+        {
+          "id": "hst_mu69eas3_5vvbkh",
+          "ts": "2026-09-18T01:07:40.947Z",
+          "changes": [
+            "Prazo previsto: 18/09/2026"
+          ]
+        },
+        {
+          "id": "hst_mtwi32ii_gg9gie",
+          "ts": "2026-09-11T05:13:11.802Z",
+          "changes": [
+            "Realizado: item adicionado — Reunião de alinhamento com George"
+          ]
+        },
+        {
+          "id": "hst_mtmxb6nm_jxuasl",
+          "ts": "2026-09-04T12:21:42.898Z",
+          "changes": [
+            "Próximos passos: adicionado — Colocar a Comunidade Acadêmica em produção até dia 18/…",
+            "Próximos passos: removido — Colocar a Comunidade Acadêmica em produção até dia 18."
+          ]
+        },
+        {
+          "id": "hst_mtmxaaqo_60oija",
+          "ts": "2026-09-04T12:21:01.536Z",
+          "changes": [
+            "Próximos passos: itens reordenados"
+          ]
+        },
+        {
+          "id": "hst_mtme09fu_gwsufl",
+          "ts": "2026-09-04T03:21:20.586Z",
+          "changes": [
+            "Item editado: “Garantir atualização automática em caso…” → “Dependência da conclusão da primeira fa…”"
+          ]
+        },
+        {
+          "id": "hst_mtmdzwam_70l6eh",
+          "ts": "2026-09-04T03:21:03.550Z",
+          "changes": [
+            "Próximos passos: item adicionado — Apresentar cronograma detalhado no final de setembro"
+          ]
+        },
+        {
+          "id": "hst_mtmdzrrl_2re7ri",
+          "ts": "2026-09-04T03:20:57.681Z",
+          "changes": [
+            "Próximos passos: item adicionado — Iniciar, ainda em setembro, as frentes de Internacionalizaç…"
+          ]
+        },
+        {
+          "id": "hst_mtmdzknw_4xwfyp",
+          "ts": "2026-09-04T03:20:48.476Z",
+          "changes": [
+            "Item editado: “• Colocar a Comunidade Acadêmica em pro…” → “Colocar a Comunidade Acadêmica em produ…”"
+          ]
+        },
+        {
+          "id": "hst_mtmdzf8b_7v7znh",
+          "ts": "2026-09-04T03:20:41.435Z",
+          "changes": [
+            "Próximos passos: item adicionado — • Colocar a Comunidade Acadêmica em produção até dia 18."
+          ]
+        },
+        {
+          "id": "hst_mtmdza0k_00254h",
+          "ts": "2026-09-04T03:20:34.676Z",
+          "changes": [
+            "Realizado: item removido — Implementar regras de inclusão, remoção e movimentação auto…"
+          ]
+        },
+        {
+          "id": "hst_mtmdz6g2_dipmr5",
+          "ts": "2026-09-04T03:20:30.050Z",
+          "changes": [
+            "Item concluído: Implementar regras de inclusão, remoção e movimentação auto…"
+          ]
+        },
+        {
+          "id": "hst_mtmdz5ij_ftonhs",
+          "ts": "2026-09-04T03:20:28.843Z",
+          "changes": [
+            "Próximos passos: item removido — Desenvolver a automação de criação e matrícula das comunida…"
+          ]
+        },
+        {
+          "id": "hst_mtmdyv1f_i9r0ao",
+          "ts": "2026-09-04T03:20:15.267Z",
+          "changes": [
+            "Item concluído: Consolidação das regras para criação, manutenção e atualiza…"
+          ]
+        },
+        {
+          "id": "hst_mtmdyrg4_1fwyje",
+          "ts": "2026-09-04T03:20:10.612Z",
+          "changes": [
+            "Em andamento: item removido — Refinamento da integração automatizada entre RM e Canvas"
+          ]
+        },
+        {
+          "id": "hst_mtmdyo8b_ux3dkw",
+          "ts": "2026-09-04T03:20:06.443Z",
+          "changes": [
+            "Em andamento: item adicionado — Preparação da primeira entrega (Comunidade Acadêmica)."
+          ]
+        },
+        {
+          "id": "hst_mtmda2ux_c2zeuy",
+          "ts": "2026-09-04T03:00:59.001Z",
+          "changes": [
+            "Realizado: item adicionado — Apresentação das datas da iniciativa para a TE"
+          ]
+        },
+        {
+          "id": "hst_mtlk2mce_1kyiej",
+          "ts": "2026-09-03T13:23:22.142Z",
+          "changes": [
+            "Nome alterado para “CANVAS - Comunidade”"
+          ]
+        },
+        {
+          "id": "hst_mtlk13hi_f7ht0w",
+          "ts": "2026-09-03T13:22:11.046Z",
+          "changes": [
+            "Projeto criado"
+          ]
+        }
+      ],
+      "createdAt": "2026-09-03T13:19:48.810Z",
+      "updatedAt": "2026-09-18T01:07:40.947Z"
+    },
+    {
+      "id": "prj_mtljdrgh_inwfcz",
+      "name": "Gestão de PROVAS [Unificado]",
+      "description": "PASSO 1\n\n1. Autoagendamento em lote conforme parâmetros de decisão da gestão;\n2. Flexibilização da aplicação para um período de prova com o autoagendamento sem dia e hora específico;\n3. Correção das questões discursivas com IA\n4. Otimização da operação dos bancos de questões com anulação em lote de questões\n5. Operação dos bancos de questões a nível de conteúdo e não de turma, ou seja, as turmas são vinculadas aos bancos sem redundância. Assim os professores e coordenadores atuam diretamente no banco do conteúdo.\n6. Matriz de categorização das questões para identificação de futuros gaps de aprendizagem.\n7. Acesso com restrição por IP e não por senha que pode ser compartilhada e quebra a segurança.\n8. Anexo de Material de apoio para prova\n9. Modelo de prova personalizáveis\n10. Tempo extra para alunos em acompanhamento especial\n11. Relatórios personalizados",
+      "owner": "JONATHAN",
+      "area": "Soluções Educacionais",
+      "statusId": "st_active",
+      "criticalityId": "cr_normal",
+      "startDate": "2026-08-05",
+      "dueDate": "2026-09-04",
+      "tags": [],
+      "flags": [],
+      "items": {
+        "doing": [],
+        "risks": [],
+        "next": [
+          {
+            "id": "it_mtljx4ae_31fden",
+            "text": "Aguardando TI",
+            "done": false,
+            "createdAt": "2026-09-03T13:19:05.462Z"
+          }
+        ],
+        "done": [
+          {
+            "id": "it_mtwi6s42_egvy7g",
+            "text": "Alinhamento de Campus/Polo RM - Prova Fácil",
+            "done": true,
+            "createdAt": "2026-09-11T05:16:04.946Z"
+          },
+          {
+            "id": "it_mtljx4ae_81qrdm",
+            "text": "Levantamento de escopo EAD",
+            "done": true,
+            "createdAt": "2026-09-03T13:19:05.462Z"
+          },
+          {
+            "id": "it_mtljx4ae_doqzq5",
+            "text": "Levantamento de escopo TE",
+            "done": true,
+            "createdAt": "2026-09-03T13:19:05.462Z"
+          }
+        ]
+      },
+      "history": [
+        {
+          "id": "hst_mtwi6vip_rlrcv1",
+          "ts": "2026-09-11T05:16:09.361Z",
+          "changes": [
+            "Item concluído: Alinhamento de Campus/Polo RM - Prova Fácil"
+          ]
+        },
+        {
+          "id": "hst_mtwi6s42_vjntsi",
+          "ts": "2026-09-11T05:16:04.946Z",
+          "changes": [
+            "Em andamento: item adicionado — Alinhamento de Campus/Polo RM - Prova Fácil"
+          ]
+        },
+        {
+          "id": "hst_mtwi6168_w928kn",
+          "ts": "2026-09-11T05:15:30.032Z",
+          "changes": [
+            "Descrição atualizada"
+          ]
+        },
+        {
+          "id": "hst_mtmxq4km_2f4cur",
+          "ts": "2026-09-04T12:33:20.038Z",
+          "changes": [
+            "Nome alterado para “Gestão de PROVAS [Unificado]”"
+          ]
+        },
+        {
+          "id": "hst_mtljx4ae_gf9nds",
+          "ts": "2026-09-03T13:19:05.462Z",
+          "changes": [
+            "Projeto criado"
+          ]
+        }
+      ],
+      "createdAt": "2026-09-03T13:04:02.369Z",
+      "updatedAt": "2026-09-11T05:16:09.361Z"
+    },
+    {
+      "id": "prj_mtljbxeu_6befio",
+      "name": "ZOOM",
+      "description": "Projeto destinado para configuração do ZOOM no canvas como ferramenta oficial de aulas ao vivo.",
+      "owner": "JONATHAN",
+      "area": "Soluções Educacionais",
+      "statusId": "st_paused",
+      "criticalityId": "cr_normal",
+      "startDate": "",
+      "dueDate": "",
+      "tags": [],
+      "flags": [],
+      "items": {
+        "doing": [
+          {
+            "id": "it_mtljdfbd_n6ozj8",
+            "text": "Análise de aderência com o ZOOM",
+            "done": false,
+            "createdAt": "2026-09-03T13:03:46.633Z"
+          }
+        ],
+        "risks": [],
+        "next": [],
+        "done": []
+      },
+      "history": [
+        {
+          "id": "hst_mtljdfbd_pl6fbl",
+          "ts": "2026-09-03T13:03:46.633Z",
+          "changes": [
+            "Projeto criado"
+          ]
+        }
+      ],
+      "createdAt": "2026-09-03T13:02:36.774Z",
+      "updatedAt": "2026-09-03T13:03:46.633Z"
+    },
+    {
+      "id": "prj_mtlj7x61_1udzoz",
+      "name": "CANVAS - Projeto SSO x Canvas",
+      "description": "https://canvas-sso.afya.com.br/\n\nTUTORIAL ALUNO:\n\nfile:///C:/Users/jonathan.souza/AppData/Local/Temp/OneNote/16.0/Exported/%7BAD64FB98-76E8-49F6-B62A-3CB7CF6FB69F%7D/NT/0/[ESTUDANTES]%20Tutorial%20Acesso%20SSO%205.pdf\n\n\n\n\nTUTORIAL PROFESSOR\n\nfile:///C:/Users/jonathan.souza/AppData/Local/Temp/OneNote/16.0/Exported/%7BAD64FB98-76E8-49F6-B62A-3CB7CF6FB69F%7D/NT/1/[PROFESSORES]%20Tutorial%20Acesso%20SSO%203.pdf",
+      "owner": "JONATHAN",
+      "area": "Soluções Educacionais",
+      "statusId": "st_done",
+      "criticalityId": "cr_normal",
+      "startDate": "",
+      "dueDate": "2026-07-13",
+      "tags": [],
+      "flags": [],
+      "items": {
+        "doing": [],
+        "risks": [],
+        "next": [],
+        "done": [
+          {
+            "id": "it_mtljax4h_bsbf7g",
+            "text": "Login por SSO - Canvas",
+            "done": true,
+            "createdAt": "2026-09-03T13:01:49.745Z"
+          },
+          {
+            "id": "it_mtljax4h_xd0v0s",
+            "text": "Acesso de alunos separados de colaboradores",
+            "done": true,
+            "createdAt": "2026-09-03T13:01:49.745Z"
+          }
+        ]
+      },
+      "history": [
+        {
+          "id": "hst_mtlk3f1y_bp4atw",
+          "ts": "2026-09-03T13:23:59.350Z",
+          "changes": [
+            "Nome alterado para “CANVAS - Projeto SSO x Canvas”"
+          ]
+        },
+        {
+          "id": "hst_mtljax4h_anokte",
+          "ts": "2026-09-03T13:01:49.745Z",
+          "changes": [
+            "Projeto criado"
+          ]
+        }
+      ],
+      "createdAt": "2026-09-03T12:59:29.833Z",
+      "updatedAt": "2026-09-03T13:23:59.350Z"
+    },
+    {
+      "id": "prj_mtlj59q1_1epbuf",
+      "name": "CANVAS - Layout",
+      "description": "Pedidos listados Afya - Google Planilhas - https://docs.google.com/spreadsheets/d/1YRWy-mtqSBki3j3NsvG-L_tYp5J6GvyQgxsT-Kb8xYc/edit?gid=1285639898#gid=1285639898\n\n\nBanner\nDisciplinas e comunidades\nVisão antiga\nMenu recolhido\nPerfil de aluno / adm\nNotas\nFiltro em usuários\nVisualização do aluno",
+      "owner": "JONATHAN",
+      "area": "Soluções Educacionais",
+      "statusId": "st_done",
+      "criticalityId": "cr_normal",
+      "startDate": "",
+      "dueDate": "",
+      "tags": [],
+      "flags": [],
+      "items": {
+        "doing": [],
+        "risks": [],
+        "next": [],
+        "done": []
+      },
+      "history": [
+        {
+          "id": "hst_mtlk376d_8kiw2a",
+          "ts": "2026-09-03T13:23:49.141Z",
+          "changes": [
+            "Nome alterado para “CANVAS - Layout”"
+          ]
+        },
+        {
+          "id": "hst_mtlj75qe_d2eywr",
+          "ts": "2026-09-03T12:58:54.278Z",
+          "changes": [
+            "Projeto criado"
+          ]
+        }
+      ],
+      "createdAt": "2026-09-03T12:57:26.137Z",
+      "updatedAt": "2026-09-03T13:23:49.141Z"
+    },
+    {
+      "id": "prj_mtlj10wu_tntjmf",
+      "name": "CANVAS - Ferramenta AVISOS",
+      "description": "https://docs.google.com/spreadsheets/d/1q9GZ4UYUzT8yi2Cqj4XeD9KUganL1rAnl_GJUPvfGII/edit?gid=0#gid=0\nSelecionar todos do filtro\nInserção de itens além de texto no 'Avisos'\nEditar comunicado em massa (por TAG) \nPuxar o conteúdo anterior pela TAG",
+      "owner": "JONATHAN",
+      "area": "Soluções Educacionais",
+      "statusId": "st_done",
+      "criticalityId": "cr_normal",
+      "startDate": "",
+      "dueDate": "",
+      "tags": [],
+      "flags": [],
+      "items": {
+        "doing": [],
+        "risks": [],
+        "next": [],
+        "done": [
+          {
+            "id": "it_mtlj3dp1_zl7frk",
+            "text": "Inserir Imagem retorna erro:",
+            "done": true,
+            "createdAt": "2026-09-03T12:55:57.973Z"
+          },
+          {
+            "id": "it_mtlj3dp1_o058q3",
+            "text": "Pesquisa pelo código [TAG] na tela de início",
+            "done": true,
+            "createdAt": "2026-09-03T12:55:57.973Z"
+          },
+          {
+            "id": "it_mtlj3dp1_fhcxa9",
+            "text": "Imagem com resolução PERSONALIZADA perde muito a qualidade",
+            "done": true,
+            "createdAt": "2026-09-03T12:55:57.973Z"
+          },
+          {
+            "id": "it_mtlj3dp1_louc62",
+            "text": "Criação do Aviso sem campo de data de período",
+            "done": true,
+            "createdAt": "2026-09-03T12:55:57.973Z"
+          },
+          {
+            "id": "it_mtlj3dp1_1to099",
+            "text": "No Aviso do Canvas quando permite que aluno comente, aparece duas opções:",
+            "done": true,
+            "createdAt": "2026-09-03T12:55:57.973Z"
+          },
+          {
+            "id": "it_mtlj3dp1_d1vyrg",
+            "text": "Inserção de imagem",
+            "done": true,
+            "createdAt": "2026-09-03T12:55:57.973Z"
+          }
+        ]
+      },
+      "history": [
+        {
+          "id": "hst_mtlk2vd2_yt0sbp",
+          "ts": "2026-09-03T13:23:33.830Z",
+          "changes": [
+            "Nome alterado para “CANVAS - Ferramenta AVISOS”"
+          ]
+        },
+        {
+          "id": "hst_mtlj4tep_ggvm9l",
+          "ts": "2026-09-03T12:57:04.993Z",
+          "changes": [
+            "Item concluído: Inserir Imagem retorna erro:"
+          ]
+        },
+        {
+          "id": "hst_mtlj4srl_ebt0be",
+          "ts": "2026-09-03T12:57:04.161Z",
+          "changes": [
+            "Item concluído: Pesquisa pelo código [TAG] na tela de início"
+          ]
+        },
+        {
+          "id": "hst_mtlj4mc4_hhzm6d",
+          "ts": "2026-09-03T12:56:55.828Z",
+          "changes": [
+            "Responsável: JONATHAN",
+            "Área: Soluções Educacionais"
+          ]
+        },
+        {
+          "id": "hst_mtlj3isa_40g2am",
+          "ts": "2026-09-03T12:56:04.570Z",
+          "changes": [
+            "Status alterado de Ativo para Concluído"
+          ]
+        },
+        {
+          "id": "hst_mtlj3dp1_82cnz3",
+          "ts": "2026-09-03T12:55:57.973Z",
+          "changes": [
+            "Projeto criado"
+          ]
+        }
+      ],
+      "createdAt": "2026-09-03T12:54:08.094Z",
+      "updatedAt": "2026-09-03T13:23:33.830Z"
+    },
+    {
+      "id": "prj_mtliv8oy_5sun2v",
+      "name": "Cata Lead + Degustação EAD",
+      "description": "\"Pessoal, boa tarde! Seguem os conteúdos dos cursos solicitados:\n \nADMINISTRAÇÃO - https://afya.instructure.com/courses/169937 \nRH- https://afya.instructure.com/courses/169938 \nCONTÁBEIS - https://afya.instructure.com/courses/169939 \nTEOLOGIA - https://afya.instructure.com/courses/169940 \nMKT - https://afya.instructure.com/courses/169942 \nANÁLISE E DESENVOLVIMENTO DE SISTEMAS - https://afya.instructure.com/courses/170342\nLOGÍSTICA - https://afya.instructure.com/courses/169944 \"",
+      "owner": "JONATHAN",
+      "area": "Soluções Educacionais",
+      "statusId": "st_active",
+      "criticalityId": "cr_normal",
+      "startDate": "",
+      "dueDate": "",
+      "tags": [],
+      "flags": [],
+      "items": {
+        "doing": [],
+        "risks": [
+          {
+            "id": "it_mtlj09dd_zs1h3j",
+            "text": "Comportamento do HTML na página de conteúdo",
+            "done": false,
+            "createdAt": "2026-09-03T12:53:32.401Z"
+          }
+        ],
+        "next": [
+          {
+            "id": "it_mtlj09dd_4juul0",
+            "text": "Acompanhamento",
+            "done": false,
+            "createdAt": "2026-09-03T12:53:32.401Z"
+          }
+        ],
+        "done": [
+          {
+            "id": "it_mtlj09dd_q23zjh",
+            "text": "Htmls criados para degustação",
+            "done": true,
+            "createdAt": "2026-09-03T12:53:32.401Z"
+          },
+          {
+            "id": "it_mtlj09dd_tkbb76",
+            "text": "Inclusão da barra de rolagem na página inicial",
+            "done": true,
+            "createdAt": "2026-09-03T12:53:32.401Z"
+          }
+        ]
+      },
+      "history": [
+        {
+          "id": "hst_mtlj09dd_qpzndm",
+          "ts": "2026-09-03T12:53:32.401Z",
+          "changes": [
+            "Projeto criado"
+          ]
+        }
+      ],
+      "createdAt": "2026-09-03T12:49:38.242Z",
+      "updatedAt": "2026-09-03T12:53:32.401Z"
+    },
+    {
+      "id": "prj_mtkkrfwz_1buiry",
+      "name": "Padronização do Modelo 176",
+      "description": "Apresentação de Panorama da padronização do Modelo 176\n\nLink do controle - https://nreeducacional-my.sharepoint.com/:x:/r/personal/jonathan_souza_afya_com_br/Documents/Documentos/-%20SGP%20Prova%20F%C3%A1cil/An%C3%A1lise%20de%20Banco%20tratamento.xlsx?d=w3af8b730fb4846f8a227720007214c5a&csf=1&web=1&e=eaZ9A5",
+      "owner": "JONATHAN",
+      "area": "Soluções Educacionais",
+      "statusId": "st_active",
+      "criticalityId": "cr_attention",
+      "startDate": "2026-08-01",
+      "dueDate": "2026-09-03",
+      "tags": [],
+      "flags": [
+        "fl_prio"
+      ],
+      "items": {
+        "doing": [
+          {
+            "id": "it_mtkku9yx_33bk81",
+            "text": "Construção do controle para acompanhamento",
+            "done": false,
+            "createdAt": "2026-09-02T20:57:06.297Z"
+          }
+        ],
+        "risks": [
+          {
+            "id": "it_mtkku9yx_0kir09",
+            "text": "Questões discursivas",
+            "done": false,
+            "createdAt": "2026-09-02T20:57:06.297Z"
+          }
+        ],
+        "next": [],
+        "done": []
+      },
+      "history": [
+        {
+          "id": "hst_mtkku9yy_jzdf0b",
+          "ts": "2026-09-02T20:57:06.298Z",
+          "changes": [
+            "Projeto criado"
+          ]
+        }
+      ],
+      "createdAt": "2026-09-02T20:54:54.035Z",
+      "updatedAt": "2026-09-02T20:57:06.298Z"
+    },
+    {
+      "id": "prj_mtkkp6he_b256a2",
+      "name": "Ferramenta de para automação de Cadastro de questões",
+      "description": "Criar uma ferramenta de cadastro de questão\n\nferramenta - https://saneadadaluno.blob.core.windows.net/solucoes/exportar-questoes-qti/index.html",
+      "owner": "VINICIUS",
+      "area": "WEB",
+      "statusId": "st_active",
+      "criticalityId": "cr_attention",
+      "startDate": "2026-08-27",
+      "dueDate": "2026-09-03",
+      "tags": [],
+      "flags": [
+        "fl_prio"
+      ],
+      "items": {
+        "doing": [
+          {
+            "id": "it_mtwi0e80_q1uk5a",
+            "text": "Tela de cadastro direto",
+            "done": false,
+            "createdAt": "2026-09-11T05:11:07.008Z"
+          },
+          {
+            "id": "it_mtwi0w28_rez90k",
+            "text": "Exportação QTI CANVAS e SGP",
+            "done": false,
+            "createdAt": "2026-09-11T05:11:30.128Z"
+          }
+        ],
+        "risks": [
+          {
+            "id": "it_mtkkr78z_vp8lil",
+            "text": "Urgência",
+            "done": false,
+            "createdAt": "2026-09-02T20:54:42.803Z"
+          }
+        ],
+        "next": [],
+        "done": [
+          {
+            "id": "it_mtkkr78y_6t8ucv",
+            "text": "Criação da primeira versão",
+            "done": true,
+            "createdAt": "2026-09-02T20:54:42.802Z"
+          }
+        ]
+      },
+      "history": [
+        {
+          "id": "hst_mtwi0w28_ag8u67",
+          "ts": "2026-09-11T05:11:30.128Z",
+          "changes": [
+            "Em andamento: item adicionado — Exportação QTI CANVAS e SGP"
+          ]
+        },
+        {
+          "id": "hst_mtwi0e80_d153yb",
+          "ts": "2026-09-11T05:11:07.008Z",
+          "changes": [
+            "Em andamento: item adicionado — Tela de cadastro direto"
+          ]
+        },
+        {
+          "id": "hst_mtwi00f3_vngwv6",
+          "ts": "2026-09-11T05:10:49.119Z",
+          "changes": [
+            "Item concluído: Criação da primeira versão"
+          ]
+        },
+        {
+          "id": "hst_mtwhzxkx_ujxri0",
+          "ts": "2026-09-11T05:10:45.441Z",
+          "changes": [
+            "Descrição atualizada"
+          ]
+        },
+        {
+          "id": "hst_mtkkr78z_zq6j9k",
+          "ts": "2026-09-02T20:54:42.803Z",
+          "changes": [
+            "Projeto criado"
+          ]
+        }
+      ],
+      "createdAt": "2026-09-02T20:53:08.498Z",
+      "updatedAt": "2026-09-11T05:11:30.128Z"
+    },
+    {
+      "id": "prj_mtkkm7rd_uq1y8y",
+      "name": "Implementação do PDF",
+      "description": "Implementar PDF nos conteúdos\n\nMaterial - https://saneadadaluno.blob.core.windows.net/solucoes/imprimir-apostila/graduacao/2026.2/unidade-03/menus/conteudo.html",
+      "owner": "THIAGO",
+      "area": "WEB",
+      "statusId": "st_active",
+      "criticalityId": "cr_normal",
+      "startDate": "",
+      "dueDate": "2026-09-03",
+      "tags": [],
+      "flags": [
+        "fl_prio"
+      ],
+      "items": {
+        "doing": [
+          {
+            "id": "it_mtkko670_zzzy7g",
+            "text": "IMPLEMENTAÇÕES DE RECURSOS",
+            "done": false,
+            "createdAt": "2026-09-02T20:52:21.468Z"
+          }
+        ],
+        "risks": [],
+        "next": [],
+        "done": []
+      },
+      "history": [
+        {
+          "id": "hst_mtkkoth6_48d9c0",
+          "ts": "2026-09-02T20:52:51.642Z",
+          "changes": [
+            "Descrição atualizada"
+          ]
+        },
+        {
+          "id": "hst_mtkkojrv_mheyuy",
+          "ts": "2026-09-02T20:52:39.067Z",
+          "changes": [
+            "Descrição atualizada"
+          ]
+        },
+        {
+          "id": "hst_mtkko670_hp1nmz",
+          "ts": "2026-09-02T20:52:21.468Z",
+          "changes": [
+            "Projeto criado"
+          ]
+        }
+      ],
+      "createdAt": "2026-09-02T20:50:50.185Z",
+      "updatedAt": "2026-09-02T20:52:51.642Z"
+    },
+    {
+      "id": "prj_mtk1vv2p_d7pucb",
+      "name": "PROPOSTA EXP - Conteudos",
+      "description": "Proposta de captura de dados dos alunos nos Conteúdos",
+      "owner": "THIAGO, VINICIUS, JONATHAN, WALLACE",
+      "area": "Soluções Educacionais",
+      "statusId": "st_active",
+      "criticalityId": "cr_attention",
+      "startDate": "2026-09-02",
+      "dueDate": "",
+      "tags": [],
+      "flags": [
+        "fl_prio"
+      ],
+      "items": {
+        "doing": [
+          {
+            "id": "it_mtwb2tw8_57u5nw",
+            "text": "Análise da arquitetura atual do servidor Azure/Storage.",
+            "done": false,
+            "createdAt": "2026-09-11T01:57:03.320Z"
+          },
+          {
+            "id": "it_mtwb36s2_x94gbu",
+            "text": "Avaliação da necessidade de uma nova solução de gestão de conteúdos.",
+            "done": false,
+            "createdAt": "2026-09-11T01:57:20.018Z"
+          },
+          {
+            "id": "it_mtwb3sm6_gsd0qp",
+            "text": "Discussão sobre inclusão de uma IA de apoio ao aprendizado baseada no conteúdo já na primeira fase",
+            "done": false,
+            "createdAt": "2026-09-11T01:57:48.318Z"
+          }
+        ],
+        "risks": [
+          {
+            "id": "it_mtmd7vuv_0r8dk7",
+            "text": "Risco de contratar uma solução que não contemple todos os requisitos necessários.",
+            "done": false,
+            "createdAt": "2026-09-04T02:59:16.615Z"
+          },
+          {
+            "id": "it_mtwbema3_idgbn4",
+            "text": "Atualmente os conteúdos podem ser acessados externamente por meio do compartilhamento direto dos links.",
+            "done": false,
+            "createdAt": "2026-09-11T02:06:13.323Z"
+          },
+          {
+            "id": "it_mtwbf0xx_47qpml",
+            "text": "O ambiente atual funciona basicamente como storage e pode não suportar todas as necessidades futuras.",
+            "done": false,
+            "createdAt": "2026-09-11T02:06:32.325Z"
+          },
+          {
+            "id": "it_mtwbfpxs_kslpcr",
+            "text": "Apresentar o projeto como iniciativa institucional para graduação presencial e EAD",
+            "done": false,
+            "createdAt": "2026-09-11T02:07:04.720Z"
+          }
+        ],
+        "next": [
+          {
+            "id": "it_mtwbdsyk_xtmx9e",
+            "text": "Detalhar a arquitetura da API de autenticação entre Canvas e servidor",
+            "done": false,
+            "createdAt": "2026-09-11T02:05:35.324Z"
+          },
+          {
+            "id": "it_mtwbea7f_4g4pdr",
+            "text": "Em uma etapa posterior, avaliar integração com CRM para ações de retenção e sucesso do aluno.",
+            "done": false,
+            "createdAt": "2026-09-11T02:05:57.675Z"
+          }
+        ],
+        "done": [
+          {
+            "id": "it_mtmd7eo6_6trvu4",
+            "text": "Reunião de refinamento do escopo na próxima semana",
+            "done": true,
+            "createdAt": "2026-09-04T02:58:54.342Z"
+          },
+          {
+            "id": "it_mtmd70bk_d4s5b1",
+            "text": "Revisão do escopo para alinhamento às necessidades regulatórias e operacionais",
+            "done": true,
+            "createdAt": "2026-09-04T02:58:35.744Z"
+          },
+          {
+            "id": "it_mtmd6u13_cggv9w",
+            "text": "Análise preliminar da proposta recebida",
+            "done": true,
+            "createdAt": "2026-09-04T02:58:27.591Z"
+          },
+          {
+            "id": "it_mtwazr4c_z71dkk",
+            "text": "Identificadas as principais necessidades de segurança, integração, rastreamento e dados.",
+            "done": true,
+            "createdAt": "2026-09-11T01:54:39.756Z"
+          },
+          {
+            "id": "it_mtwb01hm_ffycap",
+            "text": "Definida a necessidade de integração entre Canvas e servidor de conteúdo",
+            "done": true,
+            "createdAt": "2026-09-11T01:54:53.194Z"
+          }
+        ]
+      },
+      "history": [
+        {
+          "id": "hst_mtwcewr6_xgzogi",
+          "ts": "2026-09-11T02:34:26.514Z",
+          "changes": [
+            "Item editado: “• Risco de contratar uma solução que nã…” → “Risco de contratar uma solução que não …”"
+          ]
+        },
+        {
+          "id": "hst_mtwceqdk_uhtvlc",
+          "ts": "2026-09-11T02:34:18.248Z",
+          "changes": [
+            "Item editado: “Segurança: atualmente os conteúdos pode…” → “Atualmente os conteúdos podem ser acess…”"
+          ]
+        },
+        {
+          "id": "hst_mtwceied_mqdtuy",
+          "ts": "2026-09-11T02:34:07.909Z",
+          "changes": [
+            "Item editado: “Infraestrutura: o ambiente atual funcio…” → “O ambiente atual funciona basicamente c…”"
+          ]
+        },
+        {
+          "id": "hst_mtwcecp4_kmhw31",
+          "ts": "2026-09-11T02:34:00.520Z",
+          "changes": [
+            "Pontos de atenção: itens reordenados"
+          ]
+        },
+        {
+          "id": "hst_mtwcechc_6kwj5a",
+          "ts": "2026-09-11T02:34:00.240Z",
+          "changes": [
+            "Pontos de atenção: itens reordenados"
+          ]
+        },
+        {
+          "id": "hst_mtwce5lv_6q65rg",
+          "ts": "2026-09-11T02:33:51.331Z",
+          "changes": [
+            "Item editado: “Posicionamento: apresentar o projeto co…” → “Apresentar o projeto como iniciativa in…”"
+          ]
+        },
+        {
+          "id": "hst_mtwcdm9c_4gb5sh",
+          "ts": "2026-09-11T02:33:26.256Z",
+          "changes": [
+            "Pontos de atenção: itens reordenados"
+          ]
+        },
+        {
+          "id": "hst_mtwccnec_jg7w8x",
+          "ts": "2026-09-11T02:32:41.076Z",
+          "changes": [
+            "Responsável: THIAGO, VINICIUS, JONATHAN, WALLACE"
+          ]
+        },
+        {
+          "id": "hst_mtwbfpxs_5tafur",
+          "ts": "2026-09-11T02:07:04.720Z",
+          "changes": [
+            "Pontos de atenção: item adicionado — Posicionamento: apresentar o projeto como iniciativa instit…"
+          ]
+        },
+        {
+          "id": "hst_mtwbf0xx_p4wqlr",
+          "ts": "2026-09-11T02:06:32.325Z",
+          "changes": [
+            "Pontos de atenção: item adicionado — Infraestrutura: o ambiente atual funciona basicamente como …"
+          ]
+        },
+        {
+          "id": "hst_mtwbema3_b0vz5r",
+          "ts": "2026-09-11T02:06:13.323Z",
+          "changes": [
+            "Pontos de atenção: item adicionado — Segurança: atualmente os conteúdos podem ser acessados exte…"
+          ]
+        },
+        {
+          "id": "hst_mtwbea7f_aczxaz",
+          "ts": "2026-09-11T02:05:57.675Z",
+          "changes": [
+            "Próximos passos: item adicionado — Em uma etapa posterior, avaliar integração com CRM para açõ…"
+          ]
+        },
+        {
+          "id": "hst_mtwbdsyl_gdwfr5",
+          "ts": "2026-09-11T02:05:35.325Z",
+          "changes": [
+            "Próximos passos: item adicionado — Detalhar a arquitetura da API de autenticação entre Canvas …"
+          ]
+        },
+        {
+          "id": "hst_mtwb3sm6_eiemet",
+          "ts": "2026-09-11T01:57:48.318Z",
+          "changes": [
+            "Em andamento: item adicionado — Discussão sobre inclusão de uma IA de apoio ao aprendizado …"
+          ]
+        },
+        {
+          "id": "hst_mtwb36s3_06lygz",
+          "ts": "2026-09-11T01:57:20.019Z",
+          "changes": [
+            "Em andamento: item adicionado — Avaliação da necessidade de uma nova solução de gestão de c…"
+          ]
+        },
+        {
+          "id": "hst_mtwb2tw9_zjlpah",
+          "ts": "2026-09-11T01:57:03.321Z",
+          "changes": [
+            "Em andamento: item adicionado — Análise da arquitetura atual do servidor Azure/Storage."
+          ]
+        },
+        {
+          "id": "hst_mtwb01hm_xbjylu",
+          "ts": "2026-09-11T01:54:53.194Z",
+          "changes": [
+            "Realizado: item adicionado — Definida a necessidade de integração entre Canvas e servido…"
+          ]
+        },
+        {
+          "id": "hst_mtwazr4d_xh77ta",
+          "ts": "2026-09-11T01:54:39.757Z",
+          "changes": [
+            "Realizado: item adicionado — Identificadas as principais necessidades de segurança, inte…"
+          ]
+        },
+        {
+          "id": "hst_mtwavs3e_qbsckj",
+          "ts": "2026-09-11T01:51:34.394Z",
+          "changes": [
+            "Pontos de atenção: item removido — Necessidade de definição de CAPEX para planejamento orçamen…"
+          ]
+        },
+        {
+          "id": "hst_mtwavlte_us1kj6",
+          "ts": "2026-09-11T01:51:26.258Z",
+          "changes": [
+            "Próximos passos: item removido — Solicitação de proposta ajustada à realidade da operação"
+          ]
+        },
+        {
+          "id": "hst_mtwavi1f_ez0mo2",
+          "ts": "2026-09-11T01:51:21.363Z",
+          "changes": [
+            "Próximos passos: item removido — Comparação entre proposta do fornecedor e requisitos levant…"
+          ]
+        },
+        {
+          "id": "hst_mtwatjs1_zj27mk",
+          "ts": "2026-09-11T01:49:50.305Z",
+          "changes": [
+            "Item concluído: Reunião de refinamento do escopo na próxima semana"
+          ]
+        },
+        {
+          "id": "hst_mtwathgj_b3fp3c",
+          "ts": "2026-09-11T01:49:47.299Z",
+          "changes": [
+            "Item concluído: Revisão do escopo para alinhamento às necessidades regulató…"
+          ]
+        },
+        {
+          "id": "hst_mtmd80vm_05uw3e",
+          "ts": "2026-09-04T02:59:23.122Z",
+          "changes": [
+            "Pontos de atenção: item adicionado — Necessidade de definição de CAPEX para planejamento orçamen…"
+          ]
+        },
+        {
+          "id": "hst_mtmd7vuv_v27e41",
+          "ts": "2026-09-04T02:59:16.615Z",
+          "changes": [
+            "Pontos de atenção: item adicionado — • Risco de contratar uma solução que não contemple todos os…"
+          ]
+        },
+        {
+          "id": "hst_mtmd7pm1_3w96ku",
+          "ts": "2026-09-04T02:59:08.521Z",
+          "changes": [
+            "Próximos passos: item adicionado — Solicitação de proposta ajustada à realidade da operação"
+          ]
+        },
+        {
+          "id": "hst_mtmd7j5n_xqi9e1",
+          "ts": "2026-09-04T02:59:00.155Z",
+          "changes": [
+            "Próximos passos: item adicionado — Comparação entre proposta do fornecedor e requisitos levant…"
+          ]
+        },
+        {
+          "id": "hst_mtmd7eo6_6b4vt2",
+          "ts": "2026-09-04T02:58:54.342Z",
+          "changes": [
+            "Próximos passos: item adicionado — Reunião de refinamento do escopo na próxima semana"
+          ]
+        },
+        {
+          "id": "hst_mtmd75t5_1f2szj",
+          "ts": "2026-09-04T02:58:42.857Z",
+          "changes": [
+            "Em andamento: item removido — Apresentação do Projeto EXP"
+          ]
+        },
+        {
+          "id": "hst_mtmd70bk_0nn8w2",
+          "ts": "2026-09-04T02:58:35.744Z",
+          "changes": [
+            "Em andamento: item adicionado — Revisão do escopo para alinhamento às necessidades regulató…"
+          ]
+        },
+        {
+          "id": "hst_mtmd6u13_gzl9ht",
+          "ts": "2026-09-04T02:58:27.591Z",
+          "changes": [
+            "Realizado: item adicionado — Análise preliminar da proposta recebida"
+          ]
+        },
+        {
+          "id": "hst_mtk5qlrc_rpopon",
+          "ts": "2026-09-02T13:54:20.712Z",
+          "changes": [
+            "Criticidade alterada para Atenção",
+            "Flags atualizadas"
+          ]
+        },
+        {
+          "id": "hst_mtk5qavr_ir5qll",
+          "ts": "2026-09-02T13:54:06.615Z",
+          "changes": [
+            "Responsável: THIAGO, VINICIUS, JONATHAN"
+          ]
+        },
+        {
+          "id": "hst_mtk5q5qn_ib0g2l",
+          "ts": "2026-09-02T13:53:59.951Z",
+          "changes": [
+            "Descrição atualizada"
+          ]
+        },
+        {
+          "id": "hst_mtk5pvgv_i1k729",
+          "ts": "2026-09-02T13:53:46.639Z",
+          "changes": [
+            "Descrição atualizada"
+          ]
+        },
+        {
+          "id": "hst_mtk1zfyg_angzqu",
+          "ts": "2026-09-02T12:09:14.632Z",
+          "changes": [
+            "Projeto criado"
+          ]
+        }
+      ],
+      "createdAt": "2026-09-02T12:06:27.601Z",
+      "updatedAt": "2026-09-11T02:34:26.514Z"
+    },
+    {
+      "id": "prj_mtj5pt9s_fqdu9q",
+      "name": "CANVAS - Beecrowd",
+      "description": "",
+      "owner": "JONATHAN",
+      "area": "Soluções Educacionais",
+      "statusId": "st_active",
+      "criticalityId": "cr_attention",
+      "startDate": "",
+      "dueDate": "",
+      "tags": [],
+      "flags": [
+        "fl_dep"
+      ],
+      "items": {
+        "doing": [
+          {
+            "id": "it_mtj5v2mv_ivef3x",
+            "text": "Organização de agenda com Álvaro​",
+            "done": false,
+            "createdAt": "2026-09-01T21:10:03.031Z"
+          }
+        ],
+        "risks": [],
+        "next": [
+          {
+            "id": "it_mtj5v2mv_m2il4v",
+            "text": "Treinamentos​",
+            "done": false,
+            "createdAt": "2026-09-01T21:10:03.031Z"
+          }
+        ],
+        "done": [
+          {
+            "id": "it_mtj5v2mv_0ikx6s",
+            "text": "Parametrização na turma​",
+            "done": true,
+            "createdAt": "2026-09-01T21:10:03.031Z"
+          },
+          {
+            "id": "it_mtj5v2mv_8ts70d",
+            "text": "Alinhamento entre TI e EXP sobre a continuidade do projeto​",
+            "done": true,
+            "createdAt": "2026-09-01T21:10:03.031Z"
+          },
+          {
+            "id": "it_mtj5v2mv_36zk7i",
+            "text": "Levantamento dos dados​",
+            "done": true,
+            "createdAt": "2026-09-01T21:10:03.031Z"
+          },
+          {
+            "id": "it_mtj5v2mv_atcizd",
+            "text": "Configuração da ferramentas nas Modelos",
+            "done": true,
+            "createdAt": "2026-09-01T21:10:03.031Z"
+          },
+          {
+            "id": "it_mtj5v2mv_3l9zcu",
+            "text": "Replicação nas filhas",
+            "done": true,
+            "createdAt": "2026-09-01T21:10:03.031Z"
+          }
+        ]
+      },
+      "history": [
+        {
+          "id": "hst_mtwalaih_2ud8b3",
+          "ts": "2026-09-11T01:43:25.049Z",
+          "changes": [
+            "Projeto revisado sem alterações de conteúdo"
+          ]
+        },
+        {
+          "id": "hst_mtwakqci_ihrls2",
+          "ts": "2026-09-11T01:42:58.914Z",
+          "changes": [
+            "Tags atualizadas"
+          ]
+        },
+        {
+          "id": "hst_mtlk2ayu_0at06w",
+          "ts": "2026-09-03T13:23:07.398Z",
+          "changes": [
+            "Nome alterado para “CANVAS - Beecrowd”"
+          ]
+        },
+        {
+          "id": "hst_mtj5v2mv_7rawix",
+          "ts": "2026-09-01T21:10:03.031Z",
+          "changes": [
+            "Projeto criado"
+          ]
+        }
+      ],
+      "createdAt": "2026-09-01T21:05:57.616Z",
+      "updatedAt": "2026-09-11T01:43:25.049Z"
+    }
+  ],
+  "settings": {
+    "schema": 1,
+    "theme": "light",
+    "statuses": [
+      {
+        "id": "st_active",
+        "label": "Ativo",
+        "color": "#17805a",
+        "kind": "active"
+      },
+      {
+        "id": "st_paused",
+        "label": "Pausado",
+        "color": "#b8860b",
+        "kind": "paused"
+      },
+      {
+        "id": "st_stopped",
+        "label": "Parado",
+        "color": "#c03a3a",
+        "kind": "stopped"
+      },
+      {
+        "id": "st_done",
+        "label": "Concluído",
+        "color": "#6c7689",
+        "kind": "done"
+      }
+    ],
+    "criticalities": [
+      {
+        "id": "cr_normal",
+        "label": "Normal",
+        "color": "#17805a",
+        "weight": 1
+      },
+      {
+        "id": "cr_attention",
+        "label": "Atenção",
+        "color": "#b8860b",
+        "weight": 2
+      },
+      {
+        "id": "cr_critical",
+        "label": "Crítico",
+        "color": "#c03a3a",
+        "weight": 3
+      }
+    ],
+    "flags": [
+      {
+        "id": "fl_dep",
+        "label": "Dependência externa",
+        "color": "#7a4fd0"
+      },
+      {
+        "id": "fl_ti",
+        "label": "Aguardando TI",
+        "color": "#2a6bb0"
+      },
+      {
+        "id": "fl_forn",
+        "label": "Aguardando fornecedor",
+        "color": "#b4632c"
+      },
+      {
+        "id": "fl_prazo",
+        "label": "CANVAS",
+        "color": "#c03a3a"
+      },
+      {
+        "id": "fl_prio",
+        "label": "Alta prioridade",
+        "color": "#a3325f"
+      },
+      {
+        "id": "fl_block",
+        "label": "Bloqueado",
+        "color": "#4b5468"
+      },
+      {
+        "id": "fl_mtwag35e_wvflic",
+        "label": "Prova Fácil",
+        "color": "#272262"
+      },
+      {
+        "id": "fl_mtwai76j_p238ro",
+        "label": "RM",
+        "color": "#b0b0b0"
+      }
+    ],
+    "areas": [
+      "Soluções Educacionais",
+      "WED"
+    ],
+    "prefs": {
+      "staleDays": 7,
+      "pageSize": 25,
+      "confirmDelete": true,
+      "demoDismissed": false,
+      "listView": "panorama",
+      "sidebarCollapsed": true
+    },
+    "trello": {
+      "agingAttention": 7,
+      "agingCritical": 14,
+      "defaultPeriod": 30,
+      "doneKeywords": "concluido, concluído, done, finalizado, entregue, publicado, completo, aprovado, finalizada",
+      "doingKeywords": "producao, produção, doing, andamento, execucao, execução, em progresso, wip, revisao, revisão, review, edicao, edição",
+      "treatArchivedAsDone": true
+    }
+  }
+};

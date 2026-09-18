@@ -85,7 +85,8 @@
         pageSize: 25,
         confirmDelete: true,
         demoDismissed: false,
-        listView: 'panorama'   // 'panorama' (quadro completo) ou 'compact'
+        listView: 'panorama',  // 'panorama' (quadro completo) ou 'compact'
+        sidebarCollapsed: false // recolhe o menu lateral em telas grandes
       },
       trello: {
         agingAttention: 7,     // dias abertos → backlog em atenção

@@ -116,7 +116,7 @@
   backdrop-filter: saturate(1.4) blur(10px);
   border-bottom: 1px solid var(--line);
 }
-.topbar__burger { display: none; }
+.topbar__burger { display: grid; }
 .topbar__title { min-width: 0; }
 .topbar__title h1 { line-height: 1.2; }
 .topbar__title p { font-size: 12.5px; color: var(--text-3); margin-top: 1px; }
@@ -204,4 +204,40 @@
   .page { padding: 0; max-width: none; }
   body { background: #fff; }
   .card, .panel { break-inside: avoid; box-shadow: none; border: 1px solid #ccc; }
+}
+
+/* ---------------- Menu lateral recolhível (desktop) ---------------- */
+@media (min-width: 961px) {
+  .app {
+    transition: grid-template-columns .22s var(--ease);
+  }
+  .app.sidebar-collapsed {
+    grid-template-columns: 72px minmax(0, 1fr);
+  }
+  .app.sidebar-collapsed .sidebar__brand {
+    justify-content: center;
+    padding: 0;
+  }
+  .app.sidebar-collapsed .brand-text,
+  .app.sidebar-collapsed .nav__label,
+  .app.sidebar-collapsed .nav__item > span,
+  .app.sidebar-collapsed .nav__count,
+  .app.sidebar-collapsed .sidebar__foot {
+    display: none;
+  }
+  .app.sidebar-collapsed .nav {
+    padding: 14px 10px;
+  }
+  .app.sidebar-collapsed .nav__item {
+    justify-content: center;
+    gap: 0;
+    padding: 10px;
+  }
+  .app.sidebar-collapsed .nav__item .ico {
+    width: 19px;
+    height: 19px;
+  }
+  .app.sidebar-collapsed .nav__item.is-active::before {
+    left: -10px;
+  }
 }
