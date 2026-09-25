@@ -155,7 +155,7 @@
     if (!btn) return;
     const id = btn.dataset.action;
     if (id === 'newProject') Projects.openForm(null);
-    else if (id === 'backToProjects') location.hash = '#/projects';
+    else if (id === 'backToProjects') Projects.returnToProjects();
     else if (id === 'newAnalysis') { Trello.reset(); render(); }
   });
 

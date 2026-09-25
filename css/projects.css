@@ -330,3 +330,34 @@
 @media print {
   .panorama-cell { min-height: 0; gap: 0; }
 }
+
+/* Retorno inteligente para a lista de projetos */
+.project-row--returned {
+  position: relative;
+  z-index: 1;
+  animation: project-return-pulse 1.8s ease-out;
+}
+.project-row--returned > td {
+  background: color-mix(in srgb, var(--accent) 10%, var(--surface));
+}
+@keyframes project-return-pulse {
+  0%, 35% { box-shadow: inset 4px 0 0 var(--accent); }
+  100% { box-shadow: inset 4px 0 0 transparent; }
+}
+.panorama-help { margin-top: 3px; }
+
+/* Mantém o projeto visível enquanto o panorama é percorrido horizontalmente. */
+@media (min-width: 861px) {
+  .panorama-table th.col-project,
+  .panorama-table td.col-project {
+    position: sticky;
+    left: 0;
+    z-index: 3;
+    background: var(--surface);
+    box-shadow: 1px 0 0 var(--line);
+  }
+  .panorama-table thead th.col-project { z-index: 5; }
+  .panorama-table tr:hover td.col-project {
+    background: color-mix(in srgb, var(--accent) 4%, var(--surface));
+  }
+}

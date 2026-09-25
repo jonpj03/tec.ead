@@ -24,6 +24,42 @@
   let panoramaOrder = [];
   let panoramaOrderSignature = '';
 
+  /* Contexto da lista para voltar exatamente ao ponto de trabalho. */
+  let returnContext = null;
+
+  function captureListContext(projectId) {
+    const wrap = document.querySelector('#view .table-wrap');
+    returnContext = {
+      projectId: projectId || '',
+      scrollY: global.scrollY || 0,
+      scrollX: wrap ? wrap.scrollLeft : 0,
+      view: listView(),
+      ts: Date.now()
+    };
+  }
+
+  function restoreListContext() {
+    if (!returnContext) return;
+    const ctx = returnContext;
+    returnContext = null;
+    global.requestAnimationFrame(() => {
+      const row = ctx.projectId ? document.querySelector(`#view tbody tr[data-id="${CSS.escape(ctx.projectId)}"]`) : null;
+      const wrap = document.querySelector('#view .table-wrap');
+      if (wrap) wrap.scrollLeft = ctx.scrollX || 0;
+      if (row) {
+        row.classList.add('project-row--returned');
+        row.scrollIntoView({ block: 'center', inline: 'nearest', behavior: 'auto' });
+        global.setTimeout(() => row.classList.remove('project-row--returned'), 1800);
+      } else {
+        global.scrollTo({ top: ctx.scrollY || 0, behavior: 'auto' });
+      }
+    });
+  }
+
+  function returnToProjects() {
+    location.hash = '#/projects';
+  }
+
   /* ---------------- Helpers de domínio ---------------- */
   function isStale(project) {
     const limit = Store.settings().prefs.staleDays || 7;
@@ -196,6 +232,7 @@
           <div>
             <h2>Portfólio</h2>
             <p class="tiny dim">${U.num(filtered.length)} de ${U.num(all.length)} ${U.plural(all.length, 'projeto', 'projetos')} · ${listView() === 'panorama' ? 'edite as anotações diretamente nas colunas' : 'clique em uma linha para abrir o detalhe'}</p>
+            ${listView() === 'panorama' ? '<p class="tiny dim panorama-help">Dica: edite anotações sem sair desta tela. Ao abrir um projeto e voltar, sua posição será preservada.</p>' : ''}
           </div>
           <div class="row gap-8 no-print">
             <div class="segmented segmented--sm" id="viewToggle">
@@ -225,6 +262,7 @@
       </div>`;
 
     bindListEvents(view);
+    restoreListContext();
   }
 
   /** Visão escolhida para a listagem, guardada nas preferências. */
@@ -526,10 +564,14 @@
     view.querySelectorAll('tbody tr').forEach(tr => {
       tr.addEventListener('click', e => {
         if (e.target.closest('[data-act], button, input, textarea, select, a, [data-panorama-editor]')) return;
+        captureListContext(tr.dataset.id);
         location.hash = '#/projects/' + tr.dataset.id;
       });
       tr.addEventListener('keydown', e => {
-        if (e.key === 'Enter' && e.target === tr) location.hash = '#/projects/' + tr.dataset.id;
+        if (e.key === 'Enter' && e.target === tr) {
+          captureListContext(tr.dataset.id);
+          location.hash = '#/projects/' + tr.dataset.id;
+        }
       });
     });
     const quickRoot = view.querySelector('.table-wrap');
@@ -606,8 +648,8 @@
     const reasons = attentionReasons(p);
 
     view.innerHTML = `
-      <a class="btn btn--ghost btn--sm no-print" href="#/projects" style="margin-bottom:14px">
-        ${icon('chevron-left', 'ico--sm')} Voltar para projetos</a>
+      <button class="btn btn--ghost btn--sm no-print" type="button" data-return-projects style="margin-bottom:14px">
+        ${icon('chevron-left', 'ico--sm')} Voltar para projetos</button>
 
       <div class="detail-head" style="--c:${esc(status.color)}">
         <div class="detail-head__top">
@@ -725,6 +767,8 @@
       renderDetail(view, project.id);
     };
 
+    const returnBtn = view.querySelector('[data-return-projects]');
+    if (returnBtn) returnBtn.addEventListener('click', returnToProjects);
     $('#editProject', view).addEventListener('click', () => openForm(project));
     $('#deleteProject', view).addEventListener('click', () => confirmDelete(project.id));
     $('#quickStatus', view).addEventListener('change', e => {
@@ -1129,7 +1173,7 @@
   }
 
   global.Projects = {
-    renderList, renderDetail, openForm, confirmDelete, setFilters,
+    renderList, renderDetail, openForm, confirmDelete, setFilters, captureListContext, returnToProjects,
     isStale, isOverdue, needsAttention, attentionReasons, counts, COLUMNS
   };
 })(window);
