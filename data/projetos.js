@@ -1,13 +1,13 @@
 /* =========================================================
    data/projetos.js — snapshot publicado
-   Gerado pelo OpsBoard em 25/09/2026 às 00:28
+   Gerado pelo OpsBoard em 25/09/2026 às 11:02
    18 projetos.
    Publicação forçada: substitui alterações locais dos visitantes.
 
    Substitua este arquivo no repositório e publique.
    ========================================================= */
 window.OPSBOARD_SNAPSHOT = {
-  "publishedAt": "2026-09-25T03:28:07.153Z",
+  "publishedAt": "2026-09-25T14:02:25.379Z",
   "label": "",
   "force": true,
   "projects": [
@@ -1913,6 +1913,12 @@ window.OPSBOARD_SNAPSHOT = {
             "text": "Organização de agenda com Álvaro​",
             "done": false,
             "createdAt": "2026-09-01T21:10:03.031Z"
+          },
+          {
+            "id": "it_mugyuf3p_8ce89q",
+            "text": "Email Álvaro",
+            "done": false,
+            "createdAt": "2026-09-25T12:57:45.205Z"
           }
         ],
         "risks": [
@@ -1966,6 +1972,13 @@ window.OPSBOARD_SNAPSHOT = {
       },
       "history": [
         {
+          "id": "hst_mugyuf3p_n929w1",
+          "ts": "2026-09-25T12:57:45.205Z",
+          "changes": [
+            "Em andamento atualizado pelo Panorama"
+          ]
+        },
+        {
           "id": "hst_muge9a2z_kzrq9j",
           "ts": "2026-09-25T03:21:26.603Z",
           "changes": [
@@ -2009,7 +2022,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-01T21:05:57.616Z",
-      "updatedAt": "2026-09-25T03:21:26.603Z"
+      "updatedAt": "2026-09-25T12:57:45.205Z"
     }
   ],
   "settings": {
