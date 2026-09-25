@@ -361,3 +361,12 @@
     background: color-mix(in srgb, var(--accent) 4%, var(--surface));
   }
 }
+
+/* Realizado: mantém o detalhe compacto exibindo só as 3 ações mais recentes. */
+.done-extra[hidden] { display: none !important; }
+.board__more {
+  padding: 0 10px 10px;
+  display: flex;
+  justify-content: center;
+}
+.done-toggle { width: 100%; justify-content: center; }

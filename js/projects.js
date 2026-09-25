@@ -730,6 +730,11 @@
 
   function columnHTML(p, col) {
     const list = p.items[col.key] || [];
+    const isDoneColumn = col.key === 'done';
+    const visibleList = isDoneColumn ? list.slice(0, 3) : list;
+    const hiddenList = isDoneColumn ? list.slice(3) : [];
+    const hiddenCount = hiddenList.length;
+
     return `<section class="board__col" data-col="${col.key}">
       <div class="board__head">
         <i class="dot" style="background:${col.color}"></i>
@@ -737,9 +742,15 @@
         <b>${list.length}</b>
       </div>
       <div class="board__list" data-drop="${col.key}">
-        ${list.length ? list.map(item => itemHTML(item, col)).join('')
+        ${list.length ? visibleList.map(item => itemHTML(item, col)).join('')
           : `<p class="small dim" style="padding:10px 9px">Nenhum item aqui.</p>`}
+        ${hiddenCount ? `<div class="done-extra" data-done-extra hidden>${hiddenList.map(item => itemHTML(item, col)).join('')}</div>` : ''}
       </div>
+      ${hiddenCount ? `<div class="board__more no-print">
+        <button class="btn btn--ghost btn--sm done-toggle" type="button" data-toggle-done aria-expanded="false">
+          ${icon('chevron-down', 'ico--sm')} Ver mais ${hiddenCount} ${U.plural(hiddenCount, 'ação', 'ações')} realizada${hiddenCount === 1 ? '' : 's'}
+        </button>
+      </div>` : ''}
       <div class="board__foot no-print">
         <button class="item-add" data-add="${col.key}">${icon('plus', 'ico--sm')} ${esc(col.addLabel)}</button>
       </div>
@@ -771,6 +782,22 @@
     if (returnBtn) returnBtn.addEventListener('click', returnToProjects);
     $('#editProject', view).addEventListener('click', () => openForm(project));
     $('#deleteProject', view).addEventListener('click', () => confirmDelete(project.id));
+
+    const doneToggle = view.querySelector('[data-toggle-done]');
+    if (doneToggle) {
+      doneToggle.addEventListener('click', () => {
+        const extra = view.querySelector('[data-done-extra]');
+        if (!extra) return;
+        const expanded = doneToggle.getAttribute('aria-expanded') === 'true';
+        extra.hidden = expanded;
+        doneToggle.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        const hiddenCount = extra.querySelectorAll('.item').length;
+        doneToggle.innerHTML = expanded
+          ? `${icon('chevron-down', 'ico--sm')} Ver mais ${hiddenCount} ${U.plural(hiddenCount, 'ação', 'ações')} realizada${hiddenCount === 1 ? '' : 's'}`
+          : `${icon('chevron-up', 'ico--sm')} Mostrar apenas as 3 últimas`;
+      });
+    }
+
     $('#quickStatus', view).addEventListener('change', e => {
       const from = Store.status(project.statusId).label;
       const to = Store.status(e.target.value).label;
