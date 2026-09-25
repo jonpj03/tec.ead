@@ -1,13 +1,13 @@
 /* =========================================================
    data/projetos.js — snapshot publicado
-   Gerado pelo OpsBoard em 18/09/2026 às 01:50
+   Gerado pelo OpsBoard em 24/09/2026 às 23:53
    18 projetos.
    Publicação forçada: substitui alterações locais dos visitantes.
 
    Substitua este arquivo no repositório e publique.
    ========================================================= */
 window.OPSBOARD_SNAPSHOT = {
-  "publishedAt": "2026-09-18T04:50:31.742Z",
+  "publishedAt": "2026-09-25T02:53:00.217Z",
   "label": "",
   "force": true,
   "projects": [
@@ -285,18 +285,6 @@ window.OPSBOARD_SNAPSHOT = {
             "createdAt": "2026-09-04T01:29:19.076Z"
           },
           {
-            "id": "it_mu6h3znd_t0iu45",
-            "text": "Implementação de Melhoria IP",
-            "done": false,
-            "createdAt": "2026-09-18T04:43:36.889Z"
-          },
-          {
-            "id": "it_mu6h4xcv_g32cbp",
-            "text": "Anexo de arquivo como material de correção da IA",
-            "done": false,
-            "createdAt": "2026-09-18T04:44:20.575Z"
-          },
-          {
             "id": "it_mu6h98np_ygo24y",
             "text": "Fluxo De Revisão Por Nota",
             "done": false,
@@ -306,19 +294,31 @@ window.OPSBOARD_SNAPSHOT = {
         "risks": [],
         "next": [
           {
-            "id": "it_mtmd8wg3_eqjlt6",
-            "text": "• Construção do documento de requisitos técnicos.",
-            "done": false,
-            "createdAt": "2026-09-04T03:00:04.035Z"
-          },
-          {
             "id": "it_mu6h3fh1_e2d3dd",
             "text": "Documento API",
             "done": false,
             "createdAt": "2026-09-18T04:43:10.741Z"
+          },
+          {
+            "id": "it_mugd7spg_0z8c3c",
+            "text": "Agenda na próxima semana",
+            "done": false,
+            "createdAt": "2026-09-25T02:52:17.812Z"
           }
         ],
         "done": [
+          {
+            "id": "it_mu6h3znd_t0iu45",
+            "text": "Implementação de Melhoria IP",
+            "done": true,
+            "createdAt": "2026-09-18T04:43:36.889Z"
+          },
+          {
+            "id": "it_mtmd8wg3_eqjlt6",
+            "text": "• Construção do documento de requisitos técnicos.",
+            "done": true,
+            "createdAt": "2026-09-04T03:00:04.035Z"
+          },
           {
             "id": "it_mtmd92d7_e60zrz",
             "text": "Compartilhamento com o time responsável para elaboração de proposta",
@@ -340,6 +340,34 @@ window.OPSBOARD_SNAPSHOT = {
         ]
       },
       "history": [
+        {
+          "id": "hst_mugd85wy_3rm2yi",
+          "ts": "2026-09-25T02:52:34.930Z",
+          "changes": [
+            "Em andamento: item removido — Anexo de arquivo como material de correção da IA"
+          ]
+        },
+        {
+          "id": "hst_mugd7upu_wkj05b",
+          "ts": "2026-09-25T02:52:20.418Z",
+          "changes": [
+            "Item concluído: Implementação de Melhoria IP"
+          ]
+        },
+        {
+          "id": "hst_mugd7spg_igtuma",
+          "ts": "2026-09-25T02:52:17.812Z",
+          "changes": [
+            "Próximos passos: item adicionado — Agenda na próxima semana"
+          ]
+        },
+        {
+          "id": "hst_mugd7j9u_3qp96j",
+          "ts": "2026-09-25T02:52:05.586Z",
+          "changes": [
+            "Item concluído: • Construção do documento de requisitos técnicos."
+          ]
+        },
         {
           "id": "hst_mu6h9jw5_iz5ksj",
           "ts": "2026-09-18T04:47:56.405Z",
@@ -503,7 +531,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-04T01:25:20.307Z",
-      "updatedAt": "2026-09-18T04:47:56.405Z"
+      "updatedAt": "2026-09-25T02:52:34.930Z"
     },
     {
       "id": "prj_mtlk1jml_4321rh",
