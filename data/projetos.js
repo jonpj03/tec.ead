@@ -1,13 +1,13 @@
 /* =========================================================
    data/projetos.js — snapshot publicado
-   Gerado pelo OpsBoard em 24/09/2026 às 23:53
+   Gerado pelo OpsBoard em 25/09/2026 às 00:28
    18 projetos.
    Publicação forçada: substitui alterações locais dos visitantes.
 
    Substitua este arquivo no repositório e publique.
    ========================================================= */
 window.OPSBOARD_SNAPSHOT = {
-  "publishedAt": "2026-09-25T02:53:00.217Z",
+  "publishedAt": "2026-09-25T03:28:07.153Z",
   "label": "",
   "force": true,
   "projects": [
@@ -572,12 +572,6 @@ window.OPSBOARD_SNAPSHOT = {
         ],
         "done": [
           {
-            "id": "it_mtlktacf_0hk4zp",
-            "text": "○ Matrículas \t\t\t§ Filtro \t\t\t§ CPF \t\t\t§ IES \t\t\t§ NÍVEL DE ENSINO \t\t\t§ IDTURMADISC \t\t\t§ IDCANVAS \t\t\t§ Turno do aluno \t\t\t§ Modelo de etapa",
-            "done": true,
-            "createdAt": "2026-09-03T13:44:06.303Z"
-          },
-          {
             "id": "it_mtlktacf_7tx133",
             "text": "Inerir ID Canvas como filtro em todas",
             "done": true,
@@ -592,6 +586,13 @@ window.OPSBOARD_SNAPSHOT = {
         ]
       },
       "history": [
+        {
+          "id": "hst_mugeh6b6_yuy1co",
+          "ts": "2026-09-25T03:27:34.962Z",
+          "changes": [
+            "Realizado: item removido — ○ Matrículas \t\t\t§ Filtro \t\t\t§ CPF \t\t\t§ IES \t\t\t§ NÍVEL DE EN…"
+          ]
+        },
         {
           "id": "hst_mtm9tzbw_70jmvw",
           "ts": "2026-09-04T01:24:29.084Z",
@@ -621,7 +622,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-03T13:22:31.965Z",
-      "updatedAt": "2026-09-04T01:24:29.084Z"
+      "updatedAt": "2026-09-25T03:27:34.962Z"
     },
     {
       "id": "prj_mtljy1qi_dr2m8l",
@@ -638,10 +639,10 @@ window.OPSBOARD_SNAPSHOT = {
       "items": {
         "doing": [
           {
-            "id": "it_mtmdyo8a_156z6i",
-            "text": "Preparação da primeira entrega (Comunidade Acadêmica).",
+            "id": "it_mugdoe55_dwq1nj",
+            "text": "Transferência de conteúdo",
             "done": false,
-            "createdAt": "2026-09-04T03:20:06.442Z"
+            "createdAt": "2026-09-25T03:05:12.089Z"
           }
         ],
         "risks": [
@@ -664,15 +665,21 @@ window.OPSBOARD_SNAPSHOT = {
             "text": "Apresentar cronograma detalhado no final de setembro",
             "done": false,
             "createdAt": "2026-09-04T03:21:03.549Z"
-          },
-          {
-            "id": "it_mtmxb6nm_8j9m6h",
-            "text": "Colocar a Comunidade Acadêmica em produção até dia 18/09",
-            "done": false,
-            "createdAt": "2026-09-04T12:21:42.898Z"
           }
         ],
         "done": [
+          {
+            "id": "it_mtmxb6nm_8j9m6h",
+            "text": "Colocar a Comunidade Acadêmica em produção até dia 18/09",
+            "done": true,
+            "createdAt": "2026-09-04T12:21:42.898Z"
+          },
+          {
+            "id": "it_mtmdyo8a_156z6i",
+            "text": "Preparação da primeira entrega (Comunidade Acadêmica).",
+            "done": true,
+            "createdAt": "2026-09-04T03:20:06.442Z"
+          },
           {
             "id": "it_mtlk13hi_tk1vwz",
             "text": "Consolidação das regras para criação, manutenção e atualização das comunidades",
@@ -712,6 +719,27 @@ window.OPSBOARD_SNAPSHOT = {
         ]
       },
       "history": [
+        {
+          "id": "hst_mugdoe55_63lt33",
+          "ts": "2026-09-25T03:05:12.089Z",
+          "changes": [
+            "Em andamento atualizado pelo Panorama"
+          ]
+        },
+        {
+          "id": "hst_mugdnqcp_vk6c1n",
+          "ts": "2026-09-25T03:04:41.257Z",
+          "changes": [
+            "Item concluído: Colocar a Comunidade Acadêmica em produção até dia 18/09"
+          ]
+        },
+        {
+          "id": "hst_mugdnfch_pmi1r0",
+          "ts": "2026-09-25T03:04:26.993Z",
+          "changes": [
+            "Item concluído: Preparação da primeira entrega (Comunidade Acadêmica)."
+          ]
+        },
         {
           "id": "hst_mu69eas3_5vvbkh",
           "ts": "2026-09-18T01:07:40.947Z",
@@ -841,7 +869,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-03T13:19:48.810Z",
-      "updatedAt": "2026-09-18T01:07:40.947Z"
+      "updatedAt": "2026-09-25T03:05:12.089Z"
     },
     {
       "id": "prj_mtljdrgh_inwfcz",
@@ -1160,7 +1188,7 @@ window.OPSBOARD_SNAPSHOT = {
       "description": "\"Pessoal, boa tarde! Seguem os conteúdos dos cursos solicitados:\n \nADMINISTRAÇÃO - https://afya.instructure.com/courses/169937 \nRH- https://afya.instructure.com/courses/169938 \nCONTÁBEIS - https://afya.instructure.com/courses/169939 \nTEOLOGIA - https://afya.instructure.com/courses/169940 \nMKT - https://afya.instructure.com/courses/169942 \nANÁLISE E DESENVOLVIMENTO DE SISTEMAS - https://afya.instructure.com/courses/170342\nLOGÍSTICA - https://afya.instructure.com/courses/169944 \"",
       "owner": "JONATHAN",
       "area": "Soluções Educacionais",
-      "statusId": "st_active",
+      "statusId": "st_done",
       "criticalityId": "cr_normal",
       "startDate": "",
       "dueDate": "",
@@ -1201,6 +1229,13 @@ window.OPSBOARD_SNAPSHOT = {
       },
       "history": [
         {
+          "id": "hst_muged2cy_tc05m6",
+          "ts": "2026-09-25T03:24:23.218Z",
+          "changes": [
+            "Status alterado de Ativo para Concluído"
+          ]
+        },
+        {
           "id": "hst_mtlj09dd_qpzndm",
           "ts": "2026-09-03T12:53:32.401Z",
           "changes": [
@@ -1209,7 +1244,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-03T12:49:38.242Z",
-      "updatedAt": "2026-09-03T12:53:32.401Z"
+      "updatedAt": "2026-09-25T03:24:23.218Z"
     },
     {
       "id": "prj_mtkkrfwz_1buiry",
@@ -1274,16 +1309,22 @@ window.OPSBOARD_SNAPSHOT = {
       "items": {
         "doing": [
           {
-            "id": "it_mtwi0e80_q1uk5a",
-            "text": "Tela de cadastro direto",
+            "id": "it_muge1823_363v6c",
+            "text": "Ajuste de comando",
             "done": false,
-            "createdAt": "2026-09-11T05:11:07.008Z"
+            "createdAt": "2026-09-25T03:15:10.731Z"
           },
           {
-            "id": "it_mtwi0w28_rez90k",
-            "text": "Exportação QTI CANVAS e SGP",
+            "id": "it_muge1g4a_mkomts",
+            "text": "Importação para o SGP",
             "done": false,
-            "createdAt": "2026-09-11T05:11:30.128Z"
+            "createdAt": "2026-09-25T03:15:21.178Z"
+          },
+          {
+            "id": "it_muge1s17_vs1sj3",
+            "text": "Comportamento de Teste Canvas",
+            "done": false,
+            "createdAt": "2026-09-25T03:15:36.619Z"
           }
         ],
         "risks": [
@@ -1292,10 +1333,35 @@ window.OPSBOARD_SNAPSHOT = {
             "text": "Urgência",
             "done": false,
             "createdAt": "2026-09-02T20:54:42.803Z"
+          },
+          {
+            "id": "it_muge25hh_0gk9gw",
+            "text": "No Canvas há dois locais de questões",
+            "done": false,
+            "createdAt": "2026-09-25T03:15:54.053Z"
           }
         ],
-        "next": [],
+        "next": [
+          {
+            "id": "it_muge2owm_bdlj6u",
+            "text": "Parametrização de exportação para o SGP",
+            "done": false,
+            "createdAt": "2026-09-25T03:16:19.222Z"
+          }
+        ],
         "done": [
+          {
+            "id": "it_mtwi0w28_rez90k",
+            "text": "Exportação QTI CANVAS",
+            "done": true,
+            "createdAt": "2026-09-11T05:11:30.128Z"
+          },
+          {
+            "id": "it_mtwi0e80_q1uk5a",
+            "text": "Tela de cadastro direto",
+            "done": true,
+            "createdAt": "2026-09-11T05:11:07.008Z"
+          },
           {
             "id": "it_mtkkr78y_6t8ucv",
             "text": "Criação da primeira versão",
@@ -1305,6 +1371,62 @@ window.OPSBOARD_SNAPSHOT = {
         ]
       },
       "history": [
+        {
+          "id": "hst_muge2owm_1svxls",
+          "ts": "2026-09-25T03:16:19.222Z",
+          "changes": [
+            "Próximos passos: item adicionado — Parametrização de exportação para o SGP"
+          ]
+        },
+        {
+          "id": "hst_muge25hh_j0doxk",
+          "ts": "2026-09-25T03:15:54.053Z",
+          "changes": [
+            "Pontos de atenção: item adicionado — No Canvas há dois locais de questões"
+          ]
+        },
+        {
+          "id": "hst_muge1s17_aip3u7",
+          "ts": "2026-09-25T03:15:36.619Z",
+          "changes": [
+            "Em andamento: item adicionado — Comportamento de Teste Canvas"
+          ]
+        },
+        {
+          "id": "hst_muge1g4a_os8gps",
+          "ts": "2026-09-25T03:15:21.178Z",
+          "changes": [
+            "Em andamento: item adicionado — Importação para o SGP"
+          ]
+        },
+        {
+          "id": "hst_muge1823_g89qjn",
+          "ts": "2026-09-25T03:15:10.731Z",
+          "changes": [
+            "Em andamento: item adicionado — Ajuste de comando"
+          ]
+        },
+        {
+          "id": "hst_muge142p_rwghkv",
+          "ts": "2026-09-25T03:15:05.569Z",
+          "changes": [
+            "Item concluído: Exportação QTI CANVAS"
+          ]
+        },
+        {
+          "id": "hst_muge12a3_69xwu0",
+          "ts": "2026-09-25T03:15:03.243Z",
+          "changes": [
+            "Item editado: “Exportação QTI CANVAS e SGP” → “Exportação QTI CANVAS”"
+          ]
+        },
+        {
+          "id": "hst_muge0s29_z2t5gw",
+          "ts": "2026-09-25T03:14:50.001Z",
+          "changes": [
+            "Item concluído: Tela de cadastro direto"
+          ]
+        },
         {
           "id": "hst_mtwi0w28_ag8u67",
           "ts": "2026-09-11T05:11:30.128Z",
@@ -1342,7 +1464,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-02T20:53:08.498Z",
-      "updatedAt": "2026-09-11T05:11:30.128Z"
+      "updatedAt": "2026-09-25T03:16:19.222Z"
     },
     {
       "id": "prj_mtkkm7rd_uq1y8y",
@@ -1350,7 +1472,7 @@ window.OPSBOARD_SNAPSHOT = {
       "description": "Implementar PDF nos conteúdos\n\nMaterial - https://saneadadaluno.blob.core.windows.net/solucoes/imprimir-apostila/graduacao/2026.2/unidade-03/menus/conteudo.html",
       "owner": "THIAGO",
       "area": "WEB",
-      "statusId": "st_active",
+      "statusId": "st_done",
       "criticalityId": "cr_normal",
       "startDate": "",
       "dueDate": "2026-09-03",
@@ -1372,6 +1494,13 @@ window.OPSBOARD_SNAPSHOT = {
         "done": []
       },
       "history": [
+        {
+          "id": "hst_mugedb96_effarj",
+          "ts": "2026-09-25T03:24:34.746Z",
+          "changes": [
+            "Status alterado de Ativo para Concluído"
+          ]
+        },
         {
           "id": "hst_mtkkoth6_48d9c0",
           "ts": "2026-09-02T20:52:51.642Z",
@@ -1395,7 +1524,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-02T20:50:50.185Z",
-      "updatedAt": "2026-09-02T20:52:51.642Z"
+      "updatedAt": "2026-09-25T03:24:34.746Z"
     },
     {
       "id": "prj_mtk1vv2p_d7pucb",
@@ -1786,7 +1915,14 @@ window.OPSBOARD_SNAPSHOT = {
             "createdAt": "2026-09-01T21:10:03.031Z"
           }
         ],
-        "risks": [],
+        "risks": [
+          {
+            "id": "it_muge5y36_3aslvy",
+            "text": "495014  494250  500340  495232  494259",
+            "done": false,
+            "createdAt": "2026-09-25T03:18:51.090Z"
+          }
+        ],
         "next": [
           {
             "id": "it_mtj5v2mv_m2il4v",
@@ -1830,6 +1966,20 @@ window.OPSBOARD_SNAPSHOT = {
       },
       "history": [
         {
+          "id": "hst_muge9a2z_kzrq9j",
+          "ts": "2026-09-25T03:21:26.603Z",
+          "changes": [
+            "Pontos de atenção: itens reordenados"
+          ]
+        },
+        {
+          "id": "hst_muge5y36_4q9xy1",
+          "ts": "2026-09-25T03:18:51.090Z",
+          "changes": [
+            "Pontos de atenção: item adicionado — 495014  494250  500340  495232  494259"
+          ]
+        },
+        {
           "id": "hst_mtwalaih_2ud8b3",
           "ts": "2026-09-11T01:43:25.049Z",
           "changes": [
@@ -1859,7 +2009,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-01T21:05:57.616Z",
-      "updatedAt": "2026-09-11T01:43:25.049Z"
+      "updatedAt": "2026-09-25T03:21:26.603Z"
     }
   ],
   "settings": {
