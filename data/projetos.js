@@ -1,13 +1,13 @@
 /* =========================================================
    data/projetos.js — snapshot publicado
-   Gerado pelo OpsBoard em 25/09/2026 às 11:02
+   Gerado pelo OpsBoard em 30/09/2026 às 12:05
    18 projetos.
    Publicação forçada: substitui alterações locais dos visitantes.
 
    Substitua este arquivo no repositório e publique.
    ========================================================= */
 window.OPSBOARD_SNAPSHOT = {
-  "publishedAt": "2026-09-25T14:02:25.379Z",
+  "publishedAt": "2026-09-30T15:05:11.266Z",
   "label": "",
   "force": true,
   "projects": [
@@ -92,6 +92,12 @@ window.OPSBOARD_SNAPSHOT = {
             "text": "Avaliação da liberação de tabelas do Canvas para o SSBI da EAD",
             "done": false,
             "createdAt": "2026-09-04T03:39:41.540Z"
+          },
+          {
+            "id": "it_muo8kxu6_zyzrrc",
+            "text": "Contato com Felipo",
+            "done": false,
+            "createdAt": "2026-09-30T15:04:42.318Z"
           }
         ],
         "risks": [],
@@ -99,6 +105,13 @@ window.OPSBOARD_SNAPSHOT = {
         "done": []
       },
       "history": [
+        {
+          "id": "hst_muo8kxu6_f2epwc",
+          "ts": "2026-09-30T15:04:42.318Z",
+          "changes": [
+            "Em andamento: item adicionado — Contato com Felipo"
+          ]
+        },
         {
           "id": "hst_mtmenuxw_scl91f",
           "ts": "2026-09-04T03:39:41.540Z",
@@ -108,7 +121,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-04T03:36:16.259Z",
-      "updatedAt": "2026-09-04T03:39:41.540Z"
+      "updatedAt": "2026-09-30T15:04:42.318Z"
     },
     {
       "id": "prj_mtmd14r4_uatxwm",
@@ -265,7 +278,7 @@ window.OPSBOARD_SNAPSHOT = {
       "statusId": "st_active",
       "criticalityId": "cr_critical",
       "startDate": "",
-      "dueDate": "2026-09-04",
+      "dueDate": "2026-10-02",
       "tags": [],
       "flags": [
         "fl_mtwag35e_wvflic"
@@ -340,6 +353,13 @@ window.OPSBOARD_SNAPSHOT = {
         ]
       },
       "history": [
+        {
+          "id": "hst_muo8jos3_jy0ob0",
+          "ts": "2026-09-30T15:03:43.923Z",
+          "changes": [
+            "Prazo previsto: 02/10/2026"
+          ]
+        },
         {
           "id": "hst_mugd85wy_3rm2yi",
           "ts": "2026-09-25T02:52:34.930Z",
@@ -531,7 +551,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-04T01:25:20.307Z",
-      "updatedAt": "2026-09-25T02:52:34.930Z"
+      "updatedAt": "2026-09-30T15:03:43.923Z"
     },
     {
       "id": "prj_mtlk1jml_4321rh",
@@ -548,16 +568,16 @@ window.OPSBOARD_SNAPSHOT = {
       "items": {
         "doing": [
           {
-            "id": "it_mtlktacf_fk6du7",
-            "text": "Melhoria no BI",
+            "id": "it_muo8bua1_h2xk6x",
+            "text": "BI Liberado para validação 30/09",
             "done": false,
-            "createdAt": "2026-09-03T13:44:06.303Z"
+            "createdAt": "2026-09-30T14:57:37.801Z"
           }
         ],
         "risks": [
           {
             "id": "it_mtlktacf_wfa6r0",
-            "text": "Semestre 26.2",
+            "text": "Semestre 26.2 - validar",
             "done": false,
             "createdAt": "2026-09-03T13:44:06.303Z"
           }
@@ -571,6 +591,12 @@ window.OPSBOARD_SNAPSHOT = {
           }
         ],
         "done": [
+          {
+            "id": "it_mtlktacf_fk6du7",
+            "text": "Melhoria no BI",
+            "done": true,
+            "createdAt": "2026-09-03T13:44:06.303Z"
+          },
           {
             "id": "it_mtlktacf_7tx133",
             "text": "Inerir ID Canvas como filtro em todas",
@@ -586,6 +612,34 @@ window.OPSBOARD_SNAPSHOT = {
         ]
       },
       "history": [
+        {
+          "id": "hst_muo8cc1q_7v0fcy",
+          "ts": "2026-09-30T14:58:00.830Z",
+          "changes": [
+            "Item editado: “Semestre 26.2” → “Semestre 26.2 - validar”"
+          ]
+        },
+        {
+          "id": "hst_muo8c5ar_l2g82v",
+          "ts": "2026-09-30T14:57:52.083Z",
+          "changes": [
+            "Item editado: “BI Liberado para validação” → “BI Liberado para validação 30/09”"
+          ]
+        },
+        {
+          "id": "hst_muo8bua1_ibotuv",
+          "ts": "2026-09-30T14:57:37.801Z",
+          "changes": [
+            "Em andamento: item adicionado — BI Liberado para validação"
+          ]
+        },
+        {
+          "id": "hst_muo8bn5v_74pu0p",
+          "ts": "2026-09-30T14:57:28.579Z",
+          "changes": [
+            "Item concluído: Melhoria no BI"
+          ]
+        },
         {
           "id": "hst_mugeh6b6_yuy1co",
           "ts": "2026-09-25T03:27:34.962Z",
@@ -622,7 +676,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-03T13:22:31.965Z",
-      "updatedAt": "2026-09-25T03:27:34.962Z"
+      "updatedAt": "2026-09-30T14:58:00.830Z"
     },
     {
       "id": "prj_mtljy1qi_dr2m8l",
@@ -633,7 +687,7 @@ window.OPSBOARD_SNAPSHOT = {
       "statusId": "st_active",
       "criticalityId": "cr_attention",
       "startDate": "2026-07-21",
-      "dueDate": "2026-09-18",
+      "dueDate": "2026-10-02",
       "tags": [],
       "flags": [],
       "items": {
@@ -643,14 +697,20 @@ window.OPSBOARD_SNAPSHOT = {
             "text": "Transferência de conteúdo",
             "done": false,
             "createdAt": "2026-09-25T03:05:12.089Z"
+          },
+          {
+            "id": "it_muo8iiq0_1yx7xs",
+            "text": "Inativação da comunidade anterior",
+            "done": false,
+            "createdAt": "2026-09-30T15:02:49.416Z"
           }
         ],
         "risks": [
           {
-            "id": "it_mtlk13hi_9kxd75",
-            "text": "Dependência da conclusão da primeira fase para evolução das demais entregas",
+            "id": "it_muo8ivyp_n0tngq",
+            "text": "Importação de conteúdo",
             "done": false,
-            "createdAt": "2026-09-03T13:22:11.046Z"
+            "createdAt": "2026-09-30T15:03:06.577Z"
           }
         ],
         "next": [
@@ -668,6 +728,12 @@ window.OPSBOARD_SNAPSHOT = {
           }
         ],
         "done": [
+          {
+            "id": "it_mtlk13hi_9kxd75",
+            "text": "Dependência da conclusão da primeira fase para evolução das demais entregas",
+            "done": true,
+            "createdAt": "2026-09-03T13:22:11.046Z"
+          },
           {
             "id": "it_mtmxb6nm_8j9m6h",
             "text": "Colocar a Comunidade Acadêmica em produção até dia 18/09",
@@ -719,6 +785,34 @@ window.OPSBOARD_SNAPSHOT = {
         ]
       },
       "history": [
+        {
+          "id": "hst_muo8j9qr_z3pze2",
+          "ts": "2026-09-30T15:03:24.435Z",
+          "changes": [
+            "Prazo previsto: 02/10/2026"
+          ]
+        },
+        {
+          "id": "hst_muo8ivyp_cmmwjf",
+          "ts": "2026-09-30T15:03:06.577Z",
+          "changes": [
+            "Pontos de atenção: item adicionado — Importação de conteúdo"
+          ]
+        },
+        {
+          "id": "hst_muo8im8y_dfphgd",
+          "ts": "2026-09-30T15:02:53.986Z",
+          "changes": [
+            "Item concluído: Dependência da conclusão da primeira fase para evolução das…"
+          ]
+        },
+        {
+          "id": "hst_muo8iiq0_tuu7t3",
+          "ts": "2026-09-30T15:02:49.416Z",
+          "changes": [
+            "Em andamento: item adicionado — Inativação da comunidade anterior"
+          ]
+        },
         {
           "id": "hst_mugdoe55_63lt33",
           "ts": "2026-09-25T03:05:12.089Z",
@@ -869,7 +963,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-03T13:19:48.810Z",
-      "updatedAt": "2026-09-25T03:05:12.089Z"
+      "updatedAt": "2026-09-30T15:03:24.435Z"
     },
     {
       "id": "prj_mtljdrgh_inwfcz",
@@ -1255,7 +1349,7 @@ window.OPSBOARD_SNAPSHOT = {
       "statusId": "st_active",
       "criticalityId": "cr_attention",
       "startDate": "2026-08-01",
-      "dueDate": "2026-09-03",
+      "dueDate": "2026-10-06",
       "tags": [],
       "flags": [
         "fl_prio"
@@ -1282,6 +1376,13 @@ window.OPSBOARD_SNAPSHOT = {
       },
       "history": [
         {
+          "id": "hst_muo8le83_udijth",
+          "ts": "2026-09-30T15:05:03.555Z",
+          "changes": [
+            "Prazo previsto: 06/10/2026"
+          ]
+        },
+        {
           "id": "hst_mtkku9yy_jzdf0b",
           "ts": "2026-09-02T20:57:06.298Z",
           "changes": [
@@ -1290,7 +1391,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-02T20:54:54.035Z",
-      "updatedAt": "2026-09-02T20:57:06.298Z"
+      "updatedAt": "2026-09-30T15:05:03.555Z"
     },
     {
       "id": "prj_mtkkp6he_b256a2",
@@ -1301,7 +1402,7 @@ window.OPSBOARD_SNAPSHOT = {
       "statusId": "st_active",
       "criticalityId": "cr_attention",
       "startDate": "2026-08-27",
-      "dueDate": "2026-09-03",
+      "dueDate": "2026-10-02",
       "tags": [],
       "flags": [
         "fl_prio"
@@ -1309,22 +1410,16 @@ window.OPSBOARD_SNAPSHOT = {
       "items": {
         "doing": [
           {
-            "id": "it_muge1823_363v6c",
-            "text": "Ajuste de comando",
-            "done": false,
-            "createdAt": "2026-09-25T03:15:10.731Z"
-          },
-          {
             "id": "it_muge1g4a_mkomts",
             "text": "Importação para o SGP",
             "done": false,
             "createdAt": "2026-09-25T03:15:21.178Z"
           },
           {
-            "id": "it_muge1s17_vs1sj3",
-            "text": "Comportamento de Teste Canvas",
+            "id": "it_muo8ddu0_0nbcl1",
+            "text": "Reunião com TE e TI para entender o New Quizzes do Canvas",
             "done": false,
-            "createdAt": "2026-09-25T03:15:36.619Z"
+            "createdAt": "2026-09-30T14:58:49.800Z"
           }
         ],
         "risks": [
@@ -1339,6 +1434,12 @@ window.OPSBOARD_SNAPSHOT = {
             "text": "No Canvas há dois locais de questões",
             "done": false,
             "createdAt": "2026-09-25T03:15:54.053Z"
+          },
+          {
+            "id": "it_muo8gc5n_6igbs6",
+            "text": "Apontamentos reportados para a Instructure",
+            "done": false,
+            "createdAt": "2026-09-30T15:01:07.595Z"
           }
         ],
         "next": [
@@ -1347,9 +1448,27 @@ window.OPSBOARD_SNAPSHOT = {
             "text": "Parametrização de exportação para o SGP",
             "done": false,
             "createdAt": "2026-09-25T03:16:19.222Z"
+          },
+          {
+            "id": "it_muo8go6z_q5eam4",
+            "text": "Retorno da TI sobre os pontos identificados",
+            "done": false,
+            "createdAt": "2026-09-30T15:01:23.195Z"
           }
         ],
         "done": [
+          {
+            "id": "it_muge1s17_vs1sj3",
+            "text": "Comportamento de Teste Canvas",
+            "done": true,
+            "createdAt": "2026-09-25T03:15:36.619Z"
+          },
+          {
+            "id": "it_muge1823_363v6c",
+            "text": "Ajuste de comando",
+            "done": true,
+            "createdAt": "2026-09-25T03:15:10.731Z"
+          },
           {
             "id": "it_mtwi0w28_rez90k",
             "text": "Exportação QTI CANVAS",
@@ -1371,6 +1490,55 @@ window.OPSBOARD_SNAPSHOT = {
         ]
       },
       "history": [
+        {
+          "id": "hst_muo8i5ir_b0wnrv",
+          "ts": "2026-09-30T15:02:32.307Z",
+          "changes": [
+            "Prazo previsto: 02/10/2026"
+          ]
+        },
+        {
+          "id": "hst_muo8go6z_intv56",
+          "ts": "2026-09-30T15:01:23.195Z",
+          "changes": [
+            "Próximos passos: item adicionado — Retorno da TI sobre os pontos identificados"
+          ]
+        },
+        {
+          "id": "hst_muo8gc5o_8v48rc",
+          "ts": "2026-09-30T15:01:07.596Z",
+          "changes": [
+            "Pontos de atenção: item adicionado — Apontamentos reportados para a Instructure"
+          ]
+        },
+        {
+          "id": "hst_muo8fime_x4n8fl",
+          "ts": "2026-09-30T15:00:29.318Z",
+          "changes": [
+            "Item editado: “Validação do” → “Reunião com TE e TI para entender o New…”"
+          ]
+        },
+        {
+          "id": "hst_muo8ddu0_lr8z6c",
+          "ts": "2026-09-30T14:58:49.800Z",
+          "changes": [
+            "Em andamento: item adicionado — Validação do"
+          ]
+        },
+        {
+          "id": "hst_muo8d8df_ihm515",
+          "ts": "2026-09-30T14:58:42.723Z",
+          "changes": [
+            "Item concluído: Comportamento de Teste Canvas"
+          ]
+        },
+        {
+          "id": "hst_muo8d6d6_uikmmv",
+          "ts": "2026-09-30T14:58:40.122Z",
+          "changes": [
+            "Item concluído: Ajuste de comando"
+          ]
+        },
         {
           "id": "hst_muge2owm_1svxls",
           "ts": "2026-09-25T03:16:19.222Z",
@@ -1464,7 +1632,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-02T20:53:08.498Z",
-      "updatedAt": "2026-09-25T03:16:19.222Z"
+      "updatedAt": "2026-09-30T15:02:32.307Z"
     },
     {
       "id": "prj_mtkkm7rd_uq1y8y",
@@ -1599,6 +1767,12 @@ window.OPSBOARD_SNAPSHOT = {
             "text": "Em uma etapa posterior, avaliar integração com CRM para ações de retenção e sucesso do aluno.",
             "done": false,
             "createdAt": "2026-09-11T02:05:57.675Z"
+          },
+          {
+            "id": "it_muo8k8o6_0lk8bi",
+            "text": "Agenda na próxima semana",
+            "done": false,
+            "createdAt": "2026-09-30T15:04:09.702Z"
           }
         ],
         "done": [
@@ -1635,6 +1809,13 @@ window.OPSBOARD_SNAPSHOT = {
         ]
       },
       "history": [
+        {
+          "id": "hst_muo8k8o6_pmytok",
+          "ts": "2026-09-30T15:04:09.702Z",
+          "changes": [
+            "Próximos passos: item adicionado — Agenda na próxima semana"
+          ]
+        },
         {
           "id": "hst_mtwcewr6_xgzogi",
           "ts": "2026-09-11T02:34:26.514Z",
@@ -1890,7 +2071,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-02T12:06:27.601Z",
-      "updatedAt": "2026-09-11T02:34:26.514Z"
+      "updatedAt": "2026-09-30T15:04:09.702Z"
     },
     {
       "id": "prj_mtj5pt9s_fqdu9q",
@@ -1909,12 +2090,6 @@ window.OPSBOARD_SNAPSHOT = {
       "items": {
         "doing": [
           {
-            "id": "it_mtj5v2mv_ivef3x",
-            "text": "Organização de agenda com Álvaro​",
-            "done": false,
-            "createdAt": "2026-09-01T21:10:03.031Z"
-          },
-          {
             "id": "it_mugyuf3p_8ce89q",
             "text": "Email Álvaro",
             "done": false,
@@ -1931,13 +2106,19 @@ window.OPSBOARD_SNAPSHOT = {
         ],
         "next": [
           {
-            "id": "it_mtj5v2mv_m2il4v",
-            "text": "Treinamentos​",
+            "id": "it_muo7p0m2_q4zlcg",
+            "text": "Feedback",
             "done": false,
-            "createdAt": "2026-09-01T21:10:03.031Z"
+            "createdAt": "2026-09-30T14:39:52.922Z"
           }
         ],
         "done": [
+          {
+            "id": "it_mtj5v2mv_m2il4v",
+            "text": "Treinamentos​",
+            "done": true,
+            "createdAt": "2026-09-01T21:10:03.031Z"
+          },
           {
             "id": "it_mtj5v2mv_0ikx6s",
             "text": "Parametrização na turma​",
@@ -1971,6 +2152,34 @@ window.OPSBOARD_SNAPSHOT = {
         ]
       },
       "history": [
+        {
+          "id": "hst_muo7p7uy_3qlrou",
+          "ts": "2026-09-30T14:40:02.314Z",
+          "changes": [
+            "Realizado: item removido — Organização de agenda com Álvaro​"
+          ]
+        },
+        {
+          "id": "hst_muo7p0m2_z99a3n",
+          "ts": "2026-09-30T14:39:52.922Z",
+          "changes": [
+            "Próximos passos: item adicionado — Feedback"
+          ]
+        },
+        {
+          "id": "hst_muo7owtm_q20jc1",
+          "ts": "2026-09-30T14:39:48.010Z",
+          "changes": [
+            "Item concluído: Treinamentos​"
+          ]
+        },
+        {
+          "id": "hst_muo79k4q_8eaget",
+          "ts": "2026-09-30T14:27:51.722Z",
+          "changes": [
+            "Item concluído: Organização de agenda com Álvaro​"
+          ]
+        },
         {
           "id": "hst_mugyuf3p_n929w1",
           "ts": "2026-09-25T12:57:45.205Z",
@@ -2022,7 +2231,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-01T21:05:57.616Z",
-      "updatedAt": "2026-09-25T12:57:45.205Z"
+      "updatedAt": "2026-09-30T14:40:02.314Z"
     }
   ],
   "settings": {
