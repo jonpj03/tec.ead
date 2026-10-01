@@ -1,13 +1,13 @@
 /* =========================================================
    data/projetos.js — snapshot publicado
-   Gerado pelo OpsBoard em 30/09/2026 às 12:05
+   Gerado pelo OpsBoard em 01/10/2026 às 17:29
    18 projetos.
    Publicação forçada: substitui alterações locais dos visitantes.
 
    Substitua este arquivo no repositório e publique.
    ========================================================= */
 window.OPSBOARD_SNAPSHOT = {
-  "publishedAt": "2026-09-30T15:05:11.266Z",
+  "publishedAt": "2026-10-01T20:29:19.975Z",
   "label": "",
   "force": true,
   "projects": [
@@ -2088,14 +2088,7 @@ window.OPSBOARD_SNAPSHOT = {
         "fl_dep"
       ],
       "items": {
-        "doing": [
-          {
-            "id": "it_mugyuf3p_8ce89q",
-            "text": "Email Álvaro",
-            "done": false,
-            "createdAt": "2026-09-25T12:57:45.205Z"
-          }
-        ],
+        "doing": [],
         "risks": [
           {
             "id": "it_muge5y36_3aslvy",
@@ -2113,6 +2106,12 @@ window.OPSBOARD_SNAPSHOT = {
           }
         ],
         "done": [
+          {
+            "id": "it_mugyuf3p_8ce89q",
+            "text": "Email Álvaro",
+            "done": true,
+            "createdAt": "2026-09-25T12:57:45.205Z"
+          },
           {
             "id": "it_mtj5v2mv_m2il4v",
             "text": "Treinamentos​",
@@ -2152,6 +2151,13 @@ window.OPSBOARD_SNAPSHOT = {
         ]
       },
       "history": [
+        {
+          "id": "hst_mupzlwio_83iznt",
+          "ts": "2026-10-01T20:29:03.072Z",
+          "changes": [
+            "Item concluído: Email Álvaro"
+          ]
+        },
         {
           "id": "hst_muo7p7uy_3qlrou",
           "ts": "2026-09-30T14:40:02.314Z",
@@ -2231,7 +2237,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-01T21:05:57.616Z",
-      "updatedAt": "2026-09-30T14:40:02.314Z"
+      "updatedAt": "2026-10-01T20:29:03.072Z"
     }
   ],
   "settings": {
