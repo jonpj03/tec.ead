@@ -1,13 +1,13 @@
 /* =========================================================
    data/projetos.js — snapshot publicado
-   Gerado pelo OpsBoard em 01/10/2026 às 17:29
+   Gerado pelo OpsBoard em 07/10/2026 às 10:19
    18 projetos.
    Publicação forçada: substitui alterações locais dos visitantes.
 
    Substitua este arquivo no repositório e publique.
    ========================================================= */
 window.OPSBOARD_SNAPSHOT = {
-  "publishedAt": "2026-10-01T20:29:19.975Z",
+  "publishedAt": "2026-10-07T13:19:07.427Z",
   "label": "",
   "force": true,
   "projects": [
@@ -556,7 +556,7 @@ window.OPSBOARD_SNAPSHOT = {
     {
       "id": "prj_mtlk1jml_4321rh",
       "name": "CANVAS - Personalização dados",
-      "description": "BI - https://app.powerbi.com/groups/f48f84eb-6cec-43e7-a35e-959e02b76c19/reports/213c5c79-6f5a-4604-ac63-d5b15b632bbf/730ca04bb77a25082e85?experience=power-bi\n\nDOC - https://nreeducacional-my.sharepoint.com/:w:/g/personal/michelle_alves_afya_com_br/IQC7uqxX34yDR4benEDeJtuiAdi0bzNqT88LJUNXDz5Q1YU?email=jonathan.souza%40afya.com.br&e=6rWrs8",
+      "description": "BI - https://app.powerbi.com/reportEmbed?reportId=49205e1d-9bce-43b6-ba9f-926f5e0a34a6&autoAuth=true&ctid=60bcece8-eb6b-494e-a607-e83fcdcef333\n\nDOC - https://nreeducacional-my.sharepoint.com/:w:/g/personal/michelle_alves_afya_com_br/IQC7uqxX34yDR4benEDeJtuiAdi0bzNqT88LJUNXDz5Q1YU?email=jonathan.souza%40afya.com.br&e=6rWrs8",
       "owner": "JONATHAN",
       "area": "",
       "statusId": "st_active",
@@ -569,28 +569,27 @@ window.OPSBOARD_SNAPSHOT = {
         "doing": [
           {
             "id": "it_muo8bua1_h2xk6x",
-            "text": "BI Liberado para validação 30/09",
+            "text": "Validação do Painel",
             "done": false,
             "createdAt": "2026-09-30T14:57:37.801Z"
           }
         ],
-        "risks": [
-          {
-            "id": "it_mtlktacf_wfa6r0",
-            "text": "Semestre 26.2 - validar",
-            "done": false,
-            "createdAt": "2026-09-03T13:44:06.303Z"
-          }
-        ],
+        "risks": [],
         "next": [
           {
             "id": "it_mtlktacf_eouiwj",
-            "text": "Validação do BI",
+            "text": "Report",
             "done": false,
             "createdAt": "2026-09-03T13:44:06.303Z"
           }
         ],
         "done": [
+          {
+            "id": "it_mtlktacf_wfa6r0",
+            "text": "Semestre 26.2 - validar",
+            "done": true,
+            "createdAt": "2026-09-03T13:44:06.303Z"
+          },
           {
             "id": "it_mtlktacf_fk6du7",
             "text": "Melhoria no BI",
@@ -612,6 +611,41 @@ window.OPSBOARD_SNAPSHOT = {
         ]
       },
       "history": [
+        {
+          "id": "hst_muy4r69o_hhlayd",
+          "ts": "2026-10-07T13:15:16.476Z",
+          "changes": [
+            "Descrição atualizada"
+          ]
+        },
+        {
+          "id": "hst_muy4qwgr_7hpf31",
+          "ts": "2026-10-07T13:15:03.771Z",
+          "changes": [
+            "Item editado: “Validação do BI” → “Report”"
+          ]
+        },
+        {
+          "id": "hst_muy4qr8u_q6q0u3",
+          "ts": "2026-10-07T13:14:57.006Z",
+          "changes": [
+            "Próximos passos: itens reordenados"
+          ]
+        },
+        {
+          "id": "hst_muy4qowr_y5muro",
+          "ts": "2026-10-07T13:14:53.979Z",
+          "changes": [
+            "Item editado: “BI Liberado para validação 30/09” → “Validação do Painel”"
+          ]
+        },
+        {
+          "id": "hst_muy4q71n_p9rqvk",
+          "ts": "2026-10-07T13:14:30.827Z",
+          "changes": [
+            "Item concluído: Semestre 26.2 - validar"
+          ]
+        },
         {
           "id": "hst_muo8cc1q_7v0fcy",
           "ts": "2026-09-30T14:58:00.830Z",
@@ -676,7 +710,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-03T13:22:31.965Z",
-      "updatedAt": "2026-09-30T14:58:00.830Z"
+      "updatedAt": "2026-10-07T13:15:16.476Z"
     },
     {
       "id": "prj_mtljy1qi_dr2m8l",
@@ -1711,31 +1745,13 @@ window.OPSBOARD_SNAPSHOT = {
       "items": {
         "doing": [
           {
-            "id": "it_mtwb2tw8_57u5nw",
-            "text": "Análise da arquitetura atual do servidor Azure/Storage.",
+            "id": "it_muo8k8o6_0lk8bi",
+            "text": "Agenda na próxima semana",
             "done": false,
-            "createdAt": "2026-09-11T01:57:03.320Z"
-          },
-          {
-            "id": "it_mtwb36s2_x94gbu",
-            "text": "Avaliação da necessidade de uma nova solução de gestão de conteúdos.",
-            "done": false,
-            "createdAt": "2026-09-11T01:57:20.018Z"
-          },
-          {
-            "id": "it_mtwb3sm6_gsd0qp",
-            "text": "Discussão sobre inclusão de uma IA de apoio ao aprendizado baseada no conteúdo já na primeira fase",
-            "done": false,
-            "createdAt": "2026-09-11T01:57:48.318Z"
+            "createdAt": "2026-09-30T15:04:09.702Z"
           }
         ],
         "risks": [
-          {
-            "id": "it_mtmd7vuv_0r8dk7",
-            "text": "Risco de contratar uma solução que não contemple todos os requisitos necessários.",
-            "done": false,
-            "createdAt": "2026-09-04T02:59:16.615Z"
-          },
           {
             "id": "it_mtwbema3_idgbn4",
             "text": "Atualmente os conteúdos podem ser acessados externamente por meio do compartilhamento direto dos links.",
@@ -1747,12 +1763,6 @@ window.OPSBOARD_SNAPSHOT = {
             "text": "O ambiente atual funciona basicamente como storage e pode não suportar todas as necessidades futuras.",
             "done": false,
             "createdAt": "2026-09-11T02:06:32.325Z"
-          },
-          {
-            "id": "it_mtwbfpxs_kslpcr",
-            "text": "Apresentar o projeto como iniciativa institucional para graduação presencial e EAD",
-            "done": false,
-            "createdAt": "2026-09-11T02:07:04.720Z"
           }
         ],
         "next": [
@@ -1767,15 +1777,15 @@ window.OPSBOARD_SNAPSHOT = {
             "text": "Em uma etapa posterior, avaliar integração com CRM para ações de retenção e sucesso do aluno.",
             "done": false,
             "createdAt": "2026-09-11T02:05:57.675Z"
-          },
-          {
-            "id": "it_muo8k8o6_0lk8bi",
-            "text": "Agenda na próxima semana",
-            "done": false,
-            "createdAt": "2026-09-30T15:04:09.702Z"
           }
         ],
         "done": [
+          {
+            "id": "it_mtwb2tw8_57u5nw",
+            "text": "Análise da arquitetura atual do servidor Azure/Storage.",
+            "done": true,
+            "createdAt": "2026-09-11T01:57:03.320Z"
+          },
           {
             "id": "it_mtmd7eo6_6trvu4",
             "text": "Reunião de refinamento do escopo na próxima semana",
@@ -1809,6 +1819,62 @@ window.OPSBOARD_SNAPSHOT = {
         ]
       },
       "history": [
+        {
+          "id": "hst_muy4rqto_8arx6p",
+          "ts": "2026-10-07T13:15:43.116Z",
+          "changes": [
+            "Pontos de atenção: item removido — Apresentar o projeto como iniciativa institucional para gra…"
+          ]
+        },
+        {
+          "id": "hst_muy4rhp8_hcum40",
+          "ts": "2026-10-07T13:15:31.292Z",
+          "changes": [
+            "Pontos de atenção: item removido — Risco de contratar uma solução que não contemple todos os r…"
+          ]
+        },
+        {
+          "id": "hst_muraovv7_un3kd0",
+          "ts": "2026-10-02T18:27:04.147Z",
+          "changes": [
+            "Realizado: item removido — Avaliação da necessidade de uma nova solução de gestão de c…"
+          ]
+        },
+        {
+          "id": "hst_muraoubn_8uwfkz",
+          "ts": "2026-10-02T18:27:02.147Z",
+          "changes": [
+            "Realizado: item removido — Discussão sobre inclusão de uma IA de apoio ao aprendizado …"
+          ]
+        },
+        {
+          "id": "hst_muraoq9f_zifm2v",
+          "ts": "2026-10-02T18:26:56.883Z",
+          "changes": [
+            "Item concluído: Discussão sobre inclusão de uma IA de apoio ao aprendizado …"
+          ]
+        },
+        {
+          "id": "hst_muraopff_330gwu",
+          "ts": "2026-10-02T18:26:55.803Z",
+          "changes": [
+            "Item concluído: Avaliação da necessidade de uma nova solução de gestão de c…"
+          ]
+        },
+        {
+          "id": "hst_muraoi5o_7wtlyg",
+          "ts": "2026-10-02T18:26:46.380Z",
+          "changes": [
+            "Item movido de Próximos passos para Em andamento — Agenda na próxima semana"
+          ]
+        },
+        {
+          "id": "hst_muraodor_vbzlsq",
+          "ts": "2026-10-02T18:26:40.587Z",
+          "changes": [
+            "Item concluído: Análise da arquitetura atual do servidor Azure/Storage."
+          ]
+        },
         {
           "id": "hst_muo8k8o6_pmytok",
           "ts": "2026-09-30T15:04:09.702Z",
@@ -2071,7 +2137,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-02T12:06:27.601Z",
-      "updatedAt": "2026-09-30T15:04:09.702Z"
+      "updatedAt": "2026-10-07T13:15:43.116Z"
     },
     {
       "id": "prj_mtj5pt9s_fqdu9q",
@@ -2340,8 +2406,8 @@ window.OPSBOARD_SNAPSHOT = {
       "pageSize": 25,
       "confirmDelete": true,
       "demoDismissed": false,
-      "listView": "panorama",
-      "sidebarCollapsed": true
+      "listView": "compact",
+      "sidebarCollapsed": false
     },
     "trello": {
       "agingAttention": 7,
