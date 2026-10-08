@@ -1,13 +1,13 @@
 /* =========================================================
    data/projetos.js — snapshot publicado
-   Gerado pelo OpsBoard em 07/10/2026 às 10:19
+   Gerado pelo OpsBoard em 08/10/2026 às 16:17
    18 projetos.
    Publicação forçada: substitui alterações locais dos visitantes.
 
    Substitua este arquivo no repositório e publique.
    ========================================================= */
 window.OPSBOARD_SNAPSHOT = {
-  "publishedAt": "2026-10-07T13:19:07.427Z",
+  "publishedAt": "2026-10-08T19:17:05.269Z",
   "label": "",
   "force": true,
   "projects": [
@@ -95,7 +95,7 @@ window.OPSBOARD_SNAPSHOT = {
           },
           {
             "id": "it_muo8kxu6_zyzrrc",
-            "text": "Contato com Felipo",
+            "text": "Contato com Maria Julia Ribeiro Rodrigues",
             "done": false,
             "createdAt": "2026-09-30T15:04:42.318Z"
           }
@@ -105,6 +105,13 @@ window.OPSBOARD_SNAPSHOT = {
         "done": []
       },
       "history": [
+        {
+          "id": "hst_muzx0qyd_yqiwp6",
+          "ts": "2026-10-08T19:14:18.613Z",
+          "changes": [
+            "Item editado: “Contato com Felipo” → “Contato com Maria Julia Ribeiro Rodrigu…”"
+          ]
+        },
         {
           "id": "hst_muo8kxu6_f2epwc",
           "ts": "2026-09-30T15:04:42.318Z",
@@ -121,7 +128,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-04T03:36:16.259Z",
-      "updatedAt": "2026-09-30T15:04:42.318Z"
+      "updatedAt": "2026-10-08T19:14:18.613Z"
     },
     {
       "id": "prj_mtmd14r4_uatxwm",
@@ -292,16 +299,10 @@ window.OPSBOARD_SNAPSHOT = {
             "createdAt": "2026-09-04T01:29:19.076Z"
           },
           {
-            "id": "it_mtma0738_v6d6q1",
-            "text": "Fluxo de revisão IA melhoria​",
+            "id": "it_muzx3bx3_1kmmew",
+            "text": "Melhoria de importação QTI",
             "done": false,
-            "createdAt": "2026-09-04T01:29:19.076Z"
-          },
-          {
-            "id": "it_mu6h98np_ygo24y",
-            "text": "Fluxo De Revisão Por Nota",
-            "done": false,
-            "createdAt": "2026-09-18T04:47:41.845Z"
+            "createdAt": "2026-10-08T19:16:19.095Z"
           }
         ],
         "risks": [],
@@ -320,6 +321,18 @@ window.OPSBOARD_SNAPSHOT = {
           }
         ],
         "done": [
+          {
+            "id": "it_mtma0738_v6d6q1",
+            "text": "Fluxo de revisão IA melhoria​",
+            "done": true,
+            "createdAt": "2026-09-04T01:29:19.076Z"
+          },
+          {
+            "id": "it_mu6h98np_ygo24y",
+            "text": "Fluxo De Revisão Por Nota",
+            "done": true,
+            "createdAt": "2026-09-18T04:47:41.845Z"
+          },
           {
             "id": "it_mu6h3znd_t0iu45",
             "text": "Implementação de Melhoria IP",
@@ -353,6 +366,27 @@ window.OPSBOARD_SNAPSHOT = {
         ]
       },
       "history": [
+        {
+          "id": "hst_muzx3bx3_ryd1zw",
+          "ts": "2026-10-08T19:16:19.095Z",
+          "changes": [
+            "Em andamento: item adicionado — Melhoria de importação QTI"
+          ]
+        },
+        {
+          "id": "hst_muzx35yl_e64sqs",
+          "ts": "2026-10-08T19:16:11.373Z",
+          "changes": [
+            "Item concluído: Fluxo de revisão IA melhoria​"
+          ]
+        },
+        {
+          "id": "hst_muzx34rq_a1vycb",
+          "ts": "2026-10-08T19:16:09.830Z",
+          "changes": [
+            "Item concluído: Fluxo De Revisão Por Nota"
+          ]
+        },
         {
           "id": "hst_muo8jos3_jy0ob0",
           "ts": "2026-09-30T15:03:43.923Z",
@@ -551,7 +585,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-04T01:25:20.307Z",
-      "updatedAt": "2026-09-30T15:03:43.923Z"
+      "updatedAt": "2026-10-08T19:16:19.095Z"
     },
     {
       "id": "prj_mtlk1jml_4321rh",
@@ -569,12 +603,19 @@ window.OPSBOARD_SNAPSHOT = {
         "doing": [
           {
             "id": "it_muo8bua1_h2xk6x",
-            "text": "Validação do Painel",
+            "text": "Validação do Painel até dia 16/10",
             "done": false,
             "createdAt": "2026-09-30T14:57:37.801Z"
           }
         ],
-        "risks": [],
+        "risks": [
+          {
+            "id": "it_muzwxzbb_me0pyn",
+            "text": "Dados do RM retornando vazio",
+            "done": false,
+            "createdAt": "2026-10-08T19:12:09.479Z"
+          }
+        ],
         "next": [
           {
             "id": "it_mtlktacf_eouiwj",
@@ -591,26 +632,57 @@ window.OPSBOARD_SNAPSHOT = {
             "createdAt": "2026-09-03T13:44:06.303Z"
           },
           {
-            "id": "it_mtlktacf_fk6du7",
-            "text": "Melhoria no BI",
-            "done": true,
-            "createdAt": "2026-09-03T13:44:06.303Z"
-          },
-          {
             "id": "it_mtlktacf_7tx133",
             "text": "Inerir ID Canvas como filtro em todas",
-            "done": true,
-            "createdAt": "2026-09-03T13:44:06.303Z"
-          },
-          {
-            "id": "it_mtlktacf_2tukl0",
-            "text": "○ Botão  - Limpar todos os filtros",
             "done": true,
             "createdAt": "2026-09-03T13:44:06.303Z"
           }
         ]
       },
       "history": [
+        {
+          "id": "hst_muzwye5y_7uqbn1",
+          "ts": "2026-10-08T19:12:28.726Z",
+          "changes": [
+            "Item editado: “Validação do Painel” → “Validação do Painel até dia 16/10”"
+          ]
+        },
+        {
+          "id": "hst_muzwy7f2_leomgi",
+          "ts": "2026-10-08T19:12:19.981Z",
+          "changes": [
+            "Realizado: item removido — ○ Botão  - Limpar todos os filtros"
+          ]
+        },
+        {
+          "id": "hst_muzwy38t_saegai",
+          "ts": "2026-10-08T19:12:14.573Z",
+          "changes": [
+            "Realizado: item removido — Melhoria no BI"
+          ]
+        },
+        {
+          "id": "hst_muzwxzbb_bsdjh8",
+          "ts": "2026-10-08T19:12:09.479Z",
+          "changes": [
+            "Pontos de atenção: adicionado — Dados do RM retornando vazio",
+            "Pontos de atenção: removido — em 'Configuração de disciplinas' faltando"
+          ]
+        },
+        {
+          "id": "hst_muzwssz3_00uh0a",
+          "ts": "2026-10-08T19:08:07.983Z",
+          "changes": [
+            "Pontos de atenção: itens reordenados"
+          ]
+        },
+        {
+          "id": "hst_muzws3bn_7fw2ai",
+          "ts": "2026-10-08T19:07:34.739Z",
+          "changes": [
+            "Pontos de atenção: item adicionado — em 'Configuração de disciplinas' faltando"
+          ]
+        },
         {
           "id": "hst_muy4r69o_hhlayd",
           "ts": "2026-10-07T13:15:16.476Z",
@@ -710,7 +782,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-03T13:22:31.965Z",
-      "updatedAt": "2026-10-07T13:15:16.476Z"
+      "updatedAt": "2026-10-08T19:12:28.726Z"
     },
     {
       "id": "prj_mtljy1qi_dr2m8l",
@@ -727,41 +799,34 @@ window.OPSBOARD_SNAPSHOT = {
       "items": {
         "doing": [
           {
-            "id": "it_mugdoe55_dwq1nj",
-            "text": "Transferência de conteúdo",
-            "done": false,
-            "createdAt": "2026-09-25T03:05:12.089Z"
-          },
-          {
             "id": "it_muo8iiq0_1yx7xs",
-            "text": "Inativação da comunidade anterior",
+            "text": "Inativação da comunidade anterior até dia 09/10",
             "done": false,
             "createdAt": "2026-09-30T15:02:49.416Z"
           }
         ],
-        "risks": [
-          {
-            "id": "it_muo8ivyp_n0tngq",
-            "text": "Importação de conteúdo",
-            "done": false,
-            "createdAt": "2026-09-30T15:03:06.577Z"
-          }
-        ],
+        "risks": [],
         "next": [
           {
             "id": "it_mtmdzrrl_x22is4",
             "text": "Iniciar, ainda em setembro, as frentes de Internacionalização e Esquenta",
             "done": false,
             "createdAt": "2026-09-04T03:20:57.681Z"
-          },
-          {
-            "id": "it_mtmdzwal_87qr5s",
-            "text": "Apresentar cronograma detalhado no final de setembro",
-            "done": false,
-            "createdAt": "2026-09-04T03:21:03.549Z"
           }
         ],
         "done": [
+          {
+            "id": "it_muo8ivyp_n0tngq",
+            "text": "Importação de conteúdo",
+            "done": true,
+            "createdAt": "2026-09-30T15:03:06.577Z"
+          },
+          {
+            "id": "it_mugdoe55_dwq1nj",
+            "text": "Transferência de conteúdo",
+            "done": true,
+            "createdAt": "2026-09-25T03:05:12.089Z"
+          },
           {
             "id": "it_mtlk13hi_9kxd75",
             "text": "Dependência da conclusão da primeira fase para evolução das demais entregas",
@@ -819,6 +884,34 @@ window.OPSBOARD_SNAPSHOT = {
         ]
       },
       "history": [
+        {
+          "id": "hst_muzx45x1_g6zndc",
+          "ts": "2026-10-08T19:16:57.973Z",
+          "changes": [
+            "Item editado: “Inativação da comunidade anterior” → “Inativação da comunidade anterior até d…”"
+          ]
+        },
+        {
+          "id": "hst_muzx1kmm_fresjo",
+          "ts": "2026-10-08T19:14:57.070Z",
+          "changes": [
+            "Próximos passos: item removido — Apresentar cronograma detalhado no final de setembro"
+          ]
+        },
+        {
+          "id": "hst_muzx1ait_uot0xx",
+          "ts": "2026-10-08T19:14:43.973Z",
+          "changes": [
+            "Item concluído: Importação de conteúdo"
+          ]
+        },
+        {
+          "id": "hst_muzx0xj1_gjz27m",
+          "ts": "2026-10-08T19:14:27.133Z",
+          "changes": [
+            "Item concluído: Transferência de conteúdo"
+          ]
+        },
         {
           "id": "hst_muo8j9qr_z3pze2",
           "ts": "2026-09-30T15:03:24.435Z",
@@ -997,7 +1090,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-03T13:19:48.810Z",
-      "updatedAt": "2026-09-30T15:03:24.435Z"
+      "updatedAt": "2026-10-08T19:16:57.973Z"
     },
     {
       "id": "prj_mtljdrgh_inwfcz",
@@ -1478,19 +1571,25 @@ window.OPSBOARD_SNAPSHOT = {
         ],
         "next": [
           {
-            "id": "it_muge2owm_bdlj6u",
-            "text": "Parametrização de exportação para o SGP",
-            "done": false,
-            "createdAt": "2026-09-25T03:16:19.222Z"
-          },
-          {
             "id": "it_muo8go6z_q5eam4",
             "text": "Retorno da TI sobre os pontos identificados",
             "done": false,
             "createdAt": "2026-09-30T15:01:23.195Z"
+          },
+          {
+            "id": "it_muzx2jxg_g4442e",
+            "text": "Retorno da intructure",
+            "done": false,
+            "createdAt": "2026-10-08T19:15:42.820Z"
           }
         ],
         "done": [
+          {
+            "id": "it_muge2owm_bdlj6u",
+            "text": "Parametrização de exportação para o SGP",
+            "done": true,
+            "createdAt": "2026-09-25T03:16:19.222Z"
+          },
           {
             "id": "it_muge1s17_vs1sj3",
             "text": "Comportamento de Teste Canvas",
@@ -1524,6 +1623,20 @@ window.OPSBOARD_SNAPSHOT = {
         ]
       },
       "history": [
+        {
+          "id": "hst_muzx2jxg_bqlluq",
+          "ts": "2026-10-08T19:15:42.820Z",
+          "changes": [
+            "Próximos passos: item adicionado — Retorno da intructure"
+          ]
+        },
+        {
+          "id": "hst_muzx2cvp_rn1i0k",
+          "ts": "2026-10-08T19:15:33.685Z",
+          "changes": [
+            "Item concluído: Parametrização de exportação para o SGP"
+          ]
+        },
         {
           "id": "hst_muo8i5ir_b0wnrv",
           "ts": "2026-09-30T15:02:32.307Z",
@@ -1666,7 +1779,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-02T20:53:08.498Z",
-      "updatedAt": "2026-09-30T15:02:32.307Z"
+      "updatedAt": "2026-10-08T19:15:42.820Z"
     },
     {
       "id": "prj_mtkkm7rd_uq1y8y",
@@ -1745,10 +1858,16 @@ window.OPSBOARD_SNAPSHOT = {
       "items": {
         "doing": [
           {
-            "id": "it_muo8k8o6_0lk8bi",
-            "text": "Agenda na próxima semana",
+            "id": "it_muzwlzpy_fe3pv5",
+            "text": "Estruturação do mecanismo de captura de eventos e interações dos alunos durante o consumo dos conteúdos.",
             "done": false,
-            "createdAt": "2026-09-30T15:04:09.702Z"
+            "createdAt": "2026-10-08T19:02:50.134Z"
+          },
+          {
+            "id": "it_muzwmzv2_42hl3h",
+            "text": "Avaliação da possível inclusão futura de funcionalidades complementares relacionadas à interação com conteúdos e outras oportunidades de evolução.",
+            "done": false,
+            "createdAt": "2026-10-08T19:03:36.974Z"
           }
         ],
         "risks": [
@@ -1774,12 +1893,24 @@ window.OPSBOARD_SNAPSHOT = {
           },
           {
             "id": "it_mtwbea7f_4g4pdr",
-            "text": "Em uma etapa posterior, avaliar integração com CRM para ações de retenção e sucesso do aluno.",
+            "text": "Realizar reuniões técnicas específicas com as equipes de segurança, infraestrutura e demais áreas envolvidas.",
             "done": false,
             "createdAt": "2026-09-11T02:05:57.675Z"
+          },
+          {
+            "id": "it_muzwmlbj_14io1v",
+            "text": "Formalizar as definições necessárias para início das etapas de implementação, piloto, validação e posterior expansão da solução.",
+            "done": false,
+            "createdAt": "2026-10-08T19:03:18.127Z"
           }
         ],
         "done": [
+          {
+            "id": "it_muo8k8o6_0lk8bi",
+            "text": "Agenda na próxima semana",
+            "done": true,
+            "createdAt": "2026-09-30T15:04:09.702Z"
+          },
           {
             "id": "it_mtwb2tw8_57u5nw",
             "text": "Análise da arquitetura atual do servidor Azure/Storage.",
@@ -1819,6 +1950,41 @@ window.OPSBOARD_SNAPSHOT = {
         ]
       },
       "history": [
+        {
+          "id": "hst_muzwmzv2_0ynhd8",
+          "ts": "2026-10-08T19:03:36.974Z",
+          "changes": [
+            "Em andamento: item adicionado — Avaliação da possível inclusão futura de funcionalidades co…"
+          ]
+        },
+        {
+          "id": "hst_muzwmlbk_kuz8za",
+          "ts": "2026-10-08T19:03:18.128Z",
+          "changes": [
+            "Próximos passos: item adicionado — Formalizar as definições necessárias para início das etapas…"
+          ]
+        },
+        {
+          "id": "hst_muzwmd0l_qok4gn",
+          "ts": "2026-10-08T19:03:07.365Z",
+          "changes": [
+            "Item editado: “Em uma etapa posterior, avaliar integra…” → “Realizar reuniões técnicas específicas …”"
+          ]
+        },
+        {
+          "id": "hst_muzwlzpy_ccabdz",
+          "ts": "2026-10-08T19:02:50.134Z",
+          "changes": [
+            "Em andamento: item adicionado — Estruturação do mecanismo de captura de eventos e interaçõe…"
+          ]
+        },
+        {
+          "id": "hst_muzwldz1_3zshxz",
+          "ts": "2026-10-08T19:02:21.949Z",
+          "changes": [
+            "Item concluído: Agenda na próxima semana"
+          ]
+        },
         {
           "id": "hst_muy4rqto_8arx6p",
           "ts": "2026-10-07T13:15:43.116Z",
@@ -2137,7 +2303,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-02T12:06:27.601Z",
-      "updatedAt": "2026-10-07T13:15:43.116Z"
+      "updatedAt": "2026-10-08T19:03:36.974Z"
     },
     {
       "id": "prj_mtj5pt9s_fqdu9q",
@@ -2154,7 +2320,14 @@ window.OPSBOARD_SNAPSHOT = {
         "fl_dep"
       ],
       "items": {
-        "doing": [],
+        "doing": [
+          {
+            "id": "it_muzwyt4a_yy4ylf",
+            "text": "Retorno do Coord",
+            "done": false,
+            "createdAt": "2026-10-08T19:12:48.106Z"
+          }
+        ],
         "risks": [
           {
             "id": "it_muge5y36_3aslvy",
@@ -2217,6 +2390,13 @@ window.OPSBOARD_SNAPSHOT = {
         ]
       },
       "history": [
+        {
+          "id": "hst_muzwyt4a_mvsypt",
+          "ts": "2026-10-08T19:12:48.106Z",
+          "changes": [
+            "Em andamento: item adicionado — Retorno do Coord"
+          ]
+        },
         {
           "id": "hst_mupzlwio_83iznt",
           "ts": "2026-10-01T20:29:03.072Z",
@@ -2303,7 +2483,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-01T21:05:57.616Z",
-      "updatedAt": "2026-10-01T20:29:03.072Z"
+      "updatedAt": "2026-10-08T19:12:48.106Z"
     }
   ],
   "settings": {
