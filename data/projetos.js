@@ -1,13 +1,13 @@
 /* =========================================================
    data/projetos.js — snapshot publicado
-   Gerado pelo OpsBoard em 08/10/2026 às 16:17
+   Gerado pelo OpsBoard em 30/10/2026 às 09:40
    18 projetos.
    Publicação forçada: substitui alterações locais dos visitantes.
 
    Substitua este arquivo no repositório e publique.
    ========================================================= */
 window.OPSBOARD_SNAPSHOT = {
-  "publishedAt": "2026-10-08T19:17:05.269Z",
+  "publishedAt": "2026-10-30T12:40:43.362Z",
   "label": "",
   "force": true,
   "projects": [
@@ -76,7 +76,7 @@ window.OPSBOARD_SNAPSHOT = {
     {
       "id": "prj_mtmejgjo_7h0z26",
       "name": "CANVAS - SSBI [LAKE]",
-      "description": "Dados do lake pelo SSBI",
+      "description": "https://afya.service-now.com/esc?id=sc_cat_item&table=sc_cat_item&sys_id=de51e5453b52cb50c06c1647f4e45a55&recordUrl=com.glideapp.servicecatalog_cat_item_view.do%3Fv%3D1&sysparm_id=de51e5453b52cb50c06c1647f4e45a55",
       "owner": "JONATHAN",
       "area": "Soluções Educacionais",
       "statusId": "st_active",
@@ -88,16 +88,22 @@ window.OPSBOARD_SNAPSHOT = {
       "items": {
         "doing": [
           {
-            "id": "it_mtmenuxw_izmivu",
-            "text": "Avaliação da liberação de tabelas do Canvas para o SSBI da EAD",
+            "id": "it_mvuylfnu_2rfczo",
+            "text": "📅 Databricks | 05/11, às 10h45",
             "done": false,
-            "createdAt": "2026-09-04T03:39:41.540Z"
+            "createdAt": "2026-10-30T12:39:14.826Z"
           },
           {
-            "id": "it_muo8kxu6_zyzrrc",
-            "text": "Contato com Maria Julia Ribeiro Rodrigues",
+            "id": "it_mvuylfnu_aayy84",
+            "text": "📅 SQL | 13/11, às 10h45",
             "done": false,
-            "createdAt": "2026-09-30T15:04:42.318Z"
+            "createdAt": "2026-10-30T12:39:14.826Z"
+          },
+          {
+            "id": "it_mvuylfnu_ex9k32",
+            "text": "📅 Power BI | 19/11, às 10h45",
+            "done": false,
+            "createdAt": "2026-10-30T12:39:14.826Z"
           }
         ],
         "risks": [],
@@ -105,6 +111,50 @@ window.OPSBOARD_SNAPSHOT = {
         "done": []
       },
       "history": [
+        {
+          "id": "hst_mvuymydm_i40tpq",
+          "ts": "2026-10-30T12:40:25.738Z",
+          "changes": [
+            "Descrição atualizada"
+          ]
+        },
+        {
+          "id": "hst_mvuylfnu_6mop39",
+          "ts": "2026-10-30T12:39:14.826Z",
+          "changes": [
+            "Em andamento: adicionado — 📅 Databricks | 05/11, às 10h45",
+            "Em andamento: adicionado — 📅 SQL | 13/11, às 10h45",
+            "Em andamento: adicionado — 📅 Power BI | 19/11, às 10h45"
+          ]
+        },
+        {
+          "id": "hst_mvuykvw2_b5zkhu",
+          "ts": "2026-10-30T12:38:49.202Z",
+          "changes": [
+            "Em andamento: item removido — 📅 Databricks | 05/11, às 10h45  📅 SQL | 13/11, às 10h45  …"
+          ]
+        },
+        {
+          "id": "hst_mvuykpca_s4spy6",
+          "ts": "2026-10-30T12:38:40.714Z",
+          "changes": [
+            "Em andamento: item adicionado — 📅 Databricks | 05/11, às 10h45  📅 SQL | 13/11, às 10h45  …"
+          ]
+        },
+        {
+          "id": "hst_mvuykmre_5swxbv",
+          "ts": "2026-10-30T12:38:37.370Z",
+          "changes": [
+            "Em andamento: item removido — Contato com Maria Julia Ribeiro Rodrigues"
+          ]
+        },
+        {
+          "id": "hst_mvuykl4q_lfmqnb",
+          "ts": "2026-10-30T12:38:35.258Z",
+          "changes": [
+            "Em andamento: item removido — Avaliação da liberação de tabelas do Canvas para o SSBI da …"
+          ]
+        },
         {
           "id": "hst_muzx0qyd_yqiwp6",
           "ts": "2026-10-08T19:14:18.613Z",
@@ -128,7 +178,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-04T03:36:16.259Z",
-      "updatedAt": "2026-10-08T19:14:18.613Z"
+      "updatedAt": "2026-10-30T12:40:25.738Z"
     },
     {
       "id": "prj_mtmd14r4_uatxwm",
@@ -602,10 +652,10 @@ window.OPSBOARD_SNAPSHOT = {
       "items": {
         "doing": [
           {
-            "id": "it_muo8bua1_h2xk6x",
-            "text": "Validação do Painel até dia 16/10",
+            "id": "it_mvuyhsbf_pgslfu",
+            "text": "Time Gustavo validando",
             "done": false,
-            "createdAt": "2026-09-30T14:57:37.801Z"
+            "createdAt": "2026-10-30T12:36:24.603Z"
           }
         ],
         "risks": [
@@ -626,6 +676,12 @@ window.OPSBOARD_SNAPSHOT = {
         ],
         "done": [
           {
+            "id": "it_mvuyhhay_lhubw5",
+            "text": "Validação com o time da EXP 29/10",
+            "done": true,
+            "createdAt": "2026-10-30T12:36:10.330Z"
+          },
+          {
             "id": "it_mtlktacf_wfa6r0",
             "text": "Semestre 26.2 - validar",
             "done": true,
@@ -640,6 +696,34 @@ window.OPSBOARD_SNAPSHOT = {
         ]
       },
       "history": [
+        {
+          "id": "hst_mvuyhsbf_6re81a",
+          "ts": "2026-10-30T12:36:24.603Z",
+          "changes": [
+            "Em andamento: item adicionado — Time Gustavo validando"
+          ]
+        },
+        {
+          "id": "hst_mvuyhhzd_ibdlu2",
+          "ts": "2026-10-30T12:36:11.209Z",
+          "changes": [
+            "Item concluído: Validação com o time da EXP 29/10"
+          ]
+        },
+        {
+          "id": "hst_mvuyhhay_edr8f7",
+          "ts": "2026-10-30T12:36:10.330Z",
+          "changes": [
+            "Em andamento: item adicionado — Validação com o time da EXP 29/10"
+          ]
+        },
+        {
+          "id": "hst_mvuyh5iz_nf2xmi",
+          "ts": "2026-10-30T12:35:55.067Z",
+          "changes": [
+            "Em andamento: item removido — Validação do Painel até dia 16/10"
+          ]
+        },
         {
           "id": "hst_muzwye5y_7uqbn1",
           "ts": "2026-10-08T19:12:28.726Z",
@@ -782,7 +866,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-03T13:22:31.965Z",
-      "updatedAt": "2026-10-08T19:12:28.726Z"
+      "updatedAt": "2026-10-30T12:36:24.603Z"
     },
     {
       "id": "prj_mtljy1qi_dr2m8l",
@@ -790,7 +874,7 @@ window.OPSBOARD_SNAPSHOT = {
       "description": "Automatização de comunidade dos alunos",
       "owner": "JONATHAN",
       "area": "Soluções Educacionais",
-      "statusId": "st_active",
+      "statusId": "st_done",
       "criticalityId": "cr_attention",
       "startDate": "2026-07-21",
       "dueDate": "2026-10-02",
@@ -884,6 +968,13 @@ window.OPSBOARD_SNAPSHOT = {
         ]
       },
       "history": [
+        {
+          "id": "hst_mvr270y9_5mrftb",
+          "ts": "2026-10-27T19:08:56.337Z",
+          "changes": [
+            "Status alterado de Ativo para Concluído"
+          ]
+        },
         {
           "id": "hst_muzx45x1_g6zndc",
           "ts": "2026-10-08T19:16:57.973Z",
@@ -1090,7 +1181,7 @@ window.OPSBOARD_SNAPSHOT = {
         }
       ],
       "createdAt": "2026-09-03T13:19:48.810Z",
-      "updatedAt": "2026-10-08T19:16:57.973Z"
+      "updatedAt": "2026-10-27T19:08:56.337Z"
     },
     {
       "id": "prj_mtljdrgh_inwfcz",
